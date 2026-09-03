@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>What's New — Noodle Inn</title>
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{ --gold:#a97e2f; --gold2:#c99a45; --ink:#1a1a1a; --muted:#6f675b; --line:rgba(0,0,0,.10); }
+  *{box-sizing:border-box}
+  body{margin:0;background:#fdfcfa url(/bg4.jpg) center center/cover fixed no-repeat;color:var(--ink);font:16px/1.55 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:inherit;text-decoration:none}
+  @media(max-width:768px){body{background:#fdfcfa url(/bg4.jpg) top center/100% auto scroll repeat-y}}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:6.6rem;gap:20px}
+  .navlinks{display:flex;gap:2rem;flex:1;align-items:center}
+  .navlinks a{font-weight:800;font-size:1.02rem}
+  .navlinks a:hover,.navlinks a.active{color:var(--gold)}
+  .brand{display:flex;flex-direction:column;align-items:center;flex:0 0 auto;gap:.3rem}
+  .brand img{height:3.8rem;width:auto;display:block}
+  .brand span{font-weight:800;font-size:1.4rem;color:var(--gold)}
+  .actions{display:flex;gap:.7rem;flex:1;justify-content:flex-end;align-items:center}
+  .btn{background:#141414;color:#fff;padding:.65rem 1.15rem;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .btn:hover{background:#000}
+  .whatsnew{background:var(--gold2);color:#1a1a1a !important;padding:.55rem 1.1rem;border-radius:999px;font-weight:800;font-size:.95rem;box-shadow:0 2px 12px rgba(201,154,69,.45);white-space:nowrap}
+  .whatsnew:hover{background:#d4a853;color:#1a1a1a}
+  .lang{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.55rem 1rem;border-radius:999px;font-weight:600;font-size:.82rem;cursor:pointer;letter-spacing:.06em}
+  @media(max-width:880px){.navlinks{display:none}.bar{height:5.2rem}.brand img{height:3rem}.brand span{font-size:1.15rem}.whatsnew{display:none}}
+
+  .title{text-align:center;padding:56px 0 6px}
+  .title,main.wrap{max-width:1120px;margin-inline:auto;background:transparent}
+  .title .kick{color:var(--gold);letter-spacing:.34em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin-bottom:12px}
+  .title h1{font-size:clamp(2.3rem,4.6vw,3.4rem);font-weight:800;letter-spacing:.01em;margin:0}
+  .title p{color:var(--muted);max-width:620px;margin:.7rem auto 0;font-weight:300}
+
+  main{padding:34px 0 90px}
+  .deals{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:960px;margin:0 auto}
+  @media(max-width:720px){.deals{grid-template-columns:1fr}}
+  .deal{background:rgba(255,255,255,.78);border:1px solid rgba(169,126,47,.35);border-radius:16px;padding:26px 24px;box-shadow:0 8px 24px rgba(30,24,14,.08)}
+  .deal .tag{display:inline-block;background:#141414;color:#e8c97a;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .75rem;border-radius:999px;margin-bottom:14px}
+  .deal h3{font-size:1.35rem;margin:0 0 8px;font-weight:800}
+  .deal .price{color:var(--gold);font-weight:800;font-size:1.15rem;margin:0 0 8px}
+  .deal p{margin:0;color:#4a463f}
+
+  footer{background:#faf8f4;border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:.9rem;margin-top:30px}
+  .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  footer a{color:var(--gold);font-weight:600}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <nav class="navlinks">
+      <a href="/#about" data-t="ourstory">Our Story</a>
+      <a href="/menu" data-t="menu">Menu</a>
+      <a href="/#gallery" data-t="gallery">Gallery</a>
+      <a href="/contact" data-t="contact">Contact</a>
+    </nav>
+    <a href="/" class="brand" aria-label="Noodle Inn home"><img src="/logo-mark-gold.png" alt="Noodle Inn" /><span>Noodle Inn</span></a>
+    <div class="actions">
+      <a href="/whats-new" class="whatsnew active" data-t="whatsnew">What's New!</a>
+      <a class="btn" data-t="order" href="https://deliveroo.co.uk/menu/sheffield/london-road/noodle-inn-london-road" target="_blank" rel="noopener">Order</a>
+      <a class="btn" data-t="reserve" href="/contact">Reserve</a>
+      <button class="lang" id="lang" type="button">中文</button>
+    </div>
+  </div>
+</header>
+
+<div class="title">
+  <div class="kick" data-t="kick">Deals &amp; Offers</div>
+  <h1 data-t="title">What's New</h1>
+  <p data-t="lead">Seasonal specials, limited time offers and the latest happenings at Noodle Inn.</p>
+</div>
+
+<main class="wrap">
+  <div class="deals" id="deals"></div>
+</main>
+
+<footer><div class="wrap foot">
+  <div>© <span id="yr"></span> Noodle Inn · 156 London Road, Sheffield · 0114 255 4488</div>
+  <div><a href="/">← <span data-t="back">Back to home</span></a></div>
+</div></footer>
+
+<script>
+var L={
+ en:{ourstory:'Our Story',menu:'Menu',gallery:'Gallery',contact:'Contact',whatsnew:"What's New!",order:'Order',reserve:'Reserve',
+   kick:'Deals & Offers',title:"What's New",lead:'Seasonal specials, limited time offers and the latest happenings at Noodle Inn.',back:'Back to home',lang:'中文'},
+ zh:{ourstory:'我們的故事',menu:'餐牌',gallery:'相集',contact:'聯絡我們',whatsnew:'最新優惠',order:'訂購',reserve:'訂座',
+   kick:'優惠及推廣',title:'最新優惠',lead:'季節限定、限時優惠，以及麵軒的最新消息。',back:'返回主頁',lang:'English'}
+};
+// fallback deals (used until live content loads)
+var DEALS=[
+ {tag:'Limited Time',tag_zh:'限時',title:'Weekday Lunch 15% Off',title_zh:'平日午市 85折',price:'',desc:'Any main plus a soft drink, Monday to Friday, 12:00 to 3:00pm. Dine in only.',desc_zh:'星期一至五 12:00 至 15:00，任何主菜加汽水。只限堂食。'},
+ {tag:'Most Popular',tag_zh:'人氣',title:'Dim Sum 4 for 3',title_zh:'點心 買四送一',price:'',desc:'Order any four dim sum baskets and only pay for three. Available all day.',desc_zh:'任選四籠點心，只需付三籠。全日供應。'},
+ {tag:'Every Day',tag_zh:'每日',title:'Student Discount 10% Off',title_zh:'學生優惠 9折',price:'',desc:'Show a valid student ID to receive 10% off your total bill. Dine in only.',desc_zh:'出示有效學生證，全單可享 9 折。只限堂食。'},
+ {tag:'New',tag_zh:'全新',title:'Family Feast for Four',title_zh:'四人套餐',price:'£49.90',desc:'A set banquet of starters, three signature mains, rice and hand pulled noodles.',desc_zh:'套餐包括前菜、三款招牌主菜、白飯及手拉麵。'}
+];
+var LANG='en'; try{LANG=localStorage.getItem('ni-lang')||'en';}catch(e){}
+if(/[?&]lang=zh/.test(location.search))LANG='zh';
+
+function esc(s){return (s||'').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+function renderDeals(){
+  var root=document.getElementById('deals'); root.innerHTML='';
+  (DEALS||[]).forEach(function(d){
+    var c=document.createElement('div'); c.className='deal';
+    var tag=LANG==='zh'?(d.tag_zh||d.tag):d.tag, name=LANG==='zh'?(d.title_zh||d.title):d.title, desc=LANG==='zh'?(d.desc_zh||d.desc):d.desc;
+    c.innerHTML=(tag?'<span class="tag">'+esc(tag)+'</span>':'')+(d.price?'<div class="price">'+esc(d.price)+'</div>':'')+
+      '<h3>'+esc(name)+'</h3><p>'+esc(desc)+'</p>';
+    root.appendChild(c);
+  });
+}
+function apply(){
+  var d=L[LANG];
+  document.querySelectorAll('[data-t]').forEach(function(n){var k=n.getAttribute('data-t');if(d[k]!=null)n.textContent=d[k];});
+  document.getElementById('lang').textContent=d.lang;
+  document.documentElement.lang=LANG==='zh'?'zh-HK':'en';
+  renderDeals();
+}
+document.getElementById('lang').onclick=function(){LANG=LANG==='zh'?'en':'zh';try{localStorage.setItem('ni-lang',LANG);}catch(e){}apply();};
+document.getElementById('yr').textContent=new Date().getFullYear();
+apply();
+// load owner-managed deals from the content API
+fetch('/api/content').then(function(r){return r.json();}).then(function(d){
+  if(d && d.deals && d.deals.length){ DEALS=d.deals; renderDeals(); }
+}).catch(function(){});
+</script>
+</body>
+</html>

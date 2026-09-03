@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Contact — Noodle Inn</title>
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{ --gold:#a97e2f; --ink:#1a1a1a; --muted:#6f675b; --line:rgba(0,0,0,.10); }
+  *{box-sizing:border-box}
+  body{margin:0;background:#fdfcfa url(/bg4.jpg) center center/cover fixed no-repeat;color:var(--ink);font:16px/1.55 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:inherit;text-decoration:none}
+  @media(max-width:768px){body{background:#fdfcfa url(/bg4.jpg) top center/100% auto scroll repeat-y}}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:6.6rem;gap:20px}
+  .navlinks{display:flex;gap:2rem;flex:1;align-items:center}
+  .navlinks a{font-weight:800;font-size:1.02rem}
+  .navlinks a:hover,.navlinks a.active{color:var(--gold)}
+  .whatsnew{background:#c99a45;color:#1a1a1a !important;padding:.5rem 1.05rem;border-radius:999px;font-weight:800;box-shadow:0 2px 12px rgba(201,154,69,.45);white-space:nowrap}
+  .whatsnew:hover{background:#d4a853;color:#1a1a1a}
+  @media(max-width:880px){.whatsnew{display:none}}
+  .brand{display:flex;flex-direction:column;align-items:center;flex:0 0 auto;gap:.3rem}
+  .brand img{height:3.8rem;width:auto;display:block}
+  .brand span{font-weight:800;font-size:1.4rem;color:var(--gold)}
+  .actions{display:flex;gap:.7rem;flex:1;justify-content:flex-end;align-items:center}
+  .btn{background:#141414;color:#fff;padding:.65rem 1.15rem;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .btn:hover{background:#000}
+  .lang{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.55rem 1rem;border-radius:999px;font-weight:600;font-size:.82rem;cursor:pointer;letter-spacing:.06em}
+  @media(max-width:880px){.navlinks{display:none}.actions{flex:0}.bar{height:5.2rem}.brand img{height:3rem}.brand span{font-size:1.15rem}}
+
+  .title{text-align:center;padding:56px 0 10px}
+  .title .kick{color:var(--gold);letter-spacing:.34em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin-bottom:12px}
+  .title h1{font-size:clamp(2.3rem,4.6vw,3.4rem);font-weight:400;letter-spacing:.02em;margin:0}
+  .title p{color:var(--muted);max-width:600px;margin:.7rem auto 0;font-weight:300}
+  .callline{margin:.6rem auto 0;font-size:.98rem}
+  .callline a{color:var(--gold);font-weight:700;white-space:nowrap}
+
+  main{padding:26px 0 90px}
+  .grid{max-width:640px;margin:0 auto}
+
+  .info h2{font-size:1.4rem;font-weight:700;margin:0 0 18px}
+  .info-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .info-row .ic{color:var(--gold);flex:0 0 auto;margin-top:2px}
+  .info-row b{display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;font-weight:600}
+  .info-row span{color:var(--ink)}
+  .map{margin-top:22px;border:1px solid var(--line);border-radius:12px;overflow:hidden;height:230px}
+  .map iframe{width:100%;height:100%;border:0;display:block}
+
+  form{display:flex;flex-direction:column;gap:16px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.row{grid-template-columns:1fr}}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field span{font-size:.76rem;font-weight:600;color:#4a463f;letter-spacing:.04em;text-transform:uppercase}
+  .field input,.field textarea{border:1px solid rgba(0,0,0,.16);border-radius:8px;padding:12px 14px;font:16px/1.5 "Inter",sans-serif;color:var(--ink);background:#fff;width:100%}
+  .field input:focus,.field textarea:focus{outline:none;border-color:#141414;box-shadow:0 0 0 3px rgba(20,20,20,.06)}
+  .field textarea{resize:vertical;min-height:150px}
+  .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+  .actions-row{display:flex;align-items:center;gap:16px;margin-top:6px;flex-wrap:wrap}
+  .send{background:#141414;color:#fff;border:none;border-radius:8px;padding:14px 36px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;cursor:pointer;transition:background .2s}
+  .send:hover{background:#000}
+  .send:disabled{opacity:.6;cursor:default}
+  .status{font-size:.92rem;color:var(--muted)}
+  .status.ok{color:#2e7d32}.status.err{color:#c0392b}
+
+  footer{background:#faf8f4;border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:.9rem;margin-top:30px}
+  .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  footer a{color:var(--gold);font-weight:600}
+  /* see-through: content is transparent so the fixed watermark shows through */
+  .title,main.wrap{max-width:860px;margin-inline:auto;background:transparent}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <nav class="navlinks">
+      <a href="/#about" data-t="ourstory">Our Story</a>
+      <a href="/menu" data-t="menu">Menu</a>
+      <a href="/#gallery" data-t="gallery">Gallery</a>
+      <a href="/contact" class="active" data-t="contact">Contact</a>
+    </nav>
+    <a href="/" class="brand" aria-label="Noodle Inn home"><img src="/logo-mark-gold.png" alt="Noodle Inn" /><span>Noodle Inn</span></a>
+    <div class="actions">
+      <a href="/whats-new" class="whatsnew" data-t="whatsnew">What's New!</a>
+      <a class="btn" data-t="order" href="https://deliveroo.co.uk/menu/sheffield/london-road/noodle-inn-london-road" target="_blank" rel="noopener">Order</a>
+      <a class="btn" data-t="reserve" href="/contact">Reserve</a>
+      <button class="lang" id="lang" type="button">中文</button>
+    </div>
+  </div>
+</header>
+
+<div class="title">
+  <div class="kick" data-t="kick">Get in Touch</div>
+  <h1 data-t="title">Contact Us</h1>
+  <p data-t="lead">Whether it's feedback, a question about our menu, or just to say hello — we'd love to hear from you.</p>
+  <p class="callline"><span data-t="callpre">To book a table, send us a message below or call</span> <a href="tel:01142554488">0114 255 4488</a></p>
+</div>
+
+<main class="wrap">
+  <div class="grid">
+    <form id="ct" novalidate>
+      <div class="row">
+        <label class="field"><span data-t="first">First name</span><input name="firstName" autocomplete="given-name"></label>
+        <label class="field"><span data-t="last">Last name</span><input name="lastName" autocomplete="family-name"></label>
+      </div>
+      <div class="row">
+        <label class="field"><span data-t="emailf">Email *</span><input name="email" type="email" autocomplete="email"></label>
+        <label class="field"><span data-t="phonef">Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <label class="field"><span data-t="message">Message *</span><textarea name="message"></textarea></label>
+      <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="actions-row"><button type="submit" class="send" data-t="send">Send Message</button><span class="status" id="st"></span></div>
+    </form>
+  </div>
+</main>
+
+<footer><div class="wrap foot">
+  <div>© <span id="yr"></span> Noodle Inn · 156 London Road, Sheffield · 0114 255 4488</div>
+  <div><a href="/">← <span data-t="back">Back to home</span></a></div>
+</div></footer>
+
+<script>
+var CONTACT_TO='noodle@kqbellc.com';
+var L={
+ en:{ourstory:'Our Story',menu:'Menu',gallery:'Gallery',contact:'Contact',whatsnew:"What's New!",order:'Order',reserve:'Reserve',
+   kick:'Get in Touch',title:'Contact Us',lead:"Whether it's feedback, a question about our menu, or just to say hello — we'd love to hear from you.",
+   visit:'Visit Us',location:'Location',phone:'Phone',email:'Email',hours:'Hours',hourstxt:'Open 7 days a week · 12:00 — 22:00',
+   first:'First name',last:'Last name',emailf:'Email *',phonef:'Phone',message:'Message *',send:'Send Message',back:'Back to home',callpre:'To book a table, send us a message below or call',lang:'中文'},
+ zh:{ourstory:'我們的故事',menu:'餐牌',gallery:'相集',contact:'聯絡我們',whatsnew:'最新優惠',order:'訂購',reserve:'訂座',
+   kick:'聯絡我們',title:'聯絡我們',lead:'無論是意見、對餐牌的查詢，還是想打個招呼 — 我們都樂意聆聽。',
+   visit:'歡迎光臨',location:'地址',phone:'電話',email:'電郵',hours:'營業時間',hourstxt:'一星期七天營業 · 12:00 — 22:00',
+   first:'名字',last:'姓氏',emailf:'電郵 *',phonef:'電話',message:'訊息 *',send:'發送訊息',back:'返回主頁',callpre:'預訂餐檯，請在下方留言或致電',lang:'English'}
+};
+var LANG='en'; try{LANG=localStorage.getItem('ni-lang')||'en';}catch(e){}
+if(/[?&]lang=zh/.test(location.search))LANG='zh';
+function apply(){var d=L[LANG];document.querySelectorAll('[data-t]').forEach(function(n){var k=n.getAttribute('data-t');if(d[k]!=null)n.textContent=d[k];});document.getElementById('lang').textContent=d.lang;document.documentElement.lang=LANG==='zh'?'zh-HK':'en';}
+document.getElementById('lang').onclick=function(){LANG=LANG==='zh'?'en':'zh';try{localStorage.setItem('ni-lang',LANG);}catch(e){}apply();};
+document.getElementById('yr').textContent=new Date().getFullYear();
+apply();
+
+var form=document.getElementById('ct'), st=document.getElementById('st');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var g=function(n){var el=form.querySelector('[name="'+n+'"]');return el?el.value.trim():'';};
+  var email=g('email'),message=g('message');
+  if(g('company')){form.reset();st.textContent=(LANG==='zh'?'感謝您 — 訊息已發送！':'Thanks — your message has been sent!');st.className='status ok';return;}
+  if(!email||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)||!message){st.textContent=(LANG==='zh'?'請填寫電郵及訊息。':'Please add a valid email and a message.');st.className='status err';return;}
+  var btn=form.querySelector('.send');btn.disabled=true;st.textContent=(LANG==='zh'?'發送中…':'Sending…');st.className='status';
+  var payload={name:(g('firstName')+' '+g('lastName')).trim()||'Website visitor',email:email,phone:g('phone'),message:message,_subject:'New enquiry from the Noodle Inn website',_template:'table'};
+  fetch('https://formsubmit.co/ajax/'+CONTACT_TO,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+   .then(function(r){return r.ok;})
+   .then(function(ok){btn.disabled=false;if(ok){form.reset();st.textContent=(LANG==='zh'?'感謝您 — 訊息已發送！':'Thanks — your message has been sent!');st.className='status ok';}else{st.textContent=(LANG==='zh'?'發送失敗，請重試。':'Could not send — please try again, or email us directly.');st.className='status err';}})
+   .catch(function(){btn.disabled=false;st.textContent=(LANG==='zh'?'發送失敗，請重試。':'Could not send — please try again.');st.className='status err';});
+});
+</script>
+</body>
+</html>

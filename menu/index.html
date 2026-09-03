@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Menu — Noodle Inn</title>
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{ --gold:#a97e2f; --gold-l:#c99a45; --ink:#1a1a1a; --muted:#6f675b; --line:rgba(0,0,0,.09); --bg:#ffffff; }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fdfcfa url(/bg4.jpg) center center/cover fixed no-repeat;color:var(--ink);
+    font:16px/1.55 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  @media(max-width:768px){body{background:#fdfcfa url(/bg4.jpg) top center/100% auto scroll repeat-y}}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:6.6rem;gap:20px}
+  .navlinks{display:flex;gap:2rem;flex:1;align-items:center}
+  .navlinks a{font-weight:800;font-size:1.02rem}
+  .navlinks a:hover,.navlinks a.active{color:var(--gold)}
+  .whatsnew{background:var(--gold-l);color:#1a1a1a !important;padding:.5rem 1.05rem;border-radius:999px;font-weight:800;box-shadow:0 2px 12px rgba(201,154,69,.45);white-space:nowrap}
+  .whatsnew:hover{background:#d4a853;color:#1a1a1a}
+  @media(max-width:880px){.whatsnew{display:none}}
+  .brand{display:flex;flex-direction:column;align-items:center;flex:0 0 auto;gap:.3rem}
+  .brand img{height:3.8rem;width:auto;display:block}
+  .brand span{font-weight:800;font-size:1.4rem;color:var(--gold);letter-spacing:.01em}
+  .actions{display:flex;gap:.7rem;flex:1;justify-content:flex-end;align-items:center}
+  .btn{background:#141414;color:#fff;padding:.65rem 1.15rem;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .btn:hover{background:#000}
+  .lang{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.55rem 1rem;border-radius:999px;font-weight:600;font-size:.82rem;cursor:pointer;letter-spacing:.06em}
+  @media(max-width:880px){ .navlinks{display:none} .actions{flex:0} .bar{height:5.2rem} .brand img{height:3rem} .brand span{font-size:1.15rem} }
+
+  /* title */
+  .title{text-align:center;padding:52px 0 26px}
+  .title .kick{color:var(--gold);letter-spacing:.34em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin-bottom:12px}
+  .title h1{font-size:clamp(2.3rem,4.6vw,3.4rem);font-weight:800;margin:0;letter-spacing:.01em}
+  .title p{color:var(--muted);margin:.55rem 0 0;font-weight:300;font-size:1.02rem}
+
+  /* sticky category tabs */
+  .switch{display:flex;justify-content:center;gap:10px;margin:2px 0 30px}
+  .sw{padding:.72rem 1.7rem;border-radius:999px;border:1px solid var(--line);font-weight:700;font-size:.95rem;background:#fff;color:var(--ink)}
+  .sw.active{background:#141414;color:#fff;border-color:#141414}
+  .sw:hover{border-color:#141414}
+  .tabs{position:sticky;top:6.6rem;z-index:40;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  @media(max-width:880px){.tabs{top:5.2rem}}
+  .tabs-in{display:flex;gap:7px;overflow-x:auto;padding:12px 0;scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none}
+  .tabs-in.drag{cursor:grabbing}
+  .tabs-in::-webkit-scrollbar{display:none}
+  .tab{white-space:nowrap;padding:.5rem 1.05rem;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:600;font-size:.88rem;cursor:pointer}
+  .tab.active{background:#141414;color:#fff;border-color:#141414}
+
+  /* menu body */
+  main{padding:14px 0 90px}
+  .cat{padding:40px 0 4px;scroll-margin-top:11rem}
+  .cat-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    border-bottom:2px solid #141414;padding-bottom:12px;margin-bottom:22px;flex-wrap:wrap}
+  .cat-head h2{font-size:1.75rem;font-weight:800;margin:0;letter-spacing:.01em}
+  .cat-head .sub{color:var(--gold);font-weight:600;font-size:1rem}
+  .items{column-count:2;column-gap:60px}
+  @media(max-width:780px){.items{column-count:1}}
+  .item{break-inside:avoid;-webkit-column-break-inside:avoid;padding:10px 0;margin-bottom:2px}
+  .line{display:flex;align-items:baseline;gap:8px}
+  .line .name{font-weight:600;font-size:1.03rem}
+  .line .dots{flex:1;border-bottom:1px dotted rgba(0,0,0,.28);transform:translateY(-4px);min-width:18px}
+  .line .price{color:var(--gold);font-weight:700;white-space:nowrap}
+  .note{color:var(--muted);font-size:.87rem;font-style:italic;margin-top:3px;max-width:44ch}
+
+  footer{background:#faf8f4;border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:.9rem;margin-top:30px}
+  .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  footer a{color:var(--gold);font-weight:600}
+  .note-top{text-align:center;color:var(--muted);font-size:.92rem;max-width:640px;margin:0 auto 6px;font-style:italic}
+  .loading{text-align:center;color:var(--muted);padding:60px 0}
+  /* see-through: content is transparent so the fixed watermark shows through (sticky header + tabs stay opaque) */
+  .title,.switch,main.wrap{max-width:1120px;margin-inline:auto;background:transparent}
+  .tabs{max-width:1120px;margin-inline:auto}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <nav class="navlinks">
+      <a href="/#about" data-t="ourstory">Our Story</a>
+      <a href="/menu" class="active" data-t="menu">Menu</a>
+      <a href="/#gallery" data-t="gallery">Gallery</a>
+      <a href="/#contact" data-t="contact">Contact</a>
+    </nav>
+    <a href="/" class="brand" aria-label="Noodle Inn home">
+      <img src="/logo-mark-gold.png" alt="Noodle Inn" />
+      <span>Noodle Inn</span>
+    </a>
+    <div class="actions">
+      <a href="/whats-new" class="whatsnew" data-t="whatsnew">What's New!</a>
+      <a class="btn" data-t="order" href="https://deliveroo.co.uk/menu/sheffield/london-road/noodle-inn-london-road" target="_blank" rel="noopener">Order</a>
+      <a class="btn" data-t="reserve" href="/contact">Reserve</a>
+      <button class="lang" id="lang" type="button">中文</button>
+    </div>
+  </div>
+</header>
+
+<div class="title">
+  <div class="kick" data-t="kick">Our Menu</div>
+  <h1 data-t="title">Menu</h1>
+  <p data-t="subtitle">Authentic Cantonese, Sichuan &amp; Cantonese roast — over 200 dishes</p>
+</div>
+
+<div class="switch">
+  <a href="/menu" class="sw active" data-t="mainmenu">Main Menu</a>
+  <a href="/dimsum" class="sw" data-t="dimsum">Dim Sum</a>
+</div>
+
+<div class="tabs"><div class="wrap"><div class="tabs-in" id="tabs"></div></div></div>
+
+<main class="wrap">
+  <p class="note-top" data-t="disclaimer">We have a wide variety of dishes and cannot list them all — please ask our staff for anything you need.</p>
+  <div id="menu" class="loading">Loading menu…</div>
+</main>
+
+<footer><div class="wrap foot">
+  <div>© <span id="yr"></span> Noodle Inn · 156 London Road, Sheffield · 0114 255 4488</div>
+  <div><a href="/">← <span data-t="back">Back to home</span></a></div>
+</div></footer>
+
+<script>
+var LABELS = {
+  en:{ourstory:'Our Story',menu:'Menu',gallery:'Gallery',contact:'Contact',whatsnew:"What's New!",order:'Order',reserve:'Reserve',
+      kick:'Our Menu',title:'Menu',subtitle:'Authentic Cantonese, Sichuan & Cantonese roast — over 200 dishes',
+      disclaimer:'We have a wide variety of dishes and cannot list them all — please ask our staff for anything you need.',
+      back:'Back to home',lang:'中文',mainmenu:'Main Menu',dimsum:'Dim Sum'},
+  zh:{ourstory:'我們的故事',menu:'餐牌',gallery:'相集',contact:'聯絡我們',whatsnew:'最新優惠',order:'訂購',reserve:'訂座',
+      kick:'我們的餐牌',title:'餐牌',subtitle:'正宗粵菜、川菜及燒臘 — 二百多款菜式',
+      disclaimer:'本店菜式種類繁多，未能盡錄，如有任何需求，可以和餐廳服務員商討。',
+      back:'返回主頁',lang:'English',mainmenu:'主餐牌',dimsum:'點心'}
+};
+var MENU_KEY='menu';
+var DATA=null, LANG='en';
+try{ LANG = localStorage.getItem('ni-lang') || 'en'; }catch(e){}
+if(/[?&]lang=zh/.test(location.search)) LANG='zh';
+if(/[?&]lang=en/.test(location.search)) LANG='en';
+
+function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
+function applyLabels(){
+  var L=LABELS[LANG];
+  document.querySelectorAll('[data-t]').forEach(function(n){var k=n.getAttribute('data-t');if(L[k]!=null)n.textContent=L[k];});
+  document.getElementById('lang').textContent=L.lang;
+  document.documentElement.lang=LANG==='zh'?'zh-HK':'en';
+}
+function render(){
+  applyLabels();
+  var menu=(DATA&&DATA[MENU_KEY])||[];
+  var root=document.getElementById('menu'); root.className=''; root.innerHTML='';
+  var tabs=document.getElementById('tabs'); tabs.innerHTML='';
+  menu.forEach(function(cat,ci){
+    var name=LANG==='zh'?(cat.name_zh||cat.name):cat.name;
+    var other=LANG==='zh'?cat.name:(cat.name_zh||'');
+    var desc=LANG==='zh'?(cat.description_zh||cat.description):cat.description;
+    var tab=el('button','tab',name); tab.onclick=function(){document.getElementById('cat-'+ci).scrollIntoView();};
+    tabs.appendChild(tab);
+    var sec=el('section','cat'); sec.id='cat-'+ci;
+    var head=el('div','cat-head');
+    head.appendChild(el('h2',null,name));
+    head.appendChild(el('div','sub', desc || other));
+    sec.appendChild(head);
+    var items=el('div','items');
+    (cat.items||[]).forEach(function(it){
+      var iname=LANG==='zh'?(it.name_zh||it.name):it.name;
+      var inote=LANG==='zh'?(it.note_zh||it.note):it.note;
+      var item=el('div','item');
+      var line=el('div','line');
+      line.appendChild(el('span','name',iname));
+      line.appendChild(el('span','dots'));
+      if(it.price) line.appendChild(el('span','price',it.price));
+      item.appendChild(line);
+      if(inote) item.appendChild(el('div','note',inote));
+      items.appendChild(item);
+    });
+    sec.appendChild(items);
+    root.appendChild(sec);
+  });
+  spy(menu.length);
+}
+function spy(n){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  window.onscroll=function(){
+    var cur=0;
+    for(var i=0;i<n;i++){var s=document.getElementById('cat-'+i);if(s&&s.getBoundingClientRect().top<=180)cur=i;}
+    tabs.forEach(function(t,i){t.classList.toggle('active',i===cur);});
+  };
+}
+document.getElementById('lang').onclick=function(){
+  LANG=LANG==='zh'?'en':'zh'; try{localStorage.setItem('ni-lang',LANG);}catch(e){} render();
+};
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* click-and-drag to scroll the category bar */
+(function(){
+  var el=document.getElementById('tabs');
+  var down=false,startX=0,startLeft=0,moved=false;
+  el.addEventListener('mousedown',function(e){down=true;moved=false;startX=e.pageX;startLeft=el.scrollLeft;el.classList.add('drag');});
+  window.addEventListener('mousemove',function(e){if(!down)return;var dx=e.pageX-startX;if(Math.abs(dx)>4)moved=true;el.scrollLeft=startLeft-dx;});
+  window.addEventListener('mouseup',function(){down=false;el.classList.remove('drag');});
+  el.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();}},true);
+  el.addEventListener('dragstart',function(e){e.preventDefault();});
+})();
+fetch('/api/content').then(function(r){return r.json();}).then(function(d){DATA=d;render();})
+  .catch(function(){document.getElementById('menu').textContent='Could not load the menu.';});
+</script>
+</body>
+</html>

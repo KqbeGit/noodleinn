@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Noodle Inn — Admin</title>
+<style>
+  :root{
+    --gold:#d4a853; --gold-light:#e8c97a; --cream:#f4ecda;
+    --bg:#20170b; --panel:#2c2010; --panel2:#392a15; --field:#181109;
+    --line:rgba(212,168,83,.22); --line2:rgba(212,168,83,.14);
+    --muted:#bfa77f; --danger:#e07a5f; --ok:#8bc06a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--cream);
+    font:16px/1.55 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  h1,h2{font-weight:700;margin:0;letter-spacing:-.01em}
+  a{color:var(--gold)}
+  .hide{display:none !important}
+
+  /* ---------- sticky header ---------- */
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(32,23,11,.96);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+    padding:12px 16px}
+  .topbar-in{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .row{display:flex;align-items:center;gap:12px}
+  .title{font-size:19px;font-weight:700}
+  .title .mk{color:var(--gold)}
+  .spacer{flex:1}
+  .tabs{display:flex;gap:6px;background:var(--field);border:1px solid var(--line);
+    border-radius:999px;padding:5px}
+  .tabs button{border:none;background:transparent;color:var(--muted);
+    padding:9px 18px;border-radius:999px;font:600 14px/1 inherit;cursor:pointer;white-space:nowrap}
+  .tabs button.active{background:var(--gold);color:#20170b}
+  .search{flex:1;position:relative;min-width:0}
+  .search input{width:100%;background:var(--field);border:1px solid var(--line);border-radius:10px;
+    color:var(--cream);padding:11px 12px 11px 38px;font:15px inherit}
+  .search input:focus{outline:none;border-color:var(--gold)}
+  .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+
+  /* ---------- layout ---------- */
+  .wrap{max-width:860px;margin:0 auto;padding:20px 16px 130px}
+  .group{background:var(--panel);border:1px solid var(--line2);border-radius:14px;margin-bottom:14px;overflow:hidden}
+  .group > summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;gap:14px}
+  .group > summary::-webkit-details-marker{display:none}
+  .group > summary:hover{background:var(--panel2)}
+  .chev{color:var(--gold);transition:transform .2s;flex-shrink:0}
+  .group[open] .chev{transform:rotate(90deg)}
+  .g-text{flex:1;min-width:0}
+  .g-title{font-size:17px;font-weight:700}
+  .g-desc{font-size:13px;color:var(--muted);margin-top:2px}
+  .g-count{font-size:12px;color:var(--muted);background:var(--field);border:1px solid var(--line2);
+    border-radius:999px;padding:4px 10px;flex-shrink:0}
+  .g-body{padding:6px 18px 16px;border-top:1px solid var(--line2)}
+
+  /* ---------- fields ---------- */
+  .field{padding:14px 0;border-bottom:1px solid var(--line2)}
+  .field:last-child{border-bottom:none}
+  .flabel{font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--gold-light);
+    text-transform:uppercase;margin-bottom:7px}
+  .ref{font-size:14px;color:var(--muted);background:var(--field);border-left:3px solid var(--line);
+    border-radius:0 8px 8px 0;padding:8px 12px;margin-bottom:8px;white-space:pre-wrap;word-break:break-word}
+  textarea,input.txt{width:100%;background:var(--field);border:1px solid var(--line);border-radius:10px;
+    color:var(--cream);padding:11px 13px;font:16px/1.5 inherit;resize:none;overflow:hidden}
+  textarea:focus,input.txt:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,168,83,.14)}
+  textarea::placeholder,input.txt::placeholder{color:#8a7a5c}
+
+  /* ---------- menu ---------- */
+  .cat-head{font-size:13px;color:var(--muted);margin:2px 0 12px}
+  .dish{background:var(--field);border:1px solid var(--line2);border-radius:12px;padding:14px;margin-bottom:12px}
+  .dish-grid{display:grid;grid-template-columns:1fr 120px;gap:12px}
+  @media(max-width:520px){.dish-grid{grid-template-columns:1fr}}
+  .mini{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+
+  /* ---------- login ---------- */
+  #login{max-width:400px;margin:14vh auto 0;background:var(--panel);border:1px solid var(--line);
+    border-radius:16px;padding:30px 26px}
+  .brand{text-align:center;margin-bottom:22px}
+  .brand h1{font-size:26px} .brand .mk{color:var(--gold)}
+  .brand .sub{color:var(--muted);font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-top:6px}
+
+  /* ---------- save bar ---------- */
+  .savebar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(24,17,9,.96);
+    backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px}
+  .savebar-in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:12px}
+  .status{margin-right:auto;font-size:14px;color:var(--muted)}
+  .status.ok{color:var(--ok)} .status.err{color:var(--danger)}
+  button.act{font:600 15px/1 inherit;cursor:pointer;border:none;border-radius:999px;padding:13px 24px}
+  .btn-gold{background:var(--gold);color:#20170b} .btn-gold:hover{background:var(--gold-light)}
+  .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}
+  .banner{background:rgba(224,122,95,.12);border:1px solid rgba(224,122,95,.5);color:#f3c9bd;
+    padding:12px 14px;border-radius:10px;font-size:14px;margin:0 0 14px}
+  .empty{text-align:center;color:var(--muted);padding:40px 0;font-size:15px}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <div class="brand"><h1>Noodle <span class="mk">Inn</span></h1><div class="sub">Admin Panel</div></div>
+  <div class="flabel" style="color:var(--muted)">Password</div>
+  <input id="pw" class="txt" type="password" placeholder="Enter admin password" autocomplete="current-password" />
+  <div id="login-err" style="color:var(--danger);min-height:18px;margin:8px 0 12px;font-size:14px"></div>
+  <button class="act btn-gold" style="width:100%" onclick="doLogin()">Sign In</button>
+  <div style="text-align:center;margin-top:16px"><a href="/">← Back to website</a></div>
+</div>
+
+<!-- APP -->
+<div id="app" class="hide">
+  <div class="topbar">
+    <div class="topbar-in">
+      <div class="row">
+        <div class="title">Noodle <span class="mk">Inn</span> Editor</div>
+        <div class="spacer"></div>
+        <div class="tabs">
+          <button id="tab-en" class="active" onclick="setLang('en')">English</button>
+          <button id="tab-zh" onclick="setLang('zh')">中文</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="tabs" id="views">
+          <button id="v-content" class="active" onclick="setView('content')">Website Text</button>
+          <button id="v-menu" onclick="setView('menu')">Edit Menu</button>
+          <button id="v-dimsum" onclick="setView('dimsum')">Edit Dim&nbsp;Sum</button>
+          <button id="v-deals" onclick="setView('deals')">What's New</button>
+          <button id="v-media" onclick="setView('media')">Images &amp; Video</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="q" type="search" placeholder="Search for any text to edit…" oninput="filter()" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div id="hint" style="font-size:14px;color:var(--muted);margin-bottom:14px"></div>
+    <div id="setup-banner" class="banner hide"></div>
+    <div id="sections"></div>
+    <div id="noresult" class="empty hide">No text matches your search.</div>
+  </div>
+</div>
+
+<div id="savebar" class="savebar hide">
+  <div class="savebar-in">
+    <span id="status" class="status"></span>
+    <button class="act btn-ghost" onclick="logout()">Sign out</button>
+    <button class="act btn-gold" onclick="save()">Save changes</button>
+  </div>
+</div>
+
+<script type="module">
+  // Vercel Blob browser uploader (direct-to-storage, handles large videos)
+  try{ var m = await import('https://esm.sh/@vercel/blob@0.27.0/client'); window.__blobUpload = m.upload; }catch(e){ console.warn('uploader load failed', e); }
+</script>
+<script>
+var DATA=null, LANG='en';
+
+/* friendly names for the longer / less obvious strings */
+var FRIENDLY={
+  'Noodle':'Hero — main heading',
+  'Where tradition meets craft. Handpulled noodles, timeless recipes, and flavors passed down through generations.':'Hero — slogan',
+  'About':'Nav — “Our Story” link',
+  'A Tradition of':'Our Story — heading (line 1)',
+  'Flavor':'Our Story — heading (line 2)',
+  'Crafting authentic flavors since the very beginning':'Our Story — sub-heading',
+  'At Noodle Inn, every dish tells a story. Our recipes are rooted in centuries-old culinary traditions, brought to life with the freshest ingredients and an unwavering dedication to craft.':'Our Story — paragraph 1',
+  'Our noodles are hand-pulled daily by skilled artisans, a mesmerizing process that transforms simple dough into silky strands of perfection. Each bowl is a labor of love, prepared with techniques passed down through generations.':'Our Story — paragraph 2',
+  'From the warmth of our kitchen to your table, we invite you to experience the soul of Chinese cuisine — where every bite is a journey and every meal is a celebration.':'Our Story — paragraph 3',
+  'Menus & Ordering':'Order band — heading',
+  'Authentic Chinese cuisine crafted with passion. Hand-pulled noodles and timeless flavors since day one.':'Footer — description',
+  'Open 7 days a week: 12:00 — 22:00':'Opening hours',
+  'Noodle Inn. All rights reserved.':'Footer — copyright',
+  'Crafted with love and tradition.':'Footer — tagline'
+};
+var GROUP_DESC={
+  'Navigation & Buttons':'The top menu links and the Order / Reserve buttons',
+  'Hero (top of page)':'The heading and slogan over the video',
+  'Our Story':'Your history — heading, the three paragraphs and the stats',
+  'Menus & Ordering':'The “Menus & Ordering” band and its buttons',
+  'Gallery captions':'Hidden photo descriptions (for accessibility)',
+  'Find Us (contact section)':'Address, phone, email, hours and services',
+  'Footer':'The bottom of every page'
+};
+
+function el(id){return document.getElementById(id);}
+function esc(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function labelFor(key){ if(FRIENDLY[key]) return FRIENDLY[key]; if(key.length<=42) return key; return key.slice(0,42).trim()+'…'; }
+
+async function doLogin(){
+  el('login-err').textContent='';
+  var r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:el('pw').value})});
+  if(r.ok) start(); else el('login-err').textContent='Incorrect password. Please try again.';
+}
+function logout(){ fetch('/api/login',{method:'DELETE'}).then(function(){location.reload();}); }
+
+async function start(){
+  DATA=await (await fetch('/api/content')).json();
+  el('login').classList.add('hide');
+  el('app').classList.remove('hide');
+  el('savebar').classList.remove('hide');
+  setLang('en');
+}
+
+function setLang(l){
+  LANG=l;
+  el('tab-en').classList.toggle('active',l==='en');
+  el('tab-zh').classList.toggle('active',l==='zh');
+  render();
+  filter();
+}
+
+var VIEW='content';
+function setView(v){
+  VIEW=v;
+  el('v-content').classList.toggle('active',v==='content');
+  el('v-menu').classList.toggle('active',v==='menu');
+  el('v-dimsum').classList.toggle('active',v==='dimsum');
+  el('v-deals').classList.toggle('active',v==='deals');
+  el('v-media').classList.toggle('active',v==='media');
+  el('q').value='';
+  render(); filter();
+}
+function updateHint(){
+  var zh=LANG==='zh';
+  if(VIEW==='menu') el('hint').textContent = zh ? '編輯主餐牌 — 分類、菜名、價錢及備註。每格上方顯示英文。' : 'Editing the main menu — categories, dish names, prices and notes.';
+  else if(VIEW==='dimsum') el('hint').textContent = zh ? '編輯點心餐牌 — 分類、菜名、價錢及備註。每格上方顯示英文。' : 'Editing the dim sum menu — categories, dish names, prices and notes.';
+  else if(VIEW==='deals') el('hint').textContent = zh ? '編輯「最新優惠」頁面 — 可新增、修改或刪除優惠。' : "Editing the What's New page — add, edit or remove offers.";
+  else if(VIEW==='media') el('hint').textContent = zh ? '上載相片及影片 — 上載後請按「Save changes」套用。' : 'Upload photos and video, then press “Save changes” to apply them to the site.';
+  else el('hint').textContent = zh ? '正在編輯中文版本。每格上方顯示英文 — 請在下方輸入中文翻譯。' : 'Editing the English website. Type in any box, then press Save.';
+}
+
+function autogrow(t){ t.style.height='auto'; t.style.height=(t.scrollHeight+2)+'px'; }
+
+function makeControl(value, multiline, onInput, placeholder){
+  var single = !multiline && (value||'').length<=42 && (value||'').indexOf('\n')===-1;
+  var c=document.createElement(single?'input':'textarea');
+  if(single) c.className='txt';
+  c.value=value||''; if(placeholder) c.placeholder=placeholder;
+  c.addEventListener('input',function(){ onInput(c.value); if(!single) autogrow(c); });
+  return c;
+}
+
+function textField(key){
+  var entry=DATA.text[key]; if(!entry) return null;
+  var f=document.createElement('div'); f.className='field';
+  f.dataset.search=(key+' '+(entry.en||'')+' '+(entry.zh||'')+' '+labelFor(key)).toLowerCase();
+
+  var lab=document.createElement('div'); lab.className='flabel'; lab.textContent=labelFor(key); f.appendChild(lab);
+
+  var isLong=(entry.en||'').length>42;
+  if(LANG==='zh'){
+    var ref=document.createElement('div'); ref.className='ref'; ref.textContent=entry.en||key; f.appendChild(ref);
+    f.appendChild(makeControl(entry.zh, isLong, function(v){entry.zh=v;}, 'Type the Chinese translation…'));
+  } else {
+    f.appendChild(makeControl(entry.en!=null?entry.en:key, isLong, function(v){entry.en=v;}, ''));
+  }
+  return f;
+}
+
+function labeledCtrl(label, value, multiline, onInput, placeholder){
+  var w=document.createElement('div'); w.style.marginBottom='10px';
+  var l=document.createElement('div'); l.className='mini'; l.textContent=label; w.appendChild(l);
+  w.appendChild(makeControl(value, multiline, onInput, placeholder));
+  return w;
+}
+
+function catGroup(cat, open){
+  var d=document.createElement('details'); d.className='group'; if(open) d.open=true;
+  var catLabel=LANG==='en'?(cat.name||''):(cat.name_zh||cat.name||'');
+  var chev='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+  var s=document.createElement('summary');
+  s.innerHTML=chev+'<div class="g-text"><div class="g-title">'+esc(catLabel||'Untitled')+'</div>'+
+    '<div class="g-desc">Dish names, prices'+(LANG==='zh'?' (Chinese)':'')+' and notes</div></div>'+
+    '<div class="g-count">'+(cat.items||[]).length+'</div>';
+  d.appendChild(s);
+  var body=document.createElement('div'); body.className='g-body';
+
+  var catField=document.createElement('div'); catField.className='field';
+  catField.dataset.search=((cat.name||'')+' '+(cat.name_zh||'')+' '+catLabel).toLowerCase();
+  if(LANG==='en'){
+    catField.appendChild(labeledCtrl('Category name', cat.name, false, function(v){cat.name=v;}));
+    catField.appendChild(labeledCtrl('Category subtitle', cat.description, false, function(v){cat.description=v;}));
+  } else {
+    var cr=document.createElement('div'); cr.className='ref'; cr.textContent=cat.name; catField.appendChild(cr);
+    catField.appendChild(labeledCtrl('Category name (Chinese)', cat.name_zh||'', false, function(v){cat.name_zh=v;}, 'Chinese…'));
+    catField.appendChild(labeledCtrl('Category subtitle (Chinese)', cat.description_zh||'', false, function(v){cat.description_zh=v;}, 'Chinese…'));
+  }
+  body.appendChild(catField);
+
+  (cat.items||[]).forEach(function(it){
+    var dish=document.createElement('div'); dish.className='dish';
+    dish.dataset.search=((it.name||'')+' '+(it.name_zh||'')+' '+(it.note||'')+' '+(it.note_zh||'')+' '+(it.price||'')).toLowerCase();
+    if(LANG==='en'){
+      var grid=document.createElement('div'); grid.className='dish-grid';
+      grid.appendChild(labeledCtrl('Dish name', it.name, false, function(v){it.name=v;}));
+      grid.appendChild(labeledCtrl('Price', it.price, false, function(v){it.price=v;}));
+      dish.appendChild(grid);
+      dish.appendChild(labeledCtrl('Note (optional)', it.note, true, function(v){it.note=v;}));
+    } else {
+      var r=document.createElement('div'); r.className='ref';
+      r.textContent=it.name+(it.price?'  ·  '+it.price:'')+(it.note?'\n'+it.note:'');
+      dish.appendChild(r);
+      dish.appendChild(labeledCtrl('Dish name (Chinese)', it.name_zh||'', false, function(v){it.name_zh=v;}, 'Chinese…'));
+      if(it.note) dish.appendChild(labeledCtrl('Note (Chinese)', it.note_zh||'', true, function(v){it.note_zh=v;}, 'Chinese…'));
+    }
+    body.appendChild(dish);
+  });
+  d.appendChild(body);
+  return d;
+}
+
+function dealCard(deal, i){
+  var d=document.createElement('details'); d.className='group'; d.open=true;
+  var chev='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+  var t=(LANG==='zh'?(deal.title_zh||deal.title):deal.title)||'New deal';
+  var s=document.createElement('summary');
+  s.innerHTML=chev+'<div class="g-text"><div class="g-title">'+esc(t)+'</div><div class="g-desc">Deal / offer card</div></div>';
+  d.appendChild(s);
+  var body=document.createElement('div'); body.className='g-body';
+  var f=document.createElement('div'); f.className='field';
+  if(LANG==='en'){
+    f.appendChild(labeledCtrl('Badge (e.g. New · Limited Time)', deal.tag, false, function(v){deal.tag=v;}));
+    f.appendChild(labeledCtrl('Title', deal.title, false, function(v){deal.title=v;}));
+    f.appendChild(labeledCtrl('Price (optional)', deal.price, false, function(v){deal.price=v;}));
+    f.appendChild(labeledCtrl('Description', deal.desc, true, function(v){deal.desc=v;}));
+  } else {
+    var ref=document.createElement('div'); ref.className='ref';
+    ref.textContent=(deal.tag?deal.tag+'  ·  ':'')+(deal.title||'')+(deal.price?'  ·  '+deal.price:'')+(deal.desc?'\n'+deal.desc:'');
+    f.appendChild(ref);
+    f.appendChild(labeledCtrl('Badge (Chinese)', deal.tag_zh||'', false, function(v){deal.tag_zh=v;}, 'Chinese…'));
+    f.appendChild(labeledCtrl('Title (Chinese)', deal.title_zh||'', false, function(v){deal.title_zh=v;}, 'Chinese…'));
+    f.appendChild(labeledCtrl('Description (Chinese)', deal.desc_zh||'', true, function(v){deal.desc_zh=v;}, 'Chinese…'));
+  }
+  body.appendChild(f);
+  var rm=document.createElement('button'); rm.className='act btn-ghost'; rm.style.marginTop='10px';
+  rm.textContent='Remove this deal';
+  rm.onclick=function(){ DATA.deals.splice(i,1); render(); };
+  body.appendChild(rm);
+  d.appendChild(body);
+  return d;
+}
+
+function uploadControl(kind, getUrl, setUrl){
+  var wrap=document.createElement('div');
+  var prev=document.createElement(kind==='video'?'video':'img');
+  prev.style.cssText='width:100%;max-width:260px;height:150px;object-fit:cover;border-radius:10px;border:1px solid var(--line2);display:block;margin-bottom:10px;background:#000';
+  if(kind==='video'){ prev.muted=true; prev.loop=true; prev.autoplay=true; prev.playsInline=true; prev.setAttribute('muted',''); prev.setAttribute('playsinline',''); }
+  function refresh(){ var u=getUrl(); if(u){ prev.src=u; prev.style.display='block'; } else { prev.removeAttribute('src'); prev.style.display='none'; } }
+  refresh();
+  var inp=document.createElement('input'); inp.type='file'; inp.accept=(kind==='video'?'video/*':'image/*'); inp.style.display='none';
+  var btn=document.createElement('button'); btn.type='button'; btn.className='act btn-gold'; btn.textContent='Upload '+(kind==='video'?'video':'image');
+  var st=document.createElement('span'); st.style.cssText='margin-left:12px;font-size:13px;color:var(--muted)';
+  btn.onclick=function(){ inp.click(); };
+  inp.onchange=function(){
+    var f=inp.files && inp.files[0]; if(!f) return;
+    if(!window.__blobUpload){ st.style.color='var(--danger)'; st.textContent='Uploader still loading — try again in a second.'; return; }
+    btn.disabled=true; st.style.color='var(--muted)'; st.textContent='Uploading'+(f.size>3e6?' (large file, please wait)…':'…');
+    window.__blobUpload(f.name, f, {access:'public', handleUploadUrl:'/api/upload', contentType:f.type})
+      .then(function(res){ setUrl(res.url); refresh(); btn.disabled=false; st.style.color='var(--ok)'; st.textContent='Uploaded ✓ — press “Save changes” to apply.'; })
+      .catch(function(e){ btn.disabled=false; st.style.color='var(--danger)'; st.textContent='Upload failed: '+((e&&e.message)||'error'); });
+  };
+  var rowc=document.createElement('div'); rowc.style.cssText='display:flex;align-items:center;flex-wrap:wrap;gap:8px'; rowc.appendChild(btn); rowc.appendChild(st);
+  wrap.appendChild(prev); wrap.appendChild(inp); wrap.appendChild(rowc);
+  return wrap;
+}
+function mediaGroup(title, kind, getUrl, setUrl){
+  var d=document.createElement('details'); d.className='group'; d.open=true;
+  var chev='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+  var s=document.createElement('summary'); s.innerHTML=chev+'<div class="g-text"><div class="g-title">'+esc(title)+'</div><div class="g-desc">Upload a new '+(kind==='video'?'video (mp4)':'image')+'</div></div>';
+  d.appendChild(s);
+  var body=document.createElement('div'); body.className='g-body';
+  var f=document.createElement('div'); f.className='field'; f.appendChild(uploadControl(kind,getUrl,setUrl)); body.appendChild(f);
+  d.appendChild(body); return d;
+}
+function galleryMediaGroup(){
+  var alts=['Dim sum selection','Noodle soup bowl','Steamed dumplings','Chinese restaurant interior','Stir fry noodles','Wok cooking flames','Spring rolls','Chinese tea service'];
+  var d=document.createElement('details'); d.className='group'; d.open=true;
+  var chev='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+  var s=document.createElement('summary'); s.innerHTML=chev+'<div class="g-text"><div class="g-title">Gallery photos</div><div class="g-desc">The 8 photos in the homepage gallery</div></div><div class="g-count">'+alts.length+'</div>';
+  d.appendChild(s);
+  var body=document.createElement('div'); body.className='g-body';
+  alts.forEach(function(alt){
+    var f=document.createElement('div'); f.className='field';
+    var lab=document.createElement('div'); lab.className='flabel'; lab.textContent=alt; f.appendChild(lab);
+    f.appendChild(uploadControl('image',
+      function(){return (DATA.media&&DATA.media.gallery&&DATA.media.gallery[alt])||'';},
+      function(u){ if(!DATA.media)DATA.media={}; if(!DATA.media.gallery)DATA.media.gallery={}; DATA.media.gallery[alt]=u; }));
+    body.appendChild(f);
+  });
+  d.appendChild(body); return d;
+}
+
+function render(){
+  var root=el('sections'); root.innerHTML=''; updateHint();
+
+  if(VIEW==='media'){
+    if(!DATA.media) DATA.media={};
+    if(!DATA.media.gallery) DATA.media.gallery={};
+    root.appendChild(mediaGroup('Hero background video','video',
+      function(){return DATA.media.heroVideo||'/intro-hero.mp4';}, function(u){DATA.media.heroVideo=u;}));
+    root.appendChild(mediaGroup('Our Story photo','image',
+      function(){return DATA.media.aboutImage||'/about.png';}, function(u){DATA.media.aboutImage=u;}));
+    root.appendChild(galleryMediaGroup());
+    return;
+  }
+
+  if(VIEW==='deals'){
+    if(!DATA.deals) DATA.deals=[];
+    var add=document.createElement('button'); add.className='act btn-gold'; add.style.margin='0 0 16px';
+    add.textContent='+ Add a deal';
+    add.onclick=function(){ DATA.deals.push({tag:'',tag_zh:'',title:'',title_zh:'',price:'',desc:'',desc_zh:''}); render(); };
+    root.appendChild(add);
+    DATA.deals.forEach(function(deal,i){ root.appendChild(dealCard(deal,i)); });
+    if(!DATA.deals.length){ var e=document.createElement('div'); e.className='empty'; e.textContent='No deals yet — click “+ Add a deal”.'; root.appendChild(e); }
+    setTimeout(function(){ document.querySelectorAll('#sections textarea').forEach(autogrow); },0);
+    return;
+  }
+
+  if(VIEW==='content'){
+    (DATA.groups||[]).forEach(function(g,gi){
+      var d=document.createElement('details'); d.className='group'; if(gi===0) d.open=true;
+      var s=document.createElement('summary');
+      var chev='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+      s.innerHTML=chev+'<div class="g-text"><div class="g-title">'+esc(g.title)+'</div>'+
+        (GROUP_DESC[g.title]?'<div class="g-desc">'+esc(GROUP_DESC[g.title])+'</div>':'')+
+        '</div><div class="g-count">'+g.keys.length+'</div>';
+      d.appendChild(s);
+      var body=document.createElement('div'); body.className='g-body';
+      g.keys.forEach(function(k){ var fld=textField(k); if(fld) body.appendChild(fld); });
+      d.appendChild(body); root.appendChild(d);
+    });
+  } else {
+    var arr = VIEW==='dimsum' ? (DATA.dimsum||[]) : (DATA.menu||[]);
+    if(!arr.length){ root.innerHTML='<div class="empty">Nothing to edit here yet.</div>'; }
+    arr.forEach(function(cat,ci){ root.appendChild(catGroup(cat, ci===0)); });
+  }
+
+  // size all textareas to their content
+  setTimeout(function(){ document.querySelectorAll('#sections textarea').forEach(autogrow); },0);
+}
+
+function filter(){
+  var q=(el('q').value||'').trim().toLowerCase();
+  var groups=document.querySelectorAll('#sections .group'); var anyShown=false;
+  groups.forEach(function(g){
+    var items=g.querySelectorAll('.field, .dish'); var shown=0;
+    items.forEach(function(it){
+      var hit=!q || (it.dataset.search||'').indexOf(q)>-1;
+      it.classList.toggle('hide',!hit); if(hit) shown++;
+    });
+    g.classList.toggle('hide', q ? shown===0 : false);
+    if(!q || shown>0) anyShown=true;
+    if(q) g.open=true;
+  });
+  el('noresult').classList.toggle('hide', anyShown || !q ? true : false);
+  if(!q){ document.querySelectorAll('#sections .group').forEach(function(g,i){ g.open=(i===0); }); }
+}
+
+function setStatus(m,c){ var s=el('status'); s.textContent=m; s.className='status '+(c||''); }
+
+async function save(){
+  setStatus('Saving…','');
+  var r=await fetch('/api/content',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(DATA)});
+  var j=await r.json().catch(function(){return{};});
+  if(r.ok&&j.ok) setStatus('Saved — your changes are live ✓','ok');
+  else if(r.status===401) setStatus('Session expired — please sign in again','err');
+  else { setStatus('Not saved','err'); if(j.error){var b=el('setup-banner'); b.textContent=j.error; b.classList.remove('hide');} }
+}
+
+el('pw').addEventListener('keydown',function(e){ if(e.key==='Enter') doLogin(); });
+</script>
+</body>
+</html>

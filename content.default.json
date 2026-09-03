@@ -1,0 +1,3006 @@
+{
+  "groups": [
+    {
+      "title": "Navigation & Buttons",
+      "keys": [
+        "About",
+        "Menu",
+        "Gallery",
+        "Contact",
+        "Order",
+        "Reserve",
+        "Noodle Inn",
+        "What's New!"
+      ]
+    },
+    {
+      "title": "Hero (top of page)",
+      "keys": [
+        "Noodle",
+        "Where tradition meets craft. Handpulled noodles, timeless recipes, and flavors passed down through generations."
+      ]
+    },
+    {
+      "title": "Our Story",
+      "keys": [
+        "A Tradition of",
+        "Flavor",
+        "Crafting authentic flavors since the very beginning",
+        "At Noodle Inn, every dish tells a story. Our recipes are rooted in centuries-old culinary traditions, brought to life with the freshest ingredients and an unwavering dedication to craft.",
+        "Our noodles are hand-pulled daily by skilled artisans, a mesmerizing process that transforms simple dough into silky strands of perfection. Each bowl is a labor of love, prepared with techniques passed down through generations.",
+        "From the warmth of our kitchen to your table, we invite you to experience the soul of Chinese cuisine — where every bite is a journey and every meal is a celebration.",
+        "Years of Craft",
+        "Signature Dishes",
+        "Fresh Daily"
+      ]
+    },
+    {
+      "title": "Menus & Ordering",
+      "keys": [
+        "Menus & Ordering",
+        "Dim Sum",
+        "Uber Eats",
+        "Deliveroo"
+      ]
+    },
+    {
+      "title": "Gallery captions",
+      "keys": [
+        "Dim sum selection",
+        "Noodle soup bowl",
+        "Steamed dumplings",
+        "Chinese restaurant interior",
+        "Stir fry noodles",
+        "Wok cooking flames",
+        "Spring rolls",
+        "Chinese tea service"
+      ]
+    },
+    {
+      "title": "Find Us (contact section)",
+      "keys": [
+        "Find",
+        "Us",
+        "Location",
+        "156 London Road",
+        "Sheffield, United Kingdom",
+        "Phone",
+        "0114 255 4488",
+        "Email",
+        "info@noodleinn.co.uk",
+        "Hours",
+        "Open 7 days a week: 12:00 — 22:00",
+        "Services",
+        "Dine In",
+        "Delivery",
+        "Takeaway",
+        "Reservations",
+        "Call to Reserve",
+        "Get Directions"
+      ]
+    },
+    {
+      "title": "Footer",
+      "keys": [
+        "Authentic Chinese cuisine crafted with passion. Hand-pulled noodles and timeless flavors since day one.",
+        "Navigate",
+        "Open 7 days a week",
+        "12:00 — 22:00",
+        "Follow Us",
+        "Noodle Inn. All rights reserved.",
+        "Crafted with love and tradition."
+      ]
+    }
+  ],
+  "text": {
+    "Home": {
+      "en": "Home",
+      "zh": "主頁"
+    },
+    "About": {
+      "en": "Our Story",
+      "zh": "我們的故事"
+    },
+    "Menu": {
+      "en": "Menu",
+      "zh": "餐牌"
+    },
+    "Gallery": {
+      "en": "Gallery",
+      "zh": "相集"
+    },
+    "Reviews": {
+      "en": "Reviews",
+      "zh": "食評"
+    },
+    "Contact": {
+      "en": "Contact",
+      "zh": "聯絡我們"
+    },
+    "Order": {
+      "en": "Order",
+      "zh": "訂購"
+    },
+    "Reserve": {
+      "en": "Reserve",
+      "zh": "訂座"
+    },
+    "Authentic Chinese Cuisine": {
+      "en": "Authentic Chinese Cuisine",
+      "zh": "正宗中菜"
+    },
+    "Noodle": {
+      "en": "麵軒 · NOODLE INN",
+      "zh": "麵軒 · NOODLE INN"
+    },
+    "Inn": {
+      "en": "Inn",
+      "zh": "軒"
+    },
+    "Where tradition meets craft. Handpulled noodles, timeless recipes, and flavors passed down through generations.": {
+      "en": "Hand-Pulled Perfection.",
+      "zh": "匠心手工拉麵"
+    },
+    "View Menu": {
+      "en": "View Menu",
+      "zh": "查看餐牌"
+    },
+    "Order on Deliveroo": {
+      "en": "Order on Deliveroo",
+      "zh": "於 Deliveroo 訂購"
+    },
+    "Reserve a Table": {
+      "en": "Reserve a Table",
+      "zh": "預訂座位"
+    },
+    "Our Story": {
+      "en": "About Us",
+      "zh": "關於我們"
+    },
+    "A Tradition of": {
+      "en": "Our",
+      "zh": "我們的"
+    },
+    "Flavor": {
+      "en": "Story",
+      "zh": "故事"
+    },
+    "Crafting authentic flavors since the very beginning": {
+      "en": "Established 2004 — one of Sheffield's oldest Chinese restaurants",
+      "zh": "成立於2004年 — 謝菲爾德市遠近馳名的中餐館"
+    },
+    "At Noodle Inn, every dish tells a story. Our recipes are rooted in centuries-old culinary traditions, brought to life with the freshest ingredients and an unwavering dedication to craft.": {
+      "en": "Noodle Inn (London Road) was established in 2004 and became one of Sheffield's oldest Chinese restaurants. Over the years, the management at Noodle Inn combined traditional Chinese cuisine with modern trends to serve the local Chinese community. With a focus on Cantonese cuisine, the emphasis remains on both quality and quantity. Aside from wok-fried dishes, our signature 'big plate rice' and 'big bowl noodles' have taken the city by storm — the trend was set and other restaurants followed suit. Our three roasties are made fresh every day and are a must-try for all customers.",
+      "zh": "麵軒（倫敦路店）成立於2004年，是謝菲爾德市遠近馳名的中餐館。成立二十多年來，麵軒人致力於把傳統中餐與現代需要結合起來，以更好地服務於華人社區。麵軒以粵菜為主，尤其註重菜品質量與分量並重。除了炒菜以外，量大美味的大碟飯、大碗麵和大碟麵更成為麵軒的一大特色，引發同類餐館紛紛仿效；而明爐三燒則是麵軒一絕。"
+    },
+    "Our noodles are hand-pulled daily by skilled artisans, a mesmerizing process that transforms simple dough into silky strands of perfection. Each bowl is a labor of love, prepared with techniques passed down through generations.": {
+      "en": "In 2010, to serve the demand and palates of our inbound Chinese students, we established our range of Sichuan cuisine, hiring an expert from China to serve authentic food. This was well received by our Chinese customers and deepened our local customers' appreciation of the diversity of Chinese cuisine — promoting Chinese food culture and bringing the foremost advances to Sheffield. In 2011, we added Dim Sum, a fundamental part of Cantonese cuisine, carefully selecting the finest offerings. Since then our menu has expanded further (over 200 dishes), each with its own speciality to suit every need.",
+      "zh": "在2010年，為滿足日益增多的中國留學生飲食需要，我們決定引入川菜，並專門高薪聘請川菜名廚主理。此舉不僅贏得廣大中國同胞的肯定，也使更多西方人認識到中餐的多樣性，為弘揚中國博大精深的飲食文化做出了貢獻。在2011年，我們新增了粵式點心 — 精致美味的點心是粵菜文化不可或缺的一部分，我們精心選擇點心中的精華菜式，獻給所有熱愛美食的人們。從此，我們的菜品不僅多樣化（多達200道），而且富有自己的特色。"
+    },
+    "From the warmth of our kitchen to your table, we invite you to experience the soul of Chinese cuisine — where every bite is a journey and every meal is a celebration.": {
+      "en": "Over the past decade our vision has remained the same: maintain the high quality of food and bespoke customer service to win over customers of all backgrounds and preferences. We continue to put customers first, working hard and constantly innovating our menu. Noodle Inn welcomes you!",
+      "zh": "二十多年來我們始終如一，以高質素的菜品和服務，贏得不同文化背景顧客的喜愛與信任。我們始終堅持以顧客需要為優先的原則，不斷創新，不斷努力。麵軒歡迎您！"
+    },
+    "Years of Craft": {
+      "en": "Years of Craft",
+      "zh": "年手藝傳承"
+    },
+    "Signature Dishes": {
+      "en": "Signature Dishes",
+      "zh": "道招牌菜式"
+    },
+    "Fresh Daily": {
+      "en": "Fresh Daily",
+      "zh": "每日新鮮製造"
+    },
+    "The Noodle Inn Experience": {
+      "en": "The Noodle Inn Experience",
+      "zh": "麵軒體驗"
+    },
+    "“Every bowl tells a story.": {
+      "en": "“Every bowl tells a story.",
+      "zh": "「每一碗，都有故事。"
+    },
+    "Every visit becomes a memory.": {
+      "en": "Every visit becomes a memory.",
+      "zh": "每一次光臨，都成回憶。"
+    },
+    "”": {
+      "en": "”",
+      "zh": "」"
+    },
+    "Culinary Excellence": {
+      "en": "Culinary Excellence",
+      "zh": "廚藝精髓"
+    },
+    "Our": {
+      "en": "Our",
+      "zh": "我們的"
+    },
+    "Authentic Chinese cuisine crafted with the finest ingredients and time-honoured techniques.": {
+      "en": "Authentic Chinese cuisine crafted with the finest ingredients and time-honoured techniques.",
+      "zh": "以上乘食材與傳統技藝炮製的正宗中菜。"
+    },
+    "Visual Journey": {
+      "en": "Visual Journey",
+      "zh": "影像之旅"
+    },
+    "Dim sum selection": {
+      "en": "Dim sum selection",
+      "zh": "精選點心"
+    },
+    "Noodle soup bowl": {
+      "en": "Noodle soup bowl",
+      "zh": "湯麵"
+    },
+    "Steamed dumplings": {
+      "en": "Steamed dumplings",
+      "zh": "蒸餃"
+    },
+    "Chinese restaurant interior": {
+      "en": "Chinese restaurant interior",
+      "zh": "餐廳環境"
+    },
+    "Stir fry noodles": {
+      "en": "Stir fry noodles",
+      "zh": "炒麵"
+    },
+    "Wok cooking flames": {
+      "en": "Wok cooking flames",
+      "zh": "鑊氣烹調"
+    },
+    "Spring rolls": {
+      "en": "Spring rolls",
+      "zh": "春卷"
+    },
+    "Chinese tea service": {
+      "en": "Chinese tea service",
+      "zh": "中式茶藝"
+    },
+    "I have been twice now to eat in and the food was delicious. Definitely recommend.": {
+      "en": "I have been twice now to eat in and the food was delicious. Definitely recommend.",
+      "zh": ""
+    },
+    "Helena Kerrigan": {
+      "en": "Helena Kerrigan",
+      "zh": ""
+    },
+    "We had a great night with fantastic food. The staff were so friendly, helpful and accommodating — we couldn't recommend more. We'll definitely be back.": {
+      "en": "We had a great night with fantastic food. The staff were so friendly, helpful and accommodating — we couldn't recommend more. We'll definitely be back.",
+      "zh": ""
+    },
+    "Ben Muscroft": {
+      "en": "Ben Muscroft",
+      "zh": ""
+    },
+    "Absolutely banging food, great friendly service.": {
+      "en": "Absolutely banging food, great friendly service.",
+      "zh": ""
+    },
+    "Michael Barrott": {
+      "en": "Michael Barrott",
+      "zh": ""
+    },
+    "Our first visit — will definitely be back. The food was fabulous and the staff were lovely.": {
+      "en": "Our first visit — will definitely be back. The food was fabulous and the staff were lovely.",
+      "zh": ""
+    },
+    "Denise Barnsley": {
+      "en": "Denise Barnsley",
+      "zh": ""
+    },
+    "Lovely place, fantastic food but portions are massive!": {
+      "en": "Lovely place, fantastic food but portions are massive!",
+      "zh": ""
+    },
+    "Kelly Shaw": {
+      "en": "Kelly Shaw",
+      "zh": ""
+    },
+    "Tops. Authentic food but, no messin' about.": {
+      "en": "Tops. Authentic food but, no messin' about.",
+      "zh": ""
+    },
+    "Mark Wilson": {
+      "en": "Mark Wilson",
+      "zh": ""
+    },
+    "What Our Guests Say": {
+      "en": "What Our Guests Say",
+      "zh": "食客好評"
+    },
+    "Reviews &": {
+      "en": "Reviews &",
+      "zh": "食評與"
+    },
+    "Praise": {
+      "en": "Praise",
+      "zh": "讚賞"
+    },
+    "Facebook Review": {
+      "en": "Facebook Review",
+      "zh": "Facebook 食評"
+    },
+    "See All Reviews on Facebook": {
+      "en": "See All Reviews on Facebook",
+      "zh": "於 Facebook 查看全部食評"
+    },
+    "156 London Road": {
+      "en": "156 London Road",
+      "zh": "156 London Road"
+    },
+    "Sheffield, United Kingdom": {
+      "en": "Sheffield, United Kingdom",
+      "zh": "謝菲爾德，英國"
+    },
+    "0114 255 4488": {
+      "en": "0114 255 4488",
+      "zh": "0114 255 4488"
+    },
+    "info@noodleinn.co.uk": {
+      "en": "info@noodleinn.co.uk",
+      "zh": "info@noodleinn.co.uk"
+    },
+    "12:00 — 22:00": {
+      "en": "12:00 — 22:00",
+      "zh": "12:00 — 22:00"
+    },
+    "Visit Us": {
+      "en": "Visit Us",
+      "zh": "歡迎光臨"
+    },
+    "Find": {
+      "en": "Find",
+      "zh": "尋找"
+    },
+    "Us": {
+      "en": "Us",
+      "zh": "我們"
+    },
+    "Location": {
+      "en": "Location",
+      "zh": "地址"
+    },
+    "Phone": {
+      "en": "Phone",
+      "zh": "電話"
+    },
+    "Email": {
+      "en": "Email",
+      "zh": "電郵"
+    },
+    "Hours": {
+      "en": "Hours",
+      "zh": "營業時間"
+    },
+    "Open 7 days a week: 12:00 — 22:00": {
+      "en": "Open 7 days a week: 12:00 — 22:00",
+      "zh": "一星期七天營業：12:00 — 22:00"
+    },
+    "Services": {
+      "en": "Services",
+      "zh": "服務"
+    },
+    "Dine In": {
+      "en": "Dine In",
+      "zh": "堂食"
+    },
+    "Delivery": {
+      "en": "Delivery",
+      "zh": "外送"
+    },
+    "Takeaway": {
+      "en": "Takeaway",
+      "zh": "外賣自取"
+    },
+    "Reservations": {
+      "en": "Reservations",
+      "zh": "訂座"
+    },
+    "Call to Reserve": {
+      "en": "Call to Reserve",
+      "zh": "致電訂座"
+    },
+    "Get Directions": {
+      "en": "Get Directions",
+      "zh": "路線指引"
+    },
+    "Authentic Chinese cuisine crafted with passion. Hand-pulled noodles and timeless flavors since day one.": {
+      "en": "Authentic Chinese cuisine crafted with passion. Hand-pulled noodles and timeless flavors since day one.",
+      "zh": "以熱誠炮製正宗中菜。手工拉麵，開業至今風味不變。"
+    },
+    "Navigate": {
+      "en": "Navigate",
+      "zh": "網站導覽"
+    },
+    "Open 7 days a week": {
+      "en": "Open 7 days a week",
+      "zh": "一星期七天營業"
+    },
+    "Follow Us": {
+      "en": "Follow Us",
+      "zh": "關注我們"
+    },
+    "Noodle Inn. All rights reserved.": {
+      "en": "Noodle Inn. All rights reserved.",
+      "zh": "麵軒 版權所有。"
+    },
+    "Crafted with love and tradition.": {
+      "en": "Crafted with love and tradition.",
+      "zh": "以愛與傳統精心製作。"
+    },
+    "Watch": {
+      "en": "Watch",
+      "zh": "觀看短片"
+    },
+    "Noodle Inn": {
+      "en": "Noodle Inn",
+      "zh": "麵軒"
+    },
+    "Menus & Ordering": {
+      "en": "Menus & Ordering",
+      "zh": "餐牌及訂購"
+    },
+    "Dim Sum": {
+      "en": "Dim Sum",
+      "zh": "點心"
+    },
+    "Uber Eats": {
+      "en": "Uber Eats",
+      "zh": "Uber Eats"
+    },
+    "Deliveroo": {
+      "en": "Deliveroo",
+      "zh": "Deliveroo"
+    },
+    "What's New!": {
+      "en": "What's New!",
+      "zh": "最新優惠"
+    }
+  },
+  "menu": [
+    {
+      "name": "Chef's Special",
+      "name_zh": "大廚精選",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Beef Short Ribs (Black Pepper / Peking Sauce / Salt & Chilli)",
+          "name_zh": "牛仔骨（黑椒/京汁/椒鹽）",
+          "price": "£16.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Deep Fried Oyster in Batter",
+          "name_zh": "酥炸生蠔",
+          "price": "£15.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Harbour Style Deep Fried Oyster",
+          "name_zh": "避風塘生蠔",
+          "price": "£15.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Oyster with Ginger & Sweet Potato Noodles in Clay Pot",
+          "name_zh": "薑蔥蠔粉絲煲",
+          "price": "£17.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Oyster Omelette",
+          "name_zh": "香煎蠔餅",
+          "price": "£15.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Battered Oyster with Salted Duck Egg Yolk",
+          "name_zh": "酥炸黃金生蠔",
+          "price": "£16.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Seasonal Vegetables with Fried Shrimp Paste Slices",
+          "name_zh": "時菜炒蝦餅",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Honey Black Pepper Fried Beef & Potato Cubes",
+          "name_zh": "蜜椒牛肉拌薯仔粒",
+          "price": "£15.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Beef Brisket with Radish Clay Pot",
+          "name_zh": "柱候牛腩蘿蔔煲",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Deep Fried Salted Duck Egg Yolk Shell-On Prawns",
+          "name_zh": "鹹蛋黃有殼大蝦",
+          "price": "£16.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Harbour Style Shell-On Prawns",
+          "name_zh": "避風塘有殼大蝦",
+          "price": "£16.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Shell-On Prawns with Garlic & Sweet Potato Noodles",
+          "name_zh": "蒜蓉粉絲蒸開邊大蝦",
+          "price": "£16.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices & Choi Sum in Satay Sauce with Ho Fun Noodles",
+          "name_zh": "沙爹菜心牛肉炒河",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Seafood in XO Sauce with Ho Fun Noodles",
+          "name_zh": "XO海鮮炒河",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pork Chop in Tomato Sauce Big Plate Rice",
+          "name_zh": "番茄豬扒飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu & Crispy Pork Belly Big Plate Rice",
+          "name_zh": "豆腐火腩飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Brisket in Curry Sauce Big Plate Rice",
+          "name_zh": "咖哩牛腩飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Brisket with Seasonal Vegetables Big Plate Rice",
+          "name_zh": "菜遠牛腩飯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Hainanese Steamed Chicken Rice",
+          "name_zh": "海南雞飯",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Golden Salted Duck Egg Fried Rice with Lap Cheung Sausage",
+          "name_zh": "黃金臘味炒飯",
+          "price": "£17.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Battered Fish Fillet with Sweet Corn Sauce",
+          "name_zh": "粟米炸魚柳",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Garlic & Sesame Spare Ribs",
+          "name_zh": "風沙芝麻蒜香骨",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Battered Pork Short Ribs with Pineapple in Sweet & Sour Sauce",
+          "name_zh": "波蘿生炒骨",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Starters",
+      "name_zh": "頭盤",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Mixed Platter (min 2 persons)",
+          "name_zh": "招牌拼盤",
+          "price": "£10.90/head",
+          "note": "Sesame Prawn Toast, Crispy Seaweed, Spring Rolls, Malaysian Skewered Satay Chicken, Peking Ribs",
+          "note_zh": "蝦多士、香脆紫菜、春卷、沙嗲雞串、京都排骨"
+        },
+        {
+          "name": "Crispy Aromatic Duck (1/4)",
+          "name_zh": "香酥鴨（四分一隻）",
+          "price": "£14.50",
+          "note": "Served with pancake, cucumber, leek & hoi sin sauce",
+          "note_zh": "伴薄餅、青瓜、京蔥及海鮮醬"
+        },
+        {
+          "name": "Crispy Aromatic Duck (1/2)",
+          "name_zh": "香酥鴨（半隻）",
+          "price": "£23.50",
+          "note": "Served with pancake, cucumber, leek & hoi sin sauce",
+          "note_zh": "伴薄餅、青瓜、京蔥及海鮮醬"
+        },
+        {
+          "name": "Sesame Prawn Toast",
+          "name_zh": "蝦多士",
+          "price": "£8.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Seaweed",
+          "name_zh": "海草",
+          "price": "£7.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Spring Rolls",
+          "name_zh": "春卷",
+          "price": "£7.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Spring Rolls",
+          "name_zh": "齋戒春卷",
+          "price": "£7.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Won Ton",
+          "name_zh": "炸雲吞",
+          "price": "£7.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Tofu",
+          "name_zh": "椒鹽豆腐",
+          "price": "£8.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Peking Ribs",
+          "name_zh": "京都骨",
+          "price": "£9.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Garlic Ribs",
+          "name_zh": "蒜蓉骨",
+          "price": "£9.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Ribs",
+          "name_zh": "椒鹽骨",
+          "price": "£9.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Honey Ribs",
+          "name_zh": "蜜汁骨",
+          "price": "£9.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Wings",
+          "name_zh": "椒鹽雞翅",
+          "price": "£8.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Chicken Slices",
+          "name_zh": "椒鹽雞片",
+          "price": "£9.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Honey Wings",
+          "name_zh": "蜜汁雞翅",
+          "price": "£8.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Malaysian Skewered Satay Chicken",
+          "name_zh": "沙爹串燒雞",
+          "price": "£9.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli King Prawns",
+          "name_zh": "椒鹽大蝦",
+          "price": "£10.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Squid",
+          "name_zh": "椒鹽鮮魷",
+          "price": "£10.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Squid & King Prawns",
+          "name_zh": "椒鹽鮮魷&大蝦",
+          "price": "£11.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Lettuce Wrap (Seafood or Chicken)",
+          "name_zh": "生菜包（海鮮/雞）",
+          "price": "£10.90",
+          "note": "Served with hoi sin sauce",
+          "note_zh": "伴海鮮醬"
+        },
+        {
+          "name": "Salt & Chilli Chips",
+          "name_zh": "椒鹽薯條",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Soup",
+      "name_zh": "湯羹類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Won Ton Soup",
+          "name_zh": "雲吞湯",
+          "price": "£6.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Dumpling Soup",
+          "name_zh": "水餃湯",
+          "price": "£6.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Hot & Sour Soup",
+          "name_zh": "酸辣湯",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Seafood Tom Yum Soup",
+          "name_zh": "海鮮冬蔭功",
+          "price": "£6.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Tom Yum Soup",
+          "name_zh": "雞肉冬蔭功",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken & Sweet Corn Soup",
+          "name_zh": "雞蓉粟米湯",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crab Stick & Sweet Corn Soup",
+          "name_zh": "蟹肉粟米湯",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef in Egg Drop Soup",
+          "name_zh": "西湖牛肉羹",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Seafood & Tofu Soup",
+          "name_zh": "海鮮豆腐湯",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken & Mushroom Soup",
+          "name_zh": "蘑菇雞湯",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Big Bowl Soup Noodles",
+      "name_zh": "大碗麵",
+      "description": "Choose: Chinese Noodle · Ramen · Ho Fun · Vermicelli · Rice Thread · Udon · Hand-Pulled",
+      "description_zh": "生麵 · 出前一丁 · 河粉 · 米粉 · 米線 · 烏冬 · 手工麵",
+      "items": [
+        {
+          "name": "Special",
+          "name_zh": "招牌湯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "3 Roasties",
+          "name_zh": "三燒湯",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Roast Duck",
+          "name_zh": "燒鴨湯",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Seafood",
+          "name_zh": "海鮮湯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns",
+          "name_zh": "大蝦湯",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Beef Brisket",
+          "name_zh": "牛腩湯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices",
+          "name_zh": "牛肉湯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Slices",
+          "name_zh": "雞片湯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Won Ton",
+          "name_zh": "雲吞湯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables",
+          "name_zh": "雜錦蔬菜湯",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Dumpling",
+          "name_zh": "水餃湯",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Shredded Duck & Preserved Vegetables",
+          "name_zh": "雪菜鴨絲湯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Shredded Pork & Szechuan Pickles",
+          "name_zh": "榨菜肉絲湯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Big Plate Fried Noodles",
+      "name_zh": "大碟麵",
+      "description": "Choose: Chinese Noodle · Ramen · Ho Fun · Vermicelli · Udon",
+      "description_zh": "生麵 · 出前一丁 · 河粉 · 米粉 · 烏冬",
+      "items": [
+        {
+          "name": "Special",
+          "name_zh": "招牌炒",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "3 Roasties",
+          "name_zh": "三燒炒",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Roast Duck",
+          "name_zh": "燒鴨炒",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Seafood",
+          "name_zh": "海鮮炒",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns",
+          "name_zh": "大蝦炒",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Slices",
+          "name_zh": "雞片炒",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Shredded Pork",
+          "name_zh": "肉絲炒",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices",
+          "name_zh": "牛肉炒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Beef Brisket",
+          "name_zh": "牛腩炒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Dry Fried Ho Fun with Beef Slices",
+          "name_zh": "乾炒牛河",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices with Green Peppers in Black Bean Sauce",
+          "name_zh": "豉椒牛肉炒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Slices with Green Peppers in Black Bean Sauce",
+          "name_zh": "豉椒雞肉炒",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Singapore Style",
+          "name_zh": "星洲炒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Malaysian Style \"Kway Teow\"",
+          "name_zh": "炒貴刁",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pad Thai",
+          "name_zh": "泰式炒河",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables",
+          "name_zh": "雜錦蔬菜炒",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Noodles with Bean Sprouts",
+          "name_zh": "芽菜炒",
+          "price": "£8.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Plain Fried Noodles",
+          "name_zh": "豉油王炒麵",
+          "price": "£7.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Big Plate Rice",
+      "name_zh": "大碟飯",
+      "description": "Egg fried rice base +£1",
+      "description_zh": "炒飯底加 £1",
+      "items": [
+        {
+          "name": "Roast Duck",
+          "name_zh": "燒鴨飯",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Honey Roast Pork",
+          "name_zh": "叉燒飯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Pork Belly",
+          "name_zh": "燒肉飯",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Chicken on the Bone",
+          "name_zh": "切雞飯",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "3 Roasties",
+          "name_zh": "三燒飯",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "2 Roasties",
+          "name_zh": "雙拼飯",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Four Treasures",
+          "name_zh": "四寶飯",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Beef Brisket",
+          "name_zh": "牛腩飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices & Chinese Vegetables",
+          "name_zh": "菜遠牛肉飯",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices in Black Pepper Sauce",
+          "name_zh": "黑椒牛肉飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef with Green Peppers in Black Bean Sauce",
+          "name_zh": "豉椒牛肉飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Minced Beef (Dry)",
+          "name_zh": "生炒牛肉飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Wings",
+          "name_zh": "椒鹽雞翅飯",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sliced Chicken with Ginger & Spring Onions",
+          "name_zh": "薑蔥雞片飯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sliced Chicken with Green Peppers in Black Bean Sauce",
+          "name_zh": "豉椒雞片飯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken in Sweet & Sour Sauce",
+          "name_zh": "咕嚕雞飯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Pork Chops",
+          "name_zh": "椒鹽豬扒飯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Seafood & Tofu in Oyster Sauce",
+          "name_zh": "豆腐海鮮飯",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fish Fillets & Tofu in Oyster Sauce",
+          "name_zh": "豆腐斑腩飯",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fish Fillets & Sweet Corn",
+          "name_zh": "粟米斑腩飯",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns in Sweet & Sour Sauce",
+          "name_zh": "咕嚕大蝦飯",
+          "price": "£13.60",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns with Ginger & Spring Onions",
+          "name_zh": "薑蔥大蝦飯",
+          "price": "£13.60",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns with Green Peppers in Black Bean Sauce",
+          "name_zh": "豉椒大蝦飯",
+          "price": "£13.60",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Aubergines & Pork Strips in Garlic Sauce",
+          "name_zh": "魚香茄子飯（港）",
+          "price": "£13.60",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Yung Chow Fried Rice",
+          "name_zh": "楊州炒飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fujian Fried Rice",
+          "name_zh": "福建炒飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Singapore Fried Rice",
+          "name_zh": "星洲炒飯",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "XO Seafood Fried Rice",
+          "name_zh": "XO海皇炒飯",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Seafood Fried Rice (Dry / Sauced)",
+          "name_zh": "海鮮炒飯（乾/濕）",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Special Fried Rice (Dry / Sauced)",
+          "name_zh": "招牌炒飯（乾/濕）",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salted Fish & Chicken Fried Rice",
+          "name_zh": "鹹魚雞粒炒飯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Egg Fried Rice",
+          "name_zh": "蛋炒飯",
+          "price": "£4.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Fragrance Rice",
+          "name_zh": "香米飯",
+          "price": "£4.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chips",
+          "name_zh": "薯條",
+          "price": "£5.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pork Fat Ends with Garlic & Dried Chilli",
+          "name_zh": "川椒肥腸飯",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pork Fat Ends with Preserved Vegetables",
+          "name_zh": "酸菜肥腸飯",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Spare Ribs with Garlic & Dried Chilli",
+          "name_zh": "川椒骨飯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Twice Cooked Belly Pork",
+          "name_zh": "回鍋肉飯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Kung Pao Chicken",
+          "name_zh": "宮保雞丁飯",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Roast Dishes",
+      "name_zh": "燒臘類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Roast Duck (Half)",
+          "name_zh": "明爐燒鴨（半隻）",
+          "price": "£21.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Roast Duck (Whole)",
+          "name_zh": "明爐燒鴨（一隻）",
+          "price": "£39.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Pork Belly",
+          "name_zh": "脆皮燒肉",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Honey Roast Pork",
+          "name_zh": "蜜汁叉燒",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Three Roasties",
+          "name_zh": "三燒拼",
+          "price": "£16.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Two Roasties",
+          "name_zh": "雙拼",
+          "price": "£16.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Corn-Fed Chicken on the Bone (Half)",
+          "name_zh": "白切雞（半隻）",
+          "price": "£14.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Emperor's Chicken on the Bone (Half)",
+          "name_zh": "霸王雞（半隻）",
+          "price": "£14.30",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Clay Pot Dishes",
+      "name_zh": "煲仔類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Braised Lamb Chops with Dried Beancurd",
+          "name_zh": "枝竹羊腩煲",
+          "price": "£15.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Brisket in Curry Sauce",
+          "name_zh": "咖哩牛腩煲",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Seafood & Tofu",
+          "name_zh": "海鮮豆腐煲",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Aubergines & Shredded Pork with Salted Fish",
+          "name_zh": "鹹魚茄子煲",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Pork Belly & Preserved Vegetables",
+          "name_zh": "梅菜扣肉煲",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Tofu with Mixed Meats & Seafood",
+          "name_zh": "八珍豆腐煲",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sliced Beef & Sweet Potato Noodles in Satay Sauce",
+          "name_zh": "沙爹金菇牛肉粉絲煲",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Seafood with Japanese Tofu",
+          "name_zh": "海鮮玉子豆腐煲",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Beef Brisket with Radish (Hot)",
+          "name_zh": "蘿蔔燒牛腩（川式）",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Seafood Dishes",
+      "name_zh": "海鮮類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Steamed Sea Bass with Ginger & Spring Onions",
+          "name_zh": "蒸鱸魚",
+          "price": "£19.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns in Szechuan Sauce",
+          "name_zh": "四川大蝦",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns in Sweet & Sour Sauce",
+          "name_zh": "咕嚕大蝦",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "King Prawns in Curry Sauce",
+          "name_zh": "咖哩大蝦",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling King Prawns with Green Peppers in Black Bean Sauce",
+          "name_zh": "鐵板豉椒大蝦",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Squid with Green Peppers in Black Bean Sauce",
+          "name_zh": "鐵板豉椒鮮魷",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Squid in Satay Sauce",
+          "name_zh": "鐵板沙嗲鮮魷",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Squid with Broccoli in Garlic Sauce",
+          "name_zh": "鐵板蒜蓉西蘭花炒鮮魷",
+          "price": "£14.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Squid in XO Sauce",
+          "name_zh": "鐵板XO醬炒鮮魷",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Chicken Dishes",
+      "name_zh": "雞肉類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Sizzling Chicken Slices & Green Peppers in Black Bean Sauce",
+          "name_zh": "鐵板豉椒雞肉片",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Chicken Slices in Satay Sauce",
+          "name_zh": "鐵板沙嗲雞肉片",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Chicken Slices with Ginger & Spring Onions",
+          "name_zh": "鐵板薑蔥雞肉片",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Shredded Chicken",
+          "name_zh": "乾炒雞肉絲",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Kung Pao Chicken Slices (Cantonese Style)",
+          "name_zh": "宮保雞片",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Slices in Szechuan Sauce",
+          "name_zh": "四川雞肉片",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken in Lemon Sauce",
+          "name_zh": "檸檬雞",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken in Sweet & Sour Sauce",
+          "name_zh": "咕嚕雞",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Slices in Curry Sauce",
+          "name_zh": "咖哩雞片",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Slices in Thai Red Curry Sauce",
+          "name_zh": "泰式紅咖喱雞肉片",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Slices in Thai Green Curry Sauce",
+          "name_zh": "泰式綠咖喱雞肉片",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Beef Dishes",
+      "name_zh": "牛肉類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Beef Slices in Cantonese Sauce",
+          "name_zh": "中式牛肉",
+          "price": "£14.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices in Black Pepper Sauce",
+          "name_zh": "黑椒牛肉",
+          "price": "£14.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Beef Slices & Green Peppers in Black Bean Sauce",
+          "name_zh": "鐵板豉椒牛肉片",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Beef Slices with Ginger & Spring Onions",
+          "name_zh": "鐵板薑蔥牛肉片",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Beef Slices with Mushrooms",
+          "name_zh": "鐵板磨菇牛肉片",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices in Szechuan Sauce",
+          "name_zh": "四川牛肉片",
+          "price": "£14.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices in Curry Sauce",
+          "name_zh": "咖哩牛肉片",
+          "price": "£14.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Shredded Beef",
+          "name_zh": "乾炒牛肉絲",
+          "price": "£14.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Beef Brisket in Oyster Sauce",
+          "name_zh": "燜牛腩",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Pork Dishes",
+      "name_zh": "豬肉類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Pork Chops with Onions in Oyster Sauce",
+          "name_zh": "蠔油洋蔥豬扒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pork Chops in Salt & Chilli",
+          "name_zh": "椒鹽豬扒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pork Chops in Honey Sauce",
+          "name_zh": "蜜汁豬扒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pork Chops in Cantonese Sauce",
+          "name_zh": "中汁豬扒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Pork Fat End",
+      "name_zh": "肥腸類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Crispy Deep Fried Pork Fat Ends",
+          "name_zh": "脆皮炸大腸",
+          "price": "£15.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Pork Fat Ends",
+          "name_zh": "椒鹽炒肥腸",
+          "price": "£15.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Pork Fat Ends with Preserved Vegetables",
+          "name_zh": "酸菜炒肥腸",
+          "price": "£15.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Pork Fat Ends with Garlic & Dry Chilli",
+          "name_zh": "川椒炒肥腸",
+          "price": "£15.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Lamb Dishes",
+      "name_zh": "羊肉類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Sizzling Lamb Slices with Ginger & Spring Onions",
+          "name_zh": "鐵板薑蔥羊肉片",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Lamb Slices in Yellow Bean Sauce",
+          "name_zh": "鐵板京蔥醬爆羊肉",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Lamb Slices with Spring Onions & Cumin Seeds",
+          "name_zh": "鐵板孜然羊肉片",
+          "price": "£14.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Duck Dishes",
+      "name_zh": "鴨肉類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Sizzling Duck Slices with Broccoli",
+          "name_zh": "鐵板西蘭花炒鴨肉片",
+          "price": "£14.60",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sizzling Duck with Green Peppers in Black Bean Sauce",
+          "name_zh": "鐵板豉椒鴨肉片",
+          "price": "£14.60",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sliced Duck in Plum Sauce",
+          "name_zh": "梅子鴨",
+          "price": "£14.60",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Tofu Dishes",
+      "name_zh": "豆腐類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Deep Fried Tofu Balls with Egg Drop Sauce",
+          "name_zh": "琵琶豆腐",
+          "price": "£13.50",
+          "note": "With minced meats & minced vegetables",
+          "note_zh": "配肉碎及菜粒"
+        },
+        {
+          "name": "Grilled & Stuffed Tofu",
+          "name_zh": "煎釀豆腐",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Grilled & Stuffed Tofu, Aubergines & Peppers",
+          "name_zh": "煎釀三寶",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Tofu with Sliced Roast Pork",
+          "name_zh": "紅燒豆腐",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Tofu with Mixed Meats & Seafood",
+          "name_zh": "八珍豆腐",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Sweet & Sour Sauce",
+          "name_zh": "咕嚕豆腐",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Szechuan Sauce",
+          "name_zh": "四川豆腐",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Cantonese Village Style",
+      "name_zh": "粵式家鄉小菜",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Harbour Style Fried Stuffed Aubergines",
+          "name_zh": "避風塘茄子",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Green Beans with Minced Pork in XO Sauce",
+          "name_zh": "XO肉末炒四季豆",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Enoki Mushrooms & Japanese Tofu with Broccoli",
+          "name_zh": "金針菇扒玉子豆腐",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Choi Sum & Chinese Mushrooms in Oyster Sauce",
+          "name_zh": "蠔油香菇菜心",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Vegetables",
+      "name_zh": "蔬菜類",
+      "description": "Cooked to choice: Garlic · Oyster Sauce · Chinese Cheese & Chilli · Ginger · Shrimp Paste",
+      "description_zh": "蒜蓉炒 · 蠔油炒 · 椒絲腐乳炒 · 薑汁炒 · 馬拉盞炒",
+      "items": [
+        {
+          "name": "Beansprouts",
+          "name_zh": "芽菜",
+          "price": "£9.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Lettuce",
+          "name_zh": "生菜",
+          "price": "£11.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables",
+          "name_zh": "雜錦鮮蔬",
+          "price": "£11.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Broccoli",
+          "name_zh": "西蘭花",
+          "price": "£11.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pak Choi",
+          "name_zh": "小白菜",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Choi Sum",
+          "name_zh": "本地菜心",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Water Morning Glory",
+          "name_zh": "空心菜",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Szechuan Hot Dishes",
+      "name_zh": "經典熱川菜",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Mouth Watering Chicken (served cold)",
+          "name_zh": "口水雞",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Twice Cooked Belly Pork",
+          "name_zh": "回鍋肉",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Wok Fried Spare Ribs with Garlic & Dried Chilli",
+          "name_zh": "川椒骨",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Slices in Hot Chilli Oil",
+          "name_zh": "麻辣水煮牛",
+          "price": "£16.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu with Minced Pork in Hot Pepper Sauce",
+          "name_zh": "麻婆豆腐",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Braised Aubergines & Minced Pork in Hot Garlic Sauce",
+          "name_zh": "魚香茄子（川式）",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Dry Fried Green Beans with Minced Pork",
+          "name_zh": "乾煸四季豆",
+          "price": "£13.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Kung Pao King Prawns",
+          "name_zh": "宮保蝦球",
+          "price": "£15.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Diced Chicken with Dried Chilli & Szechuan Peppercorns",
+          "name_zh": "辣子雞",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Kung Pao Chicken",
+          "name_zh": "宮保雞丁",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Sea Bass in a Thick Broad-Bean Sauce",
+          "name_zh": "豆瓣醬蒸鱸魚",
+          "price": "£19.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Skin Sea Bass in Sweet & Sour Sauce",
+          "name_zh": "糖醋脆皮鱸魚",
+          "price": "£19.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Sea Bass with Fresh Chilli",
+          "name_zh": "鮮椒蒸鱸魚",
+          "price": "£19.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fish Slices in Hot Chilli Oil",
+          "name_zh": "麻辣水煮魚片",
+          "price": "£17.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fish Slices with Preserved Vegetables in Broth",
+          "name_zh": "風味酸菜魚",
+          "price": "£17.80",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Set Meals",
+      "name_zh": "套餐",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Set Meal A (min 2 persons)",
+          "name_zh": "套餐 A（兩位起）",
+          "price": "£18.50/head",
+          "note": "Crab Stick & Sweet Corn Soup · Crispy Shredded Beef · Sizzling Chicken in Satay Sauce · Mixed Vegetables in Garlic Sauce · Egg Fried Rice",
+          "note_zh": "蟹肉粟米湯 · 乾炒牛肉絲 · 沙嗲雞 · 蒜香雜菜 · 蛋炒飯"
+        },
+        {
+          "name": "Set Meal B (min 3 persons)",
+          "name_zh": "套餐 B（三位起）",
+          "price": "£20.50/head",
+          "note": "Crispy Aromatic Duck · Sizzling Beef in Black Bean Sauce · Crispy Shredded Chicken · King Prawns in Szechuan Sauce · Mixed Vegetables in Oyster Sauce · Egg Fried Rice",
+          "note_zh": "香酥鴨 · 豉椒牛肉 · 乾炒雞肉絲 · 四川大蝦 · 蠔油雜菜 · 蛋炒飯"
+        },
+        {
+          "name": "Set Meal C (min 4 persons)",
+          "name_zh": "套餐 C（四位起）",
+          "price": "£21.50/head",
+          "note": "Mixed Platter · Crispy Aromatic Duck · Sizzling King Prawns with Ginger & Spring Onions · Crispy Shredded Beef · Chicken Slices in Curry Sauce · Mixed Vegetables in Garlic Sauce · Yung Chow Fried Rice",
+          "note_zh": "招牌拼盤 · 香酥鴨 · 薑蔥大蝦 · 乾炒牛肉絲 · 咖哩雞片 · 蒜香雜菜 · 楊州炒飯"
+        },
+        {
+          "name": "Vegetarian Set Meal (min 2 persons)",
+          "name_zh": "齋套餐（兩位起）",
+          "price": "£17.50/head",
+          "note": "Vegetarian Mixed Platter · Sweet & Sour Tofu · Fried Mixed Vegetables in Black Bean Sauce · Wok Fried Aubergine in Szechuan Sauce · Steamed Fragrance Rice",
+          "note_zh": "齋招牌拼盤 · 咕嚕豆腐 · 豉汁雜菜 · 川式茄子 · 香米飯"
+        },
+        {
+          "name": "Children's Set Meal",
+          "name_zh": "兒童套餐",
+          "price": "£9.90/head",
+          "note": "Fried Chicken Strips · Chips · Sweet & Sour Sauce · Soft Drink",
+          "note_zh": "炸雞條 · 薯條 · 甜酸醬 · 汽水"
+        }
+      ]
+    },
+    {
+      "name": "Vegetarian Soup",
+      "name_zh": "齋湯羹類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Sweet Corn Soup",
+          "name_zh": "粟米湯",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables & Tofu Soup",
+          "name_zh": "雜菜豆腐湯",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Hot & Sour Soup",
+          "name_zh": "齋酸辣湯",
+          "price": "£5.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Tom Yum Soup",
+          "name_zh": "齋冬陰功",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Vegetarian Starters",
+      "name_zh": "齋頭盤",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Vegetarian Mixed Platter (min 2 persons)",
+          "name_zh": "齋招牌拼盤",
+          "price": "£10.90",
+          "note": "Vegetable Tempura, Seaweed, Vegetarian Spring Rolls, Salt & Chilli Tofu",
+          "note_zh": "雜菜天婦羅、紫菜、齋春卷、椒鹽豆腐"
+        },
+        {
+          "name": "Vegetarian Crispy Seaweed",
+          "name_zh": "齋海草",
+          "price": "£7.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Spring Rolls",
+          "name_zh": "齋春卷",
+          "price": "£7.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Tofu",
+          "name_zh": "椒鹽豆腐",
+          "price": "£8.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Aubergine Tempura",
+          "name_zh": "茄子天婦羅",
+          "price": "£8.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Green Pepper Tempura",
+          "name_zh": "青椒天婦羅",
+          "price": "£8.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Mixed Tempura",
+          "name_zh": "雜菜天婦羅",
+          "price": "£8.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Lettuce Wrap",
+          "name_zh": "齋生菜包",
+          "price": "£10.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salt & Chilli Chips",
+          "name_zh": "椒鹽薯條",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Vegetarian Hot Pot",
+      "name_zh": "齋煲仔類",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Braised Tofu with Dried Bean Curd",
+          "name_zh": "枝竹豆腐煲",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu & Sweet Potato Noodles in Satay Sauce",
+          "name_zh": "沙嗲豆腐粉絲煲",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Curry Tofu",
+          "name_zh": "咖哩豆腐煲",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Vegetarian Vegetables",
+      "name_zh": "齋素菜類",
+      "description": "Cooked to choice: Garlic · Vegetarian Oyster Sauce · Chinese Cheese & Chilli · Ginger",
+      "description_zh": "蒜蓉炒 · 蠔油炒 · 椒絲腐乳炒 · 薑汁炒",
+      "items": [
+        {
+          "name": "Beansprouts",
+          "name_zh": "芽菜",
+          "price": "£9.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Lettuce",
+          "name_zh": "生菜",
+          "price": "£11.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables",
+          "name_zh": "雜菜",
+          "price": "£11.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Broccoli",
+          "name_zh": "西蘭花",
+          "price": "£11.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pak Choi",
+          "name_zh": "小白菜",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Choi Sum",
+          "name_zh": "本地菜心",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Water Morning Glory",
+          "name_zh": "空心菜",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Vegetarian Big Bowl Noodles",
+      "name_zh": "齋大碗麵",
+      "description": "Choose: Chinese Noodle · Ramen · Ho Fun · Vermicelli · Rice Thread · Udon · Hand-Pulled",
+      "description_zh": "生麵 · 出前一丁 · 河粉 · 米粉 · 米線 · 烏冬 · 手工麵",
+      "items": [
+        {
+          "name": "Mixed Vegetables",
+          "name_zh": "雜錦蔬菜湯",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Hot & Sour Soup",
+          "name_zh": "齋酸辣湯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Tofu & Chinese Pickled Vegetables",
+          "name_zh": "榨菜豆腐湯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Tofu & Preserved Vegetables",
+          "name_zh": "雪菜豆腐湯",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Vegetarian Big Plate Noodles / Rice",
+      "name_zh": "齋大碟麵/飯",
+      "description": "Choose: Chinese Noodle · Ramen · Ho Fun · Vermicelli · Udon",
+      "description_zh": "生麵 · 出前一丁 · 河粉 · 米粉 · 烏冬",
+      "items": [
+        {
+          "name": "Vegetarian Singapore Style",
+          "name_zh": "齋星洲炒",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Malaysian Style \"Kway Teow\"",
+          "name_zh": "齋炒貴刁",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables",
+          "name_zh": "雜錦蔬菜",
+          "price": "£13.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables in Satay Sauce",
+          "name_zh": "沙嗲雜菜",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables in Black Bean Sauce",
+          "name_zh": "豉汁雜菜",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables in Sweet & Sour Sauce",
+          "name_zh": "咕嚕雜菜",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Mixed Vegetables in Curry Sauce",
+          "name_zh": "咖哩雜菜",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Sweet & Sour Sauce",
+          "name_zh": "咕嚕豆腐",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu with Sweet Corn",
+          "name_zh": "粟米豆腐",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu with Ginger & Spring Onions",
+          "name_zh": "薑蔥豆腐",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Black Bean Sauce",
+          "name_zh": "豉汁豆腐",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Satay Sauce",
+          "name_zh": "沙嗲豆腐",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Curry Sauce",
+          "name_zh": "咖哩豆腐",
+          "price": "£13.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Noodles with Bean Sprouts",
+          "name_zh": "芽菜炒",
+          "price": "£8.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Plain Fried Noodles",
+          "name_zh": "豉油王炒麵",
+          "price": "£7.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Egg Fried Rice",
+          "name_zh": "蛋炒飯",
+          "price": "£4.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Fragrance Rice",
+          "name_zh": "香米飯",
+          "price": "£4.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chips",
+          "name_zh": "薯條",
+          "price": "£5.80",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Vegetarian Village Style",
+      "name_zh": "齋家鄉小菜",
+      "description": "",
+      "description_zh": "",
+      "items": [
+        {
+          "name": "Vegetarian Harbour Style Fried Aubergines",
+          "name_zh": "齋避風塘茄子",
+          "price": "£14.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Choi Sum & Chinese Mushrooms in Oyster Flavour Sauce",
+          "name_zh": "蠔油香菇菜心",
+          "price": "£13.90",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Enoki Mushrooms & Japanese Tofu with Broccoli",
+          "name_zh": "金針菇扒玉子豆腐",
+          "price": "£14.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Vegetarian Ma Po Tofu",
+          "name_zh": "齋麻婆豆腐",
+          "price": "£13.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Sweet & Sour Sauce",
+          "name_zh": "咕嚕豆腐",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tofu in Szechuan Sauce",
+          "name_zh": "四川豆腐",
+          "price": "£13.00",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    }
+  ],
+  "dimsum": [
+    {
+      "name": "Dim Sum",
+      "name_zh": "點心",
+      "description": "Steamed to order",
+      "description_zh": "即叫即蒸",
+      "items": [
+        {
+          "name": "Emperor Prawn Dumplings",
+          "name_zh": "蝦餃皇",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pork Dumplings with Prawns",
+          "name_zh": "鮮蝦燒賣",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken Claws in Black Bean Sauce",
+          "name_zh": "豉汁鳳爪",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Spare Ribs in Black Bean Sauce",
+          "name_zh": "豉汁蒸排骨",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chiu Chow Style Steamed Dumplings",
+          "name_zh": "潮州粉粿",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Stuffed Bean Curd Wrap in Oyster Sauce",
+          "name_zh": "蠔油鮮竹卷",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Barbecued Pork Buns",
+          "name_zh": "蜜汁叉燒包",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Steamed Pork & Vegetable Buns",
+          "name_zh": "菜肉包",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Shanghai Pork Dumplings",
+          "name_zh": "上海小籠包",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Glutinous Rice with Minced Meat",
+          "name_zh": "荷葉珍珠雞",
+          "price": "£5.30",
+          "note": "In lotus leaf",
+          "note_zh": "荷葉包裹"
+        },
+        {
+          "name": "Prawn Dumplings with Chives",
+          "name_zh": "韭菜蝦餃",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Dumplings in Ginger & Spring Onions",
+          "name_zh": "薑蔥牛肉球",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Beef Meatballs with Season Greens",
+          "name_zh": "時菜山竹牛肉球",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Meat Dumplings in Chilli Oil",
+          "name_zh": "紅油抄手",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Rice with Spare Ribs & Chicken Claws",
+          "name_zh": "豉汁排骨鳳爪飯",
+          "price": "£7.30",
+          "note": "In black bean sauce",
+          "note_zh": "豉汁"
+        },
+        {
+          "name": "Tripe with Ginger & Spring Onions",
+          "name_zh": "薑蔥牛柏葉",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Satay Honeycomb Tripe",
+          "name_zh": "沙嗲金錢肚",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Thai Sweet & Chilli Boneless Chicken Claws",
+          "name_zh": "泰式甜辣無骨鳳爪",
+          "price": "£10.50",
+          "note": "Served cold",
+          "note_zh": "凍食"
+        },
+        {
+          "name": "Sweet Custard Layer Cake",
+          "name_zh": "奶黃千層糕",
+          "price": "£4.70",
+          "note": "Sweet",
+          "note_zh": "甜品"
+        },
+        {
+          "name": "Sweet Custard Bun",
+          "name_zh": "奶黃包",
+          "price": "£5.00",
+          "note": "Sweet",
+          "note_zh": "甜品"
+        },
+        {
+          "name": "Salted Egg Yolk Custard Bun",
+          "name_zh": "流沙包",
+          "price": "£5.70",
+          "note": "Sweet",
+          "note_zh": "甜品"
+        }
+      ]
+    },
+    {
+      "name": "Fried Dim Sum",
+      "name_zh": "煎炸點心",
+      "description": "Crispy & golden",
+      "description_zh": "香脆金黃",
+      "items": [
+        {
+          "name": "Turnip Cake with Chinese Cured Meat",
+          "name_zh": "臘味蘿蔔糕",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pan Fried Turnip Cake with XO Sauce",
+          "name_zh": "XO醬煎蘿蔔糕",
+          "price": "£6.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pan Fried Gyoza",
+          "name_zh": "香煎餃子",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pan Fried Pork & Vegetable Buns",
+          "name_zh": "生煎菜肉包",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Duck Stuffed Bean Curd Wraps",
+          "name_zh": "鴨肉鮮竹卷",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Crispy Prawn Dumplings",
+          "name_zh": "脆炸蝦餃",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Deep Fried Mixed Meat Dumpling Balls",
+          "name_zh": "鹹水角",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Deep Fried Sweet Custard Bun",
+          "name_zh": "炸奶黃包",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Deep Fried Squid Tentacles",
+          "name_zh": "炸魷魚鬚",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Deep Fried Squid Tossed in XO Sauce",
+          "name_zh": "XO醬炸鮮魷",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Wafer Paper Wrapped Prawns",
+          "name_zh": "威化紙包蝦",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Fried Cuttlefish Cake",
+          "name_zh": "香煎墨魚餅",
+          "price": "£6.50",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Rice Rolls",
+      "name_zh": "腸粉",
+      "description": "Steamed rice rolls",
+      "description_zh": "布拉腸粉",
+      "items": [
+        {
+          "name": "House Special Rice Roll",
+          "name_zh": "招牌腸粉",
+          "price": "£5.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Rice Roll with King Prawn",
+          "name_zh": "鮮蝦腸粉",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Rice Roll with Barbecued Pork",
+          "name_zh": "叉燒腸粉",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Rice Roll with Beef",
+          "name_zh": "牛肉腸粉",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Rice Roll with Fried Dough Stick",
+          "name_zh": "炸兩",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Plain Rice Roll",
+          "name_zh": "齋腸",
+          "price": "£4.70",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Congee",
+      "name_zh": "粥品",
+      "description": "Warming rice porridge",
+      "description_zh": "暖胃靚粥",
+      "items": [
+        {
+          "name": "Plain Boiled Congee with Fried Dough Stick",
+          "name_zh": "白粥油炸鬼",
+          "price": "£5.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Roast Duck & Preserved Egg Congee",
+          "name_zh": "燒鴨皮蛋粥",
+          "price": "£7.30",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Preserved Egg & Pork Congee",
+          "name_zh": "皮蛋瘦肉粥",
+          "price": "£7.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sampan Congee",
+          "name_zh": "艇仔粥",
+          "price": "£7.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Chicken & Mushroom Congee",
+          "name_zh": "北菇雞粥",
+          "price": "£7.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Preserved Vegetable & Pork Strip Congee",
+          "name_zh": "榨菜肉絲粥",
+          "price": "£7.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Roast Duck Congee",
+          "name_zh": "燒鴨粥",
+          "price": "£7.30",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    }
+  ],
+  "deals": [
+    {
+      "tag": "Limited Time",
+      "tag_zh": "限時",
+      "title": "Weekday Lunch 15% Off",
+      "title_zh": "平日午市 85折",
+      "price": "",
+      "desc": "Any main plus a soft drink, Monday to Friday, 12:00 to 3:00pm. Dine in only.",
+      "desc_zh": "星期一至五 12:00 至 15:00，任何主菜加汽水。只限堂食。"
+    },
+    {
+      "tag": "Most Popular",
+      "tag_zh": "人氣",
+      "title": "Dim Sum 4 for 3",
+      "title_zh": "點心 買四送一",
+      "price": "",
+      "desc": "Order any four dim sum baskets and only pay for three. Available all day.",
+      "desc_zh": "任選四籠點心，只需付三籠。全日供應。"
+    },
+    {
+      "tag": "Every Day",
+      "tag_zh": "每日",
+      "title": "Student Discount 10% Off",
+      "title_zh": "學生優惠 9折",
+      "price": "",
+      "desc": "Show a valid student ID to receive 10% off your total bill. Dine in only.",
+      "desc_zh": "出示有效學生證，全單可享 9 折。只限堂食。"
+    },
+    {
+      "tag": "New",
+      "tag_zh": "全新",
+      "title": "Family Feast for Four",
+      "title_zh": "四人套餐",
+      "price": "£49.90",
+      "desc": "A set banquet of starters, three signature mains, rice and hand pulled noodles.",
+      "desc_zh": "套餐包括前菜、三款招牌主菜、白飯及手拉麵。"
+    }
+  ],
+  "media": {
+    "heroVideo": "/intro-hero.mp4",
+    "heroPoster": "/intro-poster.jpg",
+    "aboutImage": "/about.png",
+    "gallery": {
+      "Dim sum selection": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&h=600&fit=crop",
+      "Noodle soup bowl": "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=800&h=600&fit=crop",
+      "Steamed dumplings": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&h=600&fit=crop",
+      "Chinese restaurant interior": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop",
+      "Stir fry noodles": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
+      "Wok cooking flames": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&h=600&fit=crop",
+      "Spring rolls": "https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800&h=600&fit=crop",
+      "Chinese tea service": "https://images.unsplash.com/photo-1541696490-8744a5dc0228?w=800&h=600&fit=crop"
+    }
+  }
+}
