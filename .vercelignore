@@ -5,3 +5,6 @@ _apply.py
 Noodle Inn Menu(2026).pdf
 shopfront.jpg
 about.jpg
+
+# source menus — not for public serving
+*.pdf

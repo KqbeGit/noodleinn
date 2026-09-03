@@ -2596,297 +2596,269 @@
   ],
   "dimsum": [
     {
-      "name": "Dim Sum",
-      "name_zh": "點心",
-      "description": "Steamed to order",
-      "description_zh": "即叫即蒸",
+      "name": "Steamed",
+      "name_zh": "蒸點",
+      "description": "Steamed dumplings & buns",
+      "description_zh": "蒸點",
       "items": [
         {
           "name": "Emperor Prawn Dumplings",
-          "name_zh": "蝦餃皇",
-          "price": "£5.50",
+          "name_zh": "蝦餃王",
+          "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Pork Dumplings with Prawns",
-          "name_zh": "鮮蝦燒賣",
-          "price": "£5.50",
+          "name_zh": "乾蒸燒賣",
+          "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Chicken Claws in Black Bean Sauce",
           "name_zh": "豉汁鳳爪",
-          "price": "£5.00",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Spare Ribs in Black Bean Sauce",
-          "name_zh": "豉汁蒸排骨",
-          "price": "£5.00",
+          "name_zh": "豉汁排骨",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Chiu Chow Style Steamed Dumplings",
-          "name_zh": "潮州粉粿",
-          "price": "£5.00",
+          "name_zh": "潮州蒸粉果",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Stuffed Bean Curd Wrap in Oyster Sauce",
           "name_zh": "蠔油鮮竹卷",
-          "price": "£5.30",
+          "price": "£5.80",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Steamed Barbecued Pork Buns",
-          "name_zh": "蜜汁叉燒包",
-          "price": "£5.00",
+          "name_zh": "蠔油叉燒包",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Steamed Pork & Vegetable Buns",
-          "name_zh": "菜肉包",
-          "price": "£5.00",
+          "name_zh": "蒸菜肉包",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Shanghai Pork Dumplings",
           "name_zh": "上海小籠包",
-          "price": "£5.30",
+          "price": "£5.80",
           "note": "",
           "note_zh": ""
         },
         {
-          "name": "Glutinous Rice with Minced Meat",
-          "name_zh": "荷葉珍珠雞",
-          "price": "£5.30",
-          "note": "In lotus leaf",
-          "note_zh": "荷葉包裹"
+          "name": "Glutinous Rice with Minced Meat in Lotus Leaf",
+          "name_zh": "糯米雞",
+          "price": "£5.80",
+          "note": "",
+          "note_zh": ""
         },
         {
           "name": "Prawn Dumplings with Chives",
-          "name_zh": "韭菜蝦餃",
-          "price": "£5.50",
+          "name_zh": "鮮蝦韭菜餃",
+          "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Beef Dumplings in Ginger & Spring Onions",
-          "name_zh": "薑蔥牛肉球",
-          "price": "£5.30",
+          "name_zh": "薑蔥牛肉餃",
+          "price": "£5.80",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Beef Meatballs with Season Greens",
-          "name_zh": "時菜山竹牛肉球",
-          "price": "£5.30",
+          "name_zh": "時菜牛肉球",
+          "price": "£5.80",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Meat Dumplings in Chilli Oil",
           "name_zh": "紅油抄手",
-          "price": "£5.30",
-          "note": "",
-          "note_zh": ""
-        },
-        {
-          "name": "Rice with Spare Ribs & Chicken Claws",
-          "name_zh": "豉汁排骨鳳爪飯",
-          "price": "£7.30",
-          "note": "In black bean sauce",
-          "note_zh": "豉汁"
-        },
-        {
-          "name": "Tripe with Ginger & Spring Onions",
-          "name_zh": "薑蔥牛柏葉",
-          "price": "£5.30",
-          "note": "",
-          "note_zh": ""
-        },
-        {
-          "name": "Satay Honeycomb Tripe",
-          "name_zh": "沙嗲金錢肚",
-          "price": "£5.30",
-          "note": "",
-          "note_zh": ""
-        },
-        {
-          "name": "Thai Sweet & Chilli Boneless Chicken Claws",
-          "name_zh": "泰式甜辣無骨鳳爪",
-          "price": "£10.50",
-          "note": "Served cold",
-          "note_zh": "凍食"
-        },
-        {
-          "name": "Sweet Custard Layer Cake",
-          "name_zh": "奶黃千層糕",
-          "price": "£4.70",
-          "note": "Sweet",
-          "note_zh": "甜品"
-        },
-        {
-          "name": "Sweet Custard Bun",
-          "name_zh": "奶黃包",
-          "price": "£5.00",
-          "note": "Sweet",
-          "note_zh": "甜品"
-        },
-        {
-          "name": "Salted Egg Yolk Custard Bun",
-          "name_zh": "流沙包",
-          "price": "£5.70",
-          "note": "Sweet",
-          "note_zh": "甜品"
-        }
-      ]
-    },
-    {
-      "name": "Fried Dim Sum",
-      "name_zh": "煎炸點心",
-      "description": "Crispy & golden",
-      "description_zh": "香脆金黃",
-      "items": [
-        {
-          "name": "Turnip Cake with Chinese Cured Meat",
-          "name_zh": "臘味蘿蔔糕",
-          "price": "£5.50",
-          "note": "",
-          "note_zh": ""
-        },
-        {
-          "name": "Pan Fried Turnip Cake with XO Sauce",
-          "name_zh": "XO醬煎蘿蔔糕",
           "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
-          "name": "Pan Fried Gyoza",
-          "name_zh": "香煎餃子",
-          "price": "£5.30",
+          "name": "Rice with Spare Ribs & Chicken Claws in Black Bean Sauce",
+          "name_zh": "鳳爪排骨飯",
+          "price": "£7.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Tripe with Ginger and Spring Onions",
+          "name_zh": "薑蔥牛百葉",
+          "price": "£5.80",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Satay Honeycombs Tripe",
+          "name_zh": "沙爹金錢肚",
+          "price": "£5.80",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Fried",
+      "name_zh": "煎 / 炸點",
+      "description": "Pan-fried & deep-fried",
+      "description_zh": "煎/炸點",
+      "items": [
+        {
+          "name": "Turnip Cake with Chinese Cured Meat",
+          "name_zh": "臘味蘿蔔糕",
+          "price": "£6.00",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pan Fried Turnip Cake with XO Sauce",
+          "name_zh": "XO醬炒蘿蔔糕",
+          "price": "£6.60",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Pan Fried Gyozas",
+          "name_zh": "生煎鍋貼",
+          "price": "£5.80",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Pan Fried Pork & Vegetable Buns",
           "name_zh": "生煎菜肉包",
-          "price": "£5.30",
+          "price": "£5.80",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Duck Stuffed Bean Curd Wraps",
-          "name_zh": "鴨肉鮮竹卷",
-          "price": "£5.30",
+          "name_zh": "腐皮鴨絲卷",
+          "price": "£5.80",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Crispy Prawn Dumplings",
-          "name_zh": "脆炸蝦餃",
-          "price": "£5.50",
+          "name_zh": "沙律明蝦餃",
+          "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Deep Fried Mixed Meat Dumpling Balls",
-          "name_zh": "鹹水角",
-          "price": "£5.00",
+          "name_zh": "皮球鹹水角",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Deep Fried Sweet Custard Bun",
-          "name_zh": "炸奶黃包",
-          "price": "£5.00",
+          "name_zh": "酥炸奶皇包",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Deep Fried Squid Tentacles",
-          "name_zh": "炸魷魚鬚",
-          "price": "£6.50",
+          "name_zh": "酥炸鮮魷鬚",
+          "price": "£7.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Deep Fried Squid Tossed in XO Sauce",
-          "name_zh": "XO醬炸鮮魷",
-          "price": "£6.50",
+          "name_zh": "XO醬炒魷魚",
+          "price": "£7.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Wafer Paper Wrapped Prawns",
           "name_zh": "威化紙包蝦",
-          "price": "£5.50",
+          "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Fried Cuttlefish Cake",
-          "name_zh": "香煎墨魚餅",
-          "price": "£6.50",
+          "name_zh": "香茜墨魚餅",
+          "price": "£7.00",
           "note": "",
           "note_zh": ""
         }
       ]
     },
     {
-      "name": "Rice Rolls",
-      "name_zh": "腸粉",
-      "description": "Steamed rice rolls",
-      "description_zh": "布拉腸粉",
+      "name": "Steamed / Fried Rice Rolls",
+      "name_zh": "石磨米腸粉",
+      "description": "Stone-ground rice rolls",
+      "description_zh": "腸粉",
       "items": [
         {
           "name": "House Special Rice Roll",
           "name_zh": "招牌腸粉",
-          "price": "£5.30",
+          "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Rice Roll with King Prawn",
           "name_zh": "鮮蝦腸粉",
-          "price": "£5.50",
+          "price": "£6.00",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Rice Roll with Barbecued Pork",
           "name_zh": "叉燒腸粉",
-          "price": "£5.00",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Rice Roll with Beef",
           "name_zh": "牛肉腸粉",
-          "price": "£5.00",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Rice Roll with Fried Dough Stick",
-          "name_zh": "炸兩",
-          "price": "£5.00",
+          "name_zh": "炸兩腸粉",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Plain Rice Roll",
-          "name_zh": "齋腸",
-          "price": "£4.70",
+          "name_zh": "齋腸粉",
+          "price": "£5.20",
           "note": "",
           "note_zh": ""
         }
@@ -2894,56 +2866,85 @@
     },
     {
       "name": "Congee",
-      "name_zh": "粥品",
-      "description": "Warming rice porridge",
-      "description_zh": "暖胃靚粥",
+      "name_zh": "粥點",
+      "description": "Rice porridge",
+      "description_zh": "粥點",
       "items": [
         {
           "name": "Plain Boiled Congee with Fried Dough Stick",
-          "name_zh": "白粥油炸鬼",
-          "price": "£5.00",
+          "name_zh": "明火白粥配油條",
+          "price": "£5.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Roast Duck & Preserved Egg Congee",
-          "name_zh": "燒鴨皮蛋粥",
-          "price": "£7.30",
+          "name_zh": "皮蛋燒鴨粥",
+          "price": "£7.80",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Preserved Egg & Pork Congee",
           "name_zh": "皮蛋瘦肉粥",
-          "price": "£7.00",
+          "price": "£7.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Sampan Congee",
           "name_zh": "艇仔粥",
-          "price": "£7.00",
+          "price": "£7.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Chicken & Mushroom Congee",
-          "name_zh": "北菇雞粥",
-          "price": "£7.00",
+          "name_zh": "香菇雞肉粥",
+          "price": "£7.50",
           "note": "",
           "note_zh": ""
         },
         {
           "name": "Preserved Vegetable & Pork Strip Congee",
-          "name_zh": "榨菜肉絲粥",
-          "price": "£7.00",
+          "name_zh": "榨菜肉片粥",
+          "price": "£7.50",
           "note": "",
           "note_zh": ""
         },
         {
-          "name": "Roast Duck Congee",
-          "name_zh": "燒鴨粥",
-          "price": "£7.30",
+          "name": "Preserved Vegetable with Shredded Roast Duck Congee",
+          "name_zh": "榨菜鴨絲粥",
+          "price": "£7.80",
+          "note": "",
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "name": "Sweet",
+      "name_zh": "甜點",
+      "description": "Sweet dim sum",
+      "description_zh": "甜點",
+      "items": [
+        {
+          "name": "Sweet Custard Layer Cake",
+          "name_zh": "奶皇千層糕",
+          "price": "£5.20",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Sweet Custard Bun",
+          "name_zh": "香滑奶皇包",
+          "price": "£5.50",
+          "note": "",
+          "note_zh": ""
+        },
+        {
+          "name": "Salted Egg Yolk Custard Bun",
+          "name_zh": "香滑流沙包",
+          "price": "£6.20",
           "note": "",
           "note_zh": ""
         }
