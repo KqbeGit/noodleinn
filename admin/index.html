@@ -194,7 +194,9 @@ function labelFor(key){ if(FRIENDLY[key]) return FRIENDLY[key]; if(key.length<=4
 async function doLogin(){
   el('login-err').textContent='';
   var r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:el('pw').value})});
-  if(r.ok) start(); else el('login-err').textContent='Incorrect password. Please try again.';
+  if(r.ok){ start(); return; }
+  var j=await r.json().catch(function(){return{};});
+  el('login-err').textContent = j.error || 'Incorrect password. Please try again.';
 }
 function logout(){ fetch('/api/login',{method:'DELETE'}).then(function(){location.reload();}); }
 
