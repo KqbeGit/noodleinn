@@ -240,7 +240,7 @@
     var about = document.getElementById('about');
     if (!about || !about.parentNode) return;
     var DELIVEROO = 'https://deliveroo.co.uk/menu/sheffield/london-road/noodle-inn-london-road';
-    var UBEREATS = 'https://www.ubereats.com/gb';
+    var UBEREATS = 'https://www.ubereats.com/gb/store/noodle-inn-london-road/grDbT_taXl-jm_qem4NLug';
     var sec = document.createElement('section');
     sec.id = 'ni-order';
     sec.innerHTML =
@@ -252,6 +252,8 @@
         '<a class="ni-tile" href="' + DELIVEROO + '" target="_blank" rel="noopener">Deliveroo</a>' +
       '</div>';
     about.parentNode.insertBefore(sec, about.nextSibling);
+    // arriving from another page via /#ni-order: scroll once the band exists
+    if (location.hash === '#ni-order') setTimeout(function () { sec.scrollIntoView(); }, 60);
   }
 
   function ensureContactForm() {
