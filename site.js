@@ -352,7 +352,7 @@
     btn.setAttribute('aria-label', 'Switch language / 轉換語言');
     btn.style.cssText = ['position:fixed','bottom:22px','left:22px','z-index:400',
       'padding:10px 18px','border-radius:999px','background:rgba(46,29,12,.9)','color:#e8c97a',
-      'border:1px solid rgba(212,168,83,.75)','font:600 14px/1 Inter,system-ui,sans-serif',
+      'border:1px solid rgba(212,168,83,.75)','font:600 14px/1 Inter,"Noto Sans TC",system-ui,sans-serif',
       'letter-spacing:.12em','cursor:pointer','box-shadow:0 4px 18px rgba(30,18,5,.45)',
       'backdrop-filter:blur(6px)','-webkit-backdrop-filter:blur(6px)'].join(';');
     btn.addEventListener('click', function () {
