@@ -18,8 +18,11 @@ function makeToken() {
 
 function tokenValid(token) {
   if (!token || token.indexOf('.') === -1) return false;
-  const [exp, sig] = token.split('.');
-  if (sign(exp) !== sig) return false;
+  const i = token.lastIndexOf('.');
+  const exp = token.slice(0, i), sig = token.slice(i + 1);
+  const a = Buffer.from(sig), b = Buffer.from(sign(exp));
+  if (a.length !== b.length) return false;               // wrong shape
+  if (!crypto.timingSafeEqual(a, b)) return false;       // constant-time compare
   return Number(exp) > Date.now();
 }
 
