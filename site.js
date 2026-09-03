@@ -264,7 +264,7 @@
       '<div class="ni-ct-in">' +
         '<p class="ni-ct-kick">Get in Touch</p>' +
         '<h2 class="ni-ct-h">We\'d love to hear from you</h2>' +
-        '<p class="ni-ct-lead">Whether it\'s feedback, a question about our menu, or just to say hello — drop us a message and our team will be in touch.</p>' +
+        '<p class="ni-ct-lead">Whether it\'s feedback, a question about our menu, or just to say hello, drop us a message and our team will be in touch.</p>' +
         '<form class="ni-ct-form" novalidate>' +
           '<div class="ni-ct-row">' +
             '<label class="ni-ct-field"><span>First name</span><input name="firstName" autocomplete="given-name"></label>' +
@@ -293,7 +293,7 @@
       if (!data.email || !data.message) {
         status.textContent = 'Please add your email and a message.'; status.className = 'ni-ct-status err'; return;
       }
-      if (data.company) { form.reset(); status.textContent = 'Thanks — your message has been sent!'; status.className = 'ni-ct-status ok'; return; }
+      if (data.company) { form.reset(); status.textContent = 'Thanks! Your message has been sent.'; status.className = 'ni-ct-status ok'; return; }
       btn.disabled = true; status.textContent = 'Sending…'; status.className = 'ni-ct-status';
       var payload = {
         name: (data.firstName + ' ' + data.lastName).trim() || 'Website visitor',
@@ -307,10 +307,10 @@
         .then(function (r) { return r.ok; })
         .then(function (ok) {
           btn.disabled = false;
-          if (ok) { form.reset(); status.textContent = 'Thanks — your message has been sent!'; status.className = 'ni-ct-status ok'; }
-          else { status.textContent = 'Could not send — please try again, or email us directly.'; status.className = 'ni-ct-status err'; }
+          if (ok) { form.reset(); status.textContent = 'Thanks! Your message has been sent.'; status.className = 'ni-ct-status ok'; }
+          else { status.textContent = 'Could not send. Please try again, or email us directly.'; status.className = 'ni-ct-status err'; }
         })
-        .catch(function () { btn.disabled = false; status.textContent = 'Could not send — please try again.'; status.className = 'ni-ct-status err'; });
+        .catch(function () { btn.disabled = false; status.textContent = 'Could not send. Please try again.'; status.className = 'ni-ct-status err'; });
     });
   }
 

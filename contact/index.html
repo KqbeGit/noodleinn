@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex,nofollow" />
-<title>Contact — Noodle Inn</title>
+<title>Contact | Noodle Inn</title>
 <link rel="icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -97,7 +97,7 @@
 <div class="title">
   <div class="kick" data-t="kick">Get in Touch</div>
   <h1 data-t="title">Contact Us</h1>
-  <p data-t="lead">Whether it's feedback, a question about our menu, or just to say hello — we'd love to hear from you.</p>
+  <p data-t="lead">Whether it's feedback, a question about our menu, or just to say hello, we'd love to hear from you.</p>
   <p class="callline"><span data-t="callpre">To book a table, send us a message below or call</span> <a href="tel:01142554488">0114 255 4488</a></p>
 </div>
 
@@ -128,12 +128,12 @@
 var CONTACT_TO='noodle@kqbellc.com';
 var L={
  en:{ourstory:'Our Story',menu:'Menu',gallery:'Gallery',contact:'Contact',whatsnew:"What's New!",order:'Order',reserve:'Reserve',
-   kick:'Get in Touch',title:'Contact Us',lead:"Whether it's feedback, a question about our menu, or just to say hello — we'd love to hear from you.",
-   visit:'Visit Us',location:'Location',phone:'Phone',email:'Email',hours:'Hours',hourstxt:'Open 7 days a week · 12:00 — 22:00',
+   kick:'Get in Touch',title:'Contact Us',lead:"Whether it's feedback, a question about our menu, or just to say hello, we'd love to hear from you.",
+   visit:'Visit Us',location:'Location',phone:'Phone',email:'Email',hours:'Hours',hourstxt:'Open 7 days a week · 12:00 to 22:00',
    first:'First name',last:'Last name',emailf:'Email *',phonef:'Phone',message:'Message *',send:'Send Message',back:'Back to home',callpre:'To book a table, send us a message below or call',lang:'中文'},
  zh:{ourstory:'我們的故事',menu:'餐牌',gallery:'相集',contact:'聯絡我們',whatsnew:'最新優惠',order:'訂購',reserve:'訂座',
-   kick:'聯絡我們',title:'聯絡我們',lead:'無論是意見、對餐牌的查詢，還是想打個招呼 — 我們都樂意聆聽。',
-   visit:'歡迎光臨',location:'地址',phone:'電話',email:'電郵',hours:'營業時間',hourstxt:'一星期七天營業 · 12:00 — 22:00',
+   kick:'聯絡我們',title:'聯絡我們',lead:'無論是意見、對餐牌的查詢，還是想打個招呼，我們都樂意聆聽。',
+   visit:'歡迎光臨',location:'地址',phone:'電話',email:'電郵',hours:'營業時間',hourstxt:'一星期七天營業 · 12:00 至 22:00',
    first:'名字',last:'姓氏',emailf:'電郵 *',phonef:'電話',message:'訊息 *',send:'發送訊息',back:'返回主頁',callpre:'預訂餐檯，請在下方留言或致電',lang:'English'}
 };
 var LANG='en'; try{LANG=localStorage.getItem('ni-lang')||'en';}catch(e){}
@@ -148,14 +148,14 @@ form.addEventListener('submit',function(e){
   e.preventDefault();
   var g=function(n){var el=form.querySelector('[name="'+n+'"]');return el?el.value.trim():'';};
   var email=g('email'),message=g('message');
-  if(g('company')){form.reset();st.textContent=(LANG==='zh'?'感謝您 — 訊息已發送！':'Thanks — your message has been sent!');st.className='status ok';return;}
+  if(g('company')){form.reset();st.textContent=(LANG==='zh'?'感謝您！訊息已發送。':'Thanks! Your message has been sent.');st.className='status ok';return;}
   if(!email||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)||!message){st.textContent=(LANG==='zh'?'請填寫電郵及訊息。':'Please add a valid email and a message.');st.className='status err';return;}
   var btn=form.querySelector('.send');btn.disabled=true;st.textContent=(LANG==='zh'?'發送中…':'Sending…');st.className='status';
   var payload={name:(g('firstName')+' '+g('lastName')).trim()||'Website visitor',email:email,phone:g('phone'),message:message,_subject:'New enquiry from the Noodle Inn website',_template:'table'};
   fetch('https://formsubmit.co/ajax/'+CONTACT_TO,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
    .then(function(r){return r.ok;})
-   .then(function(ok){btn.disabled=false;if(ok){form.reset();st.textContent=(LANG==='zh'?'感謝您 — 訊息已發送！':'Thanks — your message has been sent!');st.className='status ok';}else{st.textContent=(LANG==='zh'?'發送失敗，請重試。':'Could not send — please try again, or email us directly.');st.className='status err';}})
-   .catch(function(){btn.disabled=false;st.textContent=(LANG==='zh'?'發送失敗，請重試。':'Could not send — please try again.');st.className='status err';});
+   .then(function(ok){btn.disabled=false;if(ok){form.reset();st.textContent=(LANG==='zh'?'感謝您！訊息已發送。':'Thanks! Your message has been sent.');st.className='status ok';}else{st.textContent=(LANG==='zh'?'發送失敗，請重試。':'Could not send. Please try again, or email us directly.');st.className='status err';}})
+   .catch(function(){btn.disabled=false;st.textContent=(LANG==='zh'?'發送失敗，請重試。':'Could not send. Please try again.');st.className='status err';});
 });
 </script>
 </body>
