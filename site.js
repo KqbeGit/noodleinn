@@ -204,6 +204,70 @@
     }
   }
 
+  var galPage = 0;
+  var GAL_PER = 8;
+  function galTile(url) {
+    return '<div style="position:relative;width:auto;min-width:0;aspect-ratio:1/1;overflow:hidden;border-radius:6px;background:#efece6">' +
+           '<img src="' + url + '" alt="Noodle Inn" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" /></div>';
+  }
+  function galArrow(dir) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'ni-gal-' + dir;
+    b.setAttribute('aria-label', dir === 'prev' ? 'Previous photos' : 'More photos');
+    b.innerHTML = dir === 'prev' ? '\u2039' : '\u203a';
+    b.style.cssText = 'position:absolute;top:50%;transform:translateY(-50%);' + (dir === 'prev' ? 'left:6px' : 'right:6px') +
+      ';z-index:6;width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;background:rgba(20,20,20,.82);color:#e8c97a;' +
+      'font:700 26px/1 system-ui,sans-serif;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3)';
+    return b;
+  }
+  function galRenderPage(grid, arr) {
+    var pages = Math.ceil(arr.length / GAL_PER);
+    if (galPage >= pages) galPage = 0; if (galPage < 0) galPage = pages - 1;
+    var want = (grid.getAttribute('data-ni-sig') || '') + '#' + galPage;
+    if (grid.getAttribute('data-ni-page') === want) return;
+    var start = galPage * GAL_PER, html = '';
+    for (var i = start; i < Math.min(start + GAL_PER, arr.length); i++) html += galTile(arr[i]);
+    grid.innerHTML = html;
+    grid.setAttribute('data-ni-page', want);
+  }
+  function galSyncDots(dots) {
+    if (!dots) return;
+    for (var i = 0; i < dots.children.length; i++)
+      dots.children[i].style.background = (i === galPage) ? '#a97e2f' : 'rgba(0,0,0,.22)';
+  }
+  function buildGalleryCarousel(grid, arr) {
+    var pages = Math.ceil(arr.length / GAL_PER), sig = arr.join('|');
+    if (grid.getAttribute('data-ni-sig') !== sig) { galPage = 0; grid.setAttribute('data-ni-sig', sig); grid.removeAttribute('data-ni-page'); }
+    // wrap the grid once so arrows can sit over its edges
+    var wrap = grid.parentNode;
+    if (!(wrap && wrap.classList && wrap.classList.contains('ni-gal-wrap'))) {
+      wrap = document.createElement('div'); wrap.className = 'ni-gal-wrap'; wrap.style.cssText = 'position:relative';
+      grid.parentNode.insertBefore(wrap, grid); wrap.appendChild(grid);
+    }
+    // arrows (only when more than one page)
+    var prev = wrap.querySelector('.ni-gal-prev'), next = wrap.querySelector('.ni-gal-next');
+    if (pages > 1) {
+      if (!prev) { prev = galArrow('prev'); prev.addEventListener('click', function () { galPage = (galPage - 1 + pages) % pages; galRenderPage(grid, arr); galSyncDots(wrap.parentNode.querySelector('.ni-gal-dots')); }); wrap.appendChild(prev); }
+      if (!next) { next = galArrow('next'); next.addEventListener('click', function () { galPage = (galPage + 1) % pages; galRenderPage(grid, arr); galSyncDots(wrap.parentNode.querySelector('.ni-gal-dots')); }); wrap.appendChild(next); }
+    }
+    // dots under the grid
+    var dots = wrap.parentNode.querySelector('.ni-gal-dots');
+    if (pages > 1) {
+      if (!dots) { dots = document.createElement('div'); dots.className = 'ni-gal-dots'; dots.style.cssText = 'display:flex;gap:9px;justify-content:center;margin-top:18px'; wrap.parentNode.insertBefore(dots, wrap.nextSibling); }
+      if (dots.children.length !== pages) {
+        dots.innerHTML = '';
+        for (var d = 0; d < pages; d++) (function (d) {
+          var dot = document.createElement('button'); dot.type = 'button'; dot.setAttribute('aria-label', 'Page ' + (d + 1));
+          dot.style.cssText = 'width:9px;height:9px;border-radius:50%;border:none;padding:0;cursor:pointer;background:rgba(0,0,0,.22)';
+          dot.addEventListener('click', function () { galPage = d; galRenderPage(grid, arr); galSyncDots(dots); });
+          dots.appendChild(dot);
+        })(d);
+      }
+    } else if (dots) { dots.remove(); }
+
+    galRenderPage(grid, arr);
+    galSyncDots(wrap.parentNode.querySelector('.ni-gal-dots'));
+  }
+
   function applyMedia() {
     var m = (SAVED && SAVED.media) || (DEFAULTS && DEFAULTS.media);
     if (!m) return;
@@ -220,24 +284,11 @@
       if (img && img.getAttribute('src') !== m.aboutImage) img.setAttribute('src', m.aboutImage);
     }
     if (m.gallery) {
-      // gallery is an ordered array of image URLs (any length); rebuild the grid to match
       var arr = Array.isArray(m.gallery) ? m.gallery
               : Object.keys(m.gallery).map(function (k) { return m.gallery[k]; });
       arr = arr.filter(Boolean);
       var grid = document.querySelector('#gallery .overflow-x-auto');
-      if (grid && arr.length) {
-        var sig = arr.join('|');
-        if (grid.getAttribute('data-ni-gallery') !== sig) {
-          var html = '';
-          for (var i = 0; i < arr.length; i++) {
-            html += '<div style="position:relative;width:auto;min-width:0;aspect-ratio:1/1;overflow:hidden;border-radius:6px;background:#efece6">' +
-                    '<img src="' + arr[i] + '" alt="Noodle Inn" loading="lazy" ' +
-                    'style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" /></div>';
-          }
-          grid.innerHTML = html;
-          grid.setAttribute('data-ni-gallery', sig);
-        }
-      }
+      if (grid && arr.length) buildGalleryCarousel(grid, arr);
     }
   }
 
