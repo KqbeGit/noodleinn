@@ -220,10 +220,23 @@
       if (img && img.getAttribute('src') !== m.aboutImage) img.setAttribute('src', m.aboutImage);
     }
     if (m.gallery) {
-      var gi = document.querySelectorAll('#gallery img');
-      for (var i = 0; i < gi.length; i++) {
-        var alt = gi[i].getAttribute('alt');
-        if (alt && m.gallery[alt] && gi[i].getAttribute('src') !== m.gallery[alt]) gi[i].setAttribute('src', m.gallery[alt]);
+      // gallery is an ordered array of image URLs (any length); rebuild the grid to match
+      var arr = Array.isArray(m.gallery) ? m.gallery
+              : Object.keys(m.gallery).map(function (k) { return m.gallery[k]; });
+      arr = arr.filter(Boolean);
+      var grid = document.querySelector('#gallery .overflow-x-auto');
+      if (grid && arr.length) {
+        var sig = arr.join('|');
+        if (grid.getAttribute('data-ni-gallery') !== sig) {
+          var html = '';
+          for (var i = 0; i < arr.length; i++) {
+            html += '<div style="position:relative;width:auto;min-width:0;aspect-ratio:1/1;overflow:hidden;border-radius:6px;background:#efece6">' +
+                    '<img src="' + arr[i] + '" alt="Noodle Inn" loading="lazy" ' +
+                    'style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" /></div>';
+          }
+          grid.innerHTML = html;
+          grid.setAttribute('data-ni-gallery', sig);
+        }
       }
     }
   }

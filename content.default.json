@@ -2993,15 +2993,27 @@
     "heroVideo": "/intro-hero.mp4",
     "heroPoster": "/intro-poster.jpg",
     "aboutImage": "/about.png",
-    "gallery": {
-      "Dim sum selection": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&h=600&fit=crop",
-      "Noodle soup bowl": "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=800&h=600&fit=crop",
-      "Steamed dumplings": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&h=600&fit=crop",
-      "Chinese restaurant interior": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop",
-      "Stir fry noodles": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
-      "Wok cooking flames": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&h=600&fit=crop",
-      "Spring rolls": "https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800&h=600&fit=crop",
-      "Chinese tea service": "https://images.unsplash.com/photo-1541696490-8744a5dc0228?w=800&h=600&fit=crop"
-    }
+    "gallery": [
+      "/gallery-img/g01.jpg",
+      "/gallery-img/g02.jpg",
+      "/gallery-img/g03.jpg",
+      "/gallery-img/g04.jpg",
+      "/gallery-img/g05.jpg",
+      "/gallery-img/g06.jpg",
+      "/gallery-img/g07.jpg",
+      "/gallery-img/g08.jpg",
+      "/gallery-img/g09.jpg",
+      "/gallery-img/g10.jpg",
+      "/gallery-img/g11.jpg",
+      "/gallery-img/g12.jpg",
+      "/gallery-img/g13.jpg",
+      "/gallery-img/g14.jpg",
+      "/gallery-img/g15.jpg",
+      "/gallery-img/g16.jpg",
+      "/gallery-img/g17.jpg",
+      "/gallery-img/g18.jpg",
+      "/gallery-img/g19.jpg",
+      "/gallery-img/g20.jpg"
+    ]
   }
 }

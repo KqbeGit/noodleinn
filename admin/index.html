@@ -379,21 +379,55 @@ function mediaGroup(title, kind, getUrl, setUrl){
   var f=document.createElement('div'); f.className='field'; f.appendChild(uploadControl(kind,getUrl,setUrl)); body.appendChild(f);
   d.appendChild(body); return d;
 }
+function galleryThumb(url, idx){
+  var f=document.createElement('div'); f.className='field';
+  var rowc=document.createElement('div'); rowc.style.cssText='display:flex;align-items:center;gap:14px';
+  var img=document.createElement('img'); img.src=url;
+  img.style.cssText='width:120px;height:80px;object-fit:cover;border-radius:8px;border:1px solid var(--line2);background:#000;flex:0 0 auto';
+  var meta=document.createElement('div'); meta.style.cssText='flex:1;min-width:0';
+  var num=document.createElement('div'); num.className='flabel'; num.textContent='Photo '+(idx+1);
+  meta.appendChild(num);
+  var rm=document.createElement('button'); rm.type='button'; rm.className='act btn-ghost'; rm.textContent='Remove';
+  rm.onclick=function(){ DATA.media.gallery.splice(idx,1); render(); };
+  rowc.appendChild(img); rowc.appendChild(meta); rowc.appendChild(rm);
+  f.appendChild(rowc); return f;
+}
+function galleryAdder(){
+  var f=document.createElement('div'); f.className='field';
+  var inp=document.createElement('input'); inp.type='file'; inp.accept='image/*'; inp.multiple=true; inp.style.display='none';
+  var btn=document.createElement('button'); btn.type='button'; btn.className='act btn-gold'; btn.textContent='+ Add photo(s)';
+  var st=document.createElement('span'); st.style.cssText='margin-left:12px;font-size:13px;color:var(--muted)';
+  btn.onclick=function(){ inp.click(); };
+  inp.onchange=function(){
+    var files=Array.prototype.slice.call(inp.files||[]); if(!files.length) return;
+    if(!window.__blobUpload){ st.style.color='var(--danger)'; st.textContent='Uploader still loading, try again in a second.'; return; }
+    btn.disabled=true; var done=0, total=files.length;
+    st.style.color='var(--muted)'; st.textContent='Uploading 0/'+total+'…';
+    files.reduce(function(chain,file){
+      return chain.then(function(){
+        return window.__blobUpload(file.name, file, {access:'public', handleUploadUrl:'/api/upload', contentType:file.type})
+          .then(function(res){ DATA.media.gallery.push(res.url); done++; st.textContent='Uploading '+done+'/'+total+'…'; });
+      });
+    }, Promise.resolve()).then(function(){
+      btn.disabled=false; render();
+    }).catch(function(e){ btn.disabled=false; st.style.color='var(--danger)'; st.textContent='Upload failed: '+((e&&e.message)||'error'); });
+  };
+  var rowc=document.createElement('div'); rowc.style.cssText='display:flex;align-items:center;flex-wrap:wrap;gap:8px'; rowc.appendChild(btn); rowc.appendChild(st);
+  f.appendChild(inp); f.appendChild(rowc); return f;
+}
 function galleryMediaGroup(){
-  var alts=['Dim sum selection','Noodle soup bowl','Steamed dumplings','Chinese restaurant interior','Stir fry noodles','Wok cooking flames','Spring rolls','Chinese tea service'];
+  if(!DATA.media) DATA.media={};
+  var g=DATA.media.gallery;
+  if(!Array.isArray(g)){ DATA.media.gallery = (g && typeof g==='object') ? Object.keys(g).map(function(k){return g[k];}).filter(Boolean) : []; }
+  var list=DATA.media.gallery;
   var d=document.createElement('details'); d.className='group'; d.open=true;
   var chev='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
-  var s=document.createElement('summary'); s.innerHTML=chev+'<div class="g-text"><div class="g-title">Gallery photos</div><div class="g-desc">The 8 photos in the homepage gallery</div></div><div class="g-count">'+alts.length+'</div>';
+  var s=document.createElement('summary'); s.innerHTML=chev+'<div class="g-text"><div class="g-title">Gallery photos</div><div class="g-desc">Shown in the homepage gallery. Add or remove any number.</div></div><div class="g-count">'+list.length+'</div>';
   d.appendChild(s);
   var body=document.createElement('div'); body.className='g-body';
-  alts.forEach(function(alt){
-    var f=document.createElement('div'); f.className='field';
-    var lab=document.createElement('div'); lab.className='flabel'; lab.textContent=alt; f.appendChild(lab);
-    f.appendChild(uploadControl('image',
-      function(){return (DATA.media&&DATA.media.gallery&&DATA.media.gallery[alt])||'';},
-      function(u){ if(!DATA.media)DATA.media={}; if(!DATA.media.gallery)DATA.media.gallery={}; DATA.media.gallery[alt]=u; }));
-    body.appendChild(f);
-  });
+  body.appendChild(galleryAdder());
+  list.forEach(function(url,i){ body.appendChild(galleryThumb(url,i)); });
+  if(!list.length){ var e=document.createElement('div'); e.className='empty'; e.textContent='No photos yet, click "+ Add photo(s)".'; body.appendChild(e); }
   d.appendChild(body); return d;
 }
 
