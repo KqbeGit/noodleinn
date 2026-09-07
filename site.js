@@ -224,10 +224,14 @@
     if (galPage >= pages) galPage = 0; if (galPage < 0) galPage = pages - 1;
     var want = (grid.getAttribute('data-ni-sig') || '') + '#' + galPage;
     if (grid.getAttribute('data-ni-page') === want) return;
+    var first = !grid.getAttribute('data-ni-page');   // first paint = no animation
+    grid.setAttribute('data-ni-page', want);
     var start = galPage * GAL_PER, html = '';
     for (var i = start; i < Math.min(start + GAL_PER, arr.length); i++) html += galTile(arr[i]);
-    grid.innerHTML = html;
-    grid.setAttribute('data-ni-page', want);
+    if (first) { grid.innerHTML = html; return; }
+    grid.style.transition = 'opacity .2s ease';   // simple crossfade on page change
+    grid.style.opacity = '0';
+    setTimeout(function () { grid.innerHTML = html; grid.style.opacity = '1'; }, 160);
   }
   function galSyncDots(dots) {
     if (!dots) return;
