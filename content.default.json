@@ -2953,22 +2953,13 @@
   ],
   "deals": [
     {
-      "tag": "Limited Time",
-      "tag_zh": "限時",
-      "title": "Weekday Lunch 15% Off",
-      "title_zh": "平日午市 85折",
-      "price": "",
-      "desc": "Any main plus a soft drink, Monday to Friday, 12:00 to 3:00pm. Dine in only.",
-      "desc_zh": "星期一至五 12:00 至 15:00，任何主菜加汽水。只限堂食。"
-    },
-    {
       "tag": "Most Popular",
       "tag_zh": "人氣",
       "title": "Dim Sum 4 for 3",
       "title_zh": "點心 買四送一",
       "price": "",
-      "desc": "Order any four dim sum baskets and only pay for three. Available all day.",
-      "desc_zh": "任選四籠點心，只需付三籠。全日供應。"
+      "desc": "Order any four dim sum and get the cheapest one free. Available 12pm to 5pm. Dine in only, not available on bank holidays.",
+      "desc_zh": "任選四款點心，最平一款免費。供應時間 12:00 至 17:00。只限堂食，公眾假期不適用。"
     },
     {
       "tag": "Every Day",
