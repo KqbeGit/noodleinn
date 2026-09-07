@@ -43,6 +43,7 @@
   .title .kick{color:var(--gold);letter-spacing:.34em;text-transform:uppercase;font-size:.78rem;font-weight:600;margin-bottom:12px}
   .title h1{font-size:clamp(2.3rem,4.6vw,3.4rem);font-weight:800;margin:0;letter-spacing:.01em}
   .title p{color:var(--muted);margin:.55rem 0 0;font-weight:300;font-size:1.02rem}
+  .title .hours-note{color:var(--gold);font-weight:700;font-size:1.02rem;margin:.45rem 0 0;letter-spacing:.04em}
 
   /* sticky category tabs */
   .switch{display:flex;justify-content:center;gap:10px;margin:2px 0 30px}
@@ -107,9 +108,10 @@
 </header>
 
 <div class="title">
-  <div class="kick" data-t="kick">Our Menu</div>
+  <div class="kick" data-t="kick">Artisan Handmade Dim Sum</div>
   <h1 data-t="title">Menu</h1>
   <p data-t="subtitle">Steamed to order: dumplings, buns, rice rolls &amp; congee</p>
+  <p class="hours-note" data-t="hoursnote">12-6pm daily</p>
 </div>
 
 <div class="switch">
@@ -132,11 +134,11 @@
 <script>
 var LABELS = {
   en:{ourstory:'Our Story',menu:'Menu',gallery:'Gallery',contact:'Contact',whatsnew:"What's On",order:'Order',reserve:'Reserve',
-      kick:'Our Dim Sum',title:'Dim Sum',subtitle:'Steamed to order: dumplings, buns, rice rolls & congee',
+      kick:'Artisan Handmade Dim Sum',title:'Dim Sum',subtitle:'Steamed to order: dumplings, buns, rice rolls & congee',hoursnote:'12-6pm daily',
       disclaimer:'Dim sum is served to order, so please ask our staff about daily selections.',
       back:'Back to home',lang:'中文',mainmenu:'Main Menu',dimsum:'Dim Sum'},
   zh:{ourstory:'我們的故事',menu:'餐牌',gallery:'相集',contact:'聯絡我們',whatsnew:'最新優惠',order:'訂購',reserve:'訂座',
-      kick:'我們的點心',title:'點心',subtitle:'即叫即蒸：蝦餃、燒賣、腸粉及粥品',
+      kick:'手工精製點心',title:'點心',subtitle:'即叫即蒸：蝦餃、燒賣、腸粉及粥品',hoursnote:'每日 12:00 至 18:00',
       disclaimer:'點心即叫即蒸，如有查詢請向服務員了解每日供應。',
       back:'返回主頁',lang:'English',mainmenu:'主餐牌',dimsum:'點心'}
 };
