@@ -124,7 +124,7 @@
           <button id="v-content" class="active" onclick="setView('content')">Website Text</button>
           <button id="v-menu" onclick="setView('menu')">Edit Menu</button>
           <button id="v-dimsum" onclick="setView('dimsum')">Edit Dim&nbsp;Sum</button>
-          <button id="v-deals" onclick="setView('deals')">What's New</button>
+          <button id="v-deals" onclick="setView('deals')">What's On</button>
           <button id="v-media" onclick="setView('media')">Images &amp; Video</button>
         </div>
       </div>
@@ -231,7 +231,7 @@ function updateHint(){
   var zh=LANG==='zh';
   if(VIEW==='menu') el('hint').textContent = zh ? '編輯主餐牌 — 分類、菜名、價錢及備註。每格上方顯示英文。' : 'Editing the main menu — categories, dish names, prices and notes.';
   else if(VIEW==='dimsum') el('hint').textContent = zh ? '編輯點心餐牌 — 分類、菜名、價錢及備註。每格上方顯示英文。' : 'Editing the dim sum menu — categories, dish names, prices and notes.';
-  else if(VIEW==='deals') el('hint').textContent = zh ? '編輯「最新優惠」頁面 — 可新增、修改或刪除優惠。' : "Editing the What's New page — add, edit or remove offers.";
+  else if(VIEW==='deals') el('hint').textContent = zh ? '編輯「最新優惠」頁面 — 可新增、修改或刪除優惠。' : "Editing the What's On page — add, edit or remove offers.";
   else if(VIEW==='media') el('hint').textContent = zh ? '上載相片及影片 — 上載後請按「Save changes」套用。' : 'Upload photos and video, then press “Save changes” to apply them to the site.';
   else el('hint').textContent = zh ? '正在編輯中文版本。每格上方顯示英文 — 請在下方輸入中文翻譯。' : 'Editing the English website. Type in any box, then press Save.';
 }

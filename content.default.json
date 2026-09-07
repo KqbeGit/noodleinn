@@ -10,7 +10,7 @@
         "Order",
         "Reserve",
         "Noodle Inn",
-        "What's New!"
+        "What's On"
       ]
     },
     {
@@ -186,8 +186,8 @@
       "zh": "年手藝傳承"
     },
     "Signature Dishes": {
-      "en": "Signature Dishes",
-      "zh": "道招牌菜式"
+      "en": "Extensive Range of Dishes",
+      "zh": "各式菜式"
     },
     "Fresh Daily": {
       "en": "Fresh Daily",
@@ -453,8 +453,8 @@
       "en": "Deliveroo",
       "zh": "Deliveroo"
     },
-    "What's New!": {
-      "en": "What's New!",
+    "What's On": {
+      "en": "What's On",
       "zh": "最新優惠"
     }
   },

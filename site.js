@@ -191,14 +191,14 @@
     var cta = row && row.querySelector(':scope > .ni-cta');
     if (cta && !cta.querySelector('a.ni-whatsnew')) {
       var a = document.createElement('a');
-      a.className = 'ni-whatsnew'; a.href = '/whats-new'; a.textContent = "What's New!";
+      a.className = 'ni-whatsnew'; a.href = '/whats-new'; a.textContent = "What's On";
       a.style.cssText = PILL;
       cta.insertBefore(a, cta.firstChild);
     }
     var ov = document.querySelector('[class*="z-[999]"] .gap-5');
     if (ov && !ov.querySelector('a.ni-whatsnew')) {
       var m = document.createElement('a');
-      m.className = 'ni-whatsnew'; m.href = '/whats-new'; m.textContent = "What's New!";
+      m.className = 'ni-whatsnew'; m.href = '/whats-new'; m.textContent = "What's On";
       m.style.cssText = PILL + ';font-size:1.25rem;margin-top:.5rem';
       ov.appendChild(m);
     }
