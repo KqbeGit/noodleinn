@@ -219,57 +219,75 @@
       'font:700 26px/1 system-ui,sans-serif;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3)';
     return b;
   }
-  function galRenderPage(grid, arr) {
-    var pages = Math.ceil(arr.length / GAL_PER);
-    if (galPage >= pages) galPage = 0; if (galPage < 0) galPage = pages - 1;
-    var want = (grid.getAttribute('data-ni-sig') || '') + '#' + galPage;
-    if (grid.getAttribute('data-ni-page') === want) return;
-    var first = !grid.getAttribute('data-ni-page');   // first paint = no animation
-    grid.setAttribute('data-ni-page', want);
-    var start = galPage * GAL_PER, html = '';
-    for (var i = start; i < Math.min(start + GAL_PER, arr.length); i++) html += galTile(arr[i]);
-    if (first) { grid.innerHTML = html; return; }
-    grid.style.transition = 'opacity .2s ease';   // simple crossfade on page change
-    grid.style.opacity = '0';
-    setTimeout(function () { grid.innerHTML = html; grid.style.opacity = '1'; }, 160);
+  function injectGalCss() {
+    if (document.getElementById('ni-gal-css')) return;
+    var st = document.createElement('style'); st.id = 'ni-gal-css';
+    st.textContent =
+      '#gallery .overflow-x-auto{display:block !important;overflow:hidden !important;padding-bottom:0 !important}' +
+      '.ni-gal-wrap{position:relative}' +
+      '.ni-gal-track{display:flex !important;width:100% !important;align-items:flex-start;transition:transform .42s ease;will-change:transform}' +
+      '.ni-gal-page{flex:0 0 100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}' +
+      '@media(max-width:900px){.ni-gal-page{grid-template-columns:repeat(2,minmax(0,1fr))}}';
+    document.head.appendChild(st);
   }
-  function galSyncDots(dots) {
-    if (!dots) return;
-    for (var i = 0; i < dots.children.length; i++)
+  function galGo(track, pages, p) {
+    galPage = (p % pages + pages) % pages;
+    track.style.transform = 'translateX(-' + (galPage * 100) + '%)';
+    var host = track.parentNode && track.parentNode.parentNode ? track.parentNode.parentNode.parentNode : null;
+    var dots = host && host.querySelector('.ni-gal-dots');
+    if (dots) for (var i = 0; i < dots.children.length; i++)
       dots.children[i].style.background = (i === galPage) ? '#a97e2f' : 'rgba(0,0,0,.22)';
   }
+  function addGalSwipe(el, track, pages) {
+    var x0 = null;
+    el.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      if (x0 == null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (dx < -40) galGo(track, pages, galPage + 1); else if (dx > 40) galGo(track, pages, galPage - 1);
+    }, { passive: true });
+  }
   function buildGalleryCarousel(grid, arr) {
+    injectGalCss();
     var pages = Math.ceil(arr.length / GAL_PER), sig = arr.join('|');
-    if (grid.getAttribute('data-ni-sig') !== sig) { galPage = 0; grid.setAttribute('data-ni-sig', sig); grid.removeAttribute('data-ni-page'); }
-    // wrap the grid once so arrows can sit over its edges
     var wrap = grid.parentNode;
     if (!(wrap && wrap.classList && wrap.classList.contains('ni-gal-wrap'))) {
-      wrap = document.createElement('div'); wrap.className = 'ni-gal-wrap'; wrap.style.cssText = 'position:relative';
+      wrap = document.createElement('div'); wrap.className = 'ni-gal-wrap';
       grid.parentNode.insertBefore(wrap, grid); wrap.appendChild(grid);
     }
-    // arrows (only when more than one page)
-    var prev = wrap.querySelector('.ni-gal-prev'), next = wrap.querySelector('.ni-gal-next');
-    if (pages > 1) {
-      if (!prev) { prev = galArrow('prev'); prev.addEventListener('click', function () { galPage = (galPage - 1 + pages) % pages; galRenderPage(grid, arr); galSyncDots(wrap.parentNode.querySelector('.ni-gal-dots')); }); wrap.appendChild(prev); }
-      if (!next) { next = galArrow('next'); next.addEventListener('click', function () { galPage = (galPage + 1) % pages; galRenderPage(grid, arr); galSyncDots(wrap.parentNode.querySelector('.ni-gal-dots')); }); wrap.appendChild(next); }
-    }
-    // dots under the grid
-    var dots = wrap.parentNode.querySelector('.ni-gal-dots');
-    if (pages > 1) {
-      if (!dots) { dots = document.createElement('div'); dots.className = 'ni-gal-dots'; dots.style.cssText = 'display:flex;gap:9px;justify-content:center;margin-top:18px'; wrap.parentNode.insertBefore(dots, wrap.nextSibling); }
-      if (dots.children.length !== pages) {
-        dots.innerHTML = '';
-        for (var d = 0; d < pages; d++) (function (d) {
-          var dot = document.createElement('button'); dot.type = 'button'; dot.setAttribute('aria-label', 'Page ' + (d + 1));
-          dot.style.cssText = 'width:9px;height:9px;border-radius:50%;border:none;padding:0;cursor:pointer;background:rgba(0,0,0,.22)';
-          dot.addEventListener('click', function () { galPage = d; galRenderPage(grid, arr); galSyncDots(dots); });
-          dots.appendChild(dot);
-        })(d);
+    if (grid.getAttribute('data-ni-sig') !== sig) {
+      galPage = 0;
+      grid.setAttribute('data-ni-sig', sig);
+      var track = document.createElement('div'); track.className = 'ni-gal-track';
+      for (var p = 0; p < pages; p++) {
+        var panel = document.createElement('div'); panel.className = 'ni-gal-page';
+        var html = '';
+        for (var i = p * GAL_PER; i < Math.min((p + 1) * GAL_PER, arr.length); i++) html += galTile(arr[i]);
+        panel.innerHTML = html; track.appendChild(panel);
       }
-    } else if (dots) { dots.remove(); }
-
-    galRenderPage(grid, arr);
-    galSyncDots(wrap.parentNode.querySelector('.ni-gal-dots'));
+      grid.innerHTML = ''; grid.appendChild(track);
+      addGalSwipe(grid, track, pages);
+      var op = wrap.querySelector('.ni-gal-prev'); if (op) op.remove();
+      var on = wrap.querySelector('.ni-gal-next'); if (on) on.remove();
+      var od = wrap.parentNode.querySelector('.ni-gal-dots'); if (od) od.remove();
+    }
+    var track = grid.querySelector('.ni-gal-track');
+    if (!track) return;
+    if (pages > 1 && !wrap.querySelector('.ni-gal-prev')) {
+      var prev = galArrow('prev'); prev.addEventListener('click', function () { galGo(track, pages, galPage - 1); }); wrap.appendChild(prev);
+      var next = galArrow('next'); next.addEventListener('click', function () { galGo(track, pages, galPage + 1); }); wrap.appendChild(next);
+    }
+    var dots = wrap.parentNode.querySelector('.ni-gal-dots');
+    if (pages > 1 && !dots) {
+      dots = document.createElement('div'); dots.className = 'ni-gal-dots';
+      dots.style.cssText = 'display:flex;gap:9px;justify-content:center;margin-top:18px';
+      for (var d = 0; d < pages; d++) (function (d) {
+        var dot = document.createElement('button'); dot.type = 'button'; dot.setAttribute('aria-label', 'Page ' + (d + 1));
+        dot.style.cssText = 'width:9px;height:9px;border-radius:50%;border:none;padding:0;cursor:pointer;background:rgba(0,0,0,.22)';
+        dot.addEventListener('click', function () { galGo(track, pages, d); }); dots.appendChild(dot);
+      })(d);
+      wrap.parentNode.insertBefore(dots, wrap.nextSibling);
+    }
+    galGo(track, pages, galPage);
   }
 
   function applyMedia() {
