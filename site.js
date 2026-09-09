@@ -418,9 +418,9 @@
     if (!row) return;
     var navDiv = row.querySelector('.md\\:flex');
     if (!navDiv) return;
-    // swap the boxed navy logo for the clean transparent mark
+    // swap the boxed navy logo for the clean transparent navy mark
     var logoImg = row.querySelector('a.group img');
-    if (logoImg && !/logo-mark/.test(logoImg.getAttribute('src') || '')) logoImg.src = '/logo-mark-gold2.png';
+    if (logoImg && !/logo-mark-blue/.test(logoImg.getAttribute('src') || '')) logoImg.src = '/logo-mark-blue.png';
     var cta = row.querySelector(':scope > .ni-cta');
     if (!cta) { cta = document.createElement('div'); cta.className = 'ni-cta'; row.appendChild(cta); }
     // move the Order / Reserve buttons out of the links group into the right-hand CTA group
