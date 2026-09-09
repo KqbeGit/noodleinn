@@ -17,7 +17,8 @@
       "title": "Hero (top of page)",
       "keys": [
         "Noodle",
-        "Where tradition meets craft. Handpulled noodles, timeless recipes, and flavors passed down through generations."
+        "Where tradition meets craft. Handpulled noodles, timeless recipes, and flavors passed down through generations.",
+        "Est. 2004"
       ]
     },
     {
@@ -141,6 +142,10 @@
       "en": "Hand-Pulled Perfection.",
       "zh": "匠心手工拉麵"
     },
+    "Est. 2004": {
+      "en": "Est. 2004",
+      "zh": "始於 2004"
+    },
     "View Menu": {
       "en": "View Menu",
       "zh": "查看餐牌"
@@ -166,8 +171,8 @@
       "zh": "故事"
     },
     "Crafting authentic flavors since the very beginning": {
-      "en": "Established in 2004, one of the city's longest established restaurants",
-      "zh": "成立於2004年，本市歷史最悠久的餐館之一"
+      "en": "One of the city's longest established Chinese restaurants",
+      "zh": "本市歷史最悠久的中餐館之一"
     },
     "At Noodle Inn, every dish tells a story. Our recipes are rooted in centuries-old culinary traditions, brought to life with the freshest ingredients and an unwavering dedication to craft.": {
       "en": "Noodle Inn (London Road) was established in 2004 and became one of Sheffield's oldest Chinese restaurants. Over the years, the management at Noodle Inn combined traditional Chinese cuisine with modern trends to serve the local Chinese community. With a focus on Cantonese cuisine, the emphasis remains on both quality and quantity. Aside from wok-fried dishes, our signature 'big plate rice' and 'big bowl noodles' have taken the city by storm. The trend was set and other restaurants followed suit. Our three roasties are made fresh every day and are a must-try for all customers.",
@@ -330,8 +335,8 @@
       "zh": "156 London Road"
     },
     "Sheffield, United Kingdom": {
-      "en": "Sheffield, United Kingdom",
-      "zh": "謝菲爾德，英國"
+      "en": "Sheffield, S2 4LT",
+      "zh": "謝菲爾德 S2 4LT"
     },
     "0114 255 4488": {
       "en": "0114 255 4488",
@@ -2958,8 +2963,8 @@
       "title": "Dim Sum 4 for 3",
       "title_zh": "點心 買四送一",
       "price": "",
-      "desc": "Order any four dim sum and get the cheapest one free. Offer is available from 12pm to 5pm. Dine in only, not available on bank holidays.",
-      "desc_zh": "任選四款點心，最平一款免費。優惠時間為 12:00 至 17:00。只限堂食，公眾假期不適用。"
+      "desc": "Order any four dim sum and get the cheapest one free. Offer is available from 12pm to 5pm. Dine in only, not available on bank holidays. T&Cs apply.",
+      "desc_zh": "任選四款點心，最便宜的一款免費。優惠時間為 12:00 至 17:00。只限堂食，公眾假期不適用。優惠受條款及細則約束。"
     },
     {
       "tag": "Every Day",
@@ -2967,17 +2972,17 @@
       "title": "Student Discount 10% Off",
       "title_zh": "學生優惠 9折",
       "price": "",
-      "desc": "Show a valid student ID to receive 10% off your total bill. Dine in only.",
-      "desc_zh": "出示有效學生證，全單可享 9 折。只限堂食。"
+      "desc": "Show a valid student ID to receive 10% off your total food bill. Dine in only. T&Cs apply.",
+      "desc_zh": "出示有效學生證，全單可享 9 折（飲品除外）。只限堂食。優惠受條款及細則約束。"
     },
     {
-      "tag": "New",
-      "tag_zh": "全新",
-      "title": "Family Feast for Four",
-      "title_zh": "四人套餐",
-      "price": "£49.90",
-      "desc": "A set banquet of starters, three signature mains, rice and hand pulled noodles.",
-      "desc_zh": "套餐包括前菜、三款招牌主菜、白飯及手拉麵。"
+      "tag": "Value for Money",
+      "tag_zh": "超值之選",
+      "title": "£1 Dish - Don't Miss Out!",
+      "title_zh": "£1 重磅推介",
+      "price": "",
+      "desc": "• Steamed Scallops with Garlic & Glass Noodles\n• Soy Sauce Chicken\n• Crab with Ginger & Spring Onions\n\nT&Cs: Minimum spend of £48. Offer available daily from 6pm. Dine in only. Limited to one per transaction. Valid while stock lasts. Not available on bank holidays.",
+      "desc_zh": "• 金銀蒜蓉粉絲蒸扇貝\n• 玫瑰豉油雞配味滷水蛋\n• 薑蔥炒蟹\n\n活動條款：需消費滿 £48。優惠晚上 6 時起供應。只限堂食。每台可享用 1 份。數量有限，售完即止。公眾假期不適用。"
     }
   ],
   "media": {

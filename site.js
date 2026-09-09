@@ -148,6 +148,17 @@
     }
   }
 
+  function ensureEst() {
+    // "Est. 2004" line under the hero slogan (text is translated via the content map)
+    var slogan = document.querySelector('#home p[class*="max-w-xl"]');
+    if (!slogan || !slogan.parentNode) return;
+    if (slogan.nextElementSibling && slogan.nextElementSibling.classList.contains('ni-est')) return;
+    var p = document.createElement('p');
+    p.className = 'ni-est';
+    p.textContent = 'Est. 2004';
+    slogan.parentNode.insertBefore(p, slogan.nextSibling);
+  }
+
   function relinkMenu() {
     // Menu now lives on its own page — send all "Menu" links there
     var links = document.querySelectorAll('a[href="#menu"]');
@@ -461,7 +472,7 @@
       if (!DEFAULTS && !SAVED) return;
       buildGeneric();
       makeButton();
-      ensureIntro();
+      ensureIntro(); ensureEst();
       enhanceHeader();
       relinkMenu();
       hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia();
@@ -470,9 +481,9 @@
       new MutationObserver(function () {
         if (applying || scheduled) return;
         scheduled = true;
-        requestAnimationFrame(function () { scheduled = false; makeButton(); ensureIntro(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); });
+        requestAnimationFrame(function () { scheduled = false; makeButton(); ensureIntro(); ensureEst(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); });
       }).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
-      [400, 1200, 2500].forEach(function (ms) { setTimeout(function () { makeButton(); ensureIntro(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); }, ms); });
+      [400, 1200, 2500].forEach(function (ms) { setTimeout(function () { makeButton(); ensureIntro(); ensureEst(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); }, ms); });
     });
   }
 

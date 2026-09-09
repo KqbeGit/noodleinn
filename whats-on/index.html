@@ -25,8 +25,8 @@
   .brand img{height:5.4rem;width:auto;display:block}
   .brand span{font-weight:800;font-size:1.4rem;color:var(--gold)}
   .actions{display:flex;gap:.7rem;flex:1;justify-content:flex-end;align-items:center}
-  .btn{background:#141414;color:#fff;padding:.65rem 1.15rem;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-  .btn:hover{background:#000}
+  .btn{background:rgba(46,29,12,.92);color:#e8c97a;border:1px solid rgba(212,168,83,.75);border-radius:999px;padding:.62rem 1.2rem;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 4px 18px rgba(30,18,5,.25)}
+  .btn:hover{background:#2e1d0c;color:#f0d48a;border-color:#d4a853}
   .whatsnew{background:var(--gold2);color:#1a1a1a !important;padding:.55rem 1.1rem;border-radius:999px;font-weight:800;font-size:.95rem;box-shadow:0 2px 12px rgba(201,154,69,.45);white-space:nowrap}
   .whatsnew:hover{background:#d4a853;color:#1a1a1a}
   .lang{border:1px solid var(--line);background:#fff;color:var(--ink);padding:.55rem 1rem;border-radius:999px;font-weight:600;font-size:.82rem;cursor:pointer;letter-spacing:.06em}
@@ -45,7 +45,7 @@
   .deal .tag{display:inline-block;background:#141414;color:#e8c97a;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .75rem;border-radius:999px;margin-bottom:14px}
   .deal h3{font-size:1.35rem;margin:0 0 8px;font-weight:800}
   .deal .price{color:var(--gold);font-weight:800;font-size:1.15rem;margin:0 0 8px}
-  .deal p{margin:0;color:#4a463f}
+  .deal p{margin:0;color:#4a463f;white-space:pre-line}
 
   footer{background:#faf8f4;border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:.9rem;margin-top:30px}
   .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
@@ -83,7 +83,7 @@
 </main>
 
 <footer><div class="wrap foot">
-  <div>© <span id="yr"></span> Noodle Inn · 156 London Road, Sheffield · 0114 255 4488</div>
+  <div>© <span id="yr"></span> Noodle Inn · 156 London Road, Sheffield S2 4LT · 0114 255 4488</div>
   <div><a href="/">← <span data-t="back">Back to home</span></a></div>
 </div></footer>
 
@@ -96,9 +96,9 @@ var L={
 };
 // fallback deals (used until live content loads)
 var DEALS=[
- {tag:'Most Popular',tag_zh:'人氣',title:'Dim Sum 4 for 3',title_zh:'點心 買四送一',price:'',desc:'Order any four dim sum and get the cheapest one free. Offer is available from 12pm to 5pm. Dine in only, not available on bank holidays.',desc_zh:'任選四款點心，最平一款免費。優惠時間為 12:00 至 17:00。只限堂食，公眾假期不適用。'},
- {tag:'Every Day',tag_zh:'每日',title:'Student Discount 10% Off',title_zh:'學生優惠 9折',price:'',desc:'Show a valid student ID to receive 10% off your total bill. Dine in only.',desc_zh:'出示有效學生證，全單可享 9 折。只限堂食。'},
- {tag:'New',tag_zh:'全新',title:'Family Feast for Four',title_zh:'四人套餐',price:'£49.90',desc:'A set banquet of starters, three signature mains, rice and hand pulled noodles.',desc_zh:'套餐包括前菜、三款招牌主菜、白飯及手拉麵。'}
+ {tag:'Most Popular',tag_zh:'人氣',title:'Dim Sum 4 for 3',title_zh:'點心 買四送一',price:'',desc:'Order any four dim sum and get the cheapest one free. Offer is available from 12pm to 5pm. Dine in only, not available on bank holidays. T&Cs apply.',desc_zh:'任選四款點心，最便宜的一款免費。優惠時間為 12:00 至 17:00。只限堂食，公眾假期不適用。優惠受條款及細則約束。'},
+ {tag:'Every Day',tag_zh:'每日',title:'Student Discount 10% Off',title_zh:'學生優惠 9折',price:'',desc:'Show a valid student ID to receive 10% off your total food bill. Dine in only. T&Cs apply.',desc_zh:'出示有效學生證，全單可享 9 折（飲品除外）。只限堂食。優惠受條款及細則約束。'},
+ {tag:'Value for Money',tag_zh:'超值之選',title:"£1 Dish - Don't Miss Out!",title_zh:'£1 重磅推介',price:'',desc:'• Steamed Scallops with Garlic & Glass Noodles\n• Soy Sauce Chicken\n• Crab with Ginger & Spring Onions\n\nT&Cs: Minimum spend of £48. Offer available daily from 6pm. Dine in only. Limited to one per transaction. Valid while stock lasts. Not available on bank holidays.',desc_zh:'• 金銀蒜蓉粉絲蒸扇貝\n• 玫瑰豉油雞配味滷水蛋\n• 薑蔥炒蟹\n\n活動條款：需消費滿 £48。優惠晚上 6 時起供應。只限堂食。每台可享用 1 份。數量有限，售完即止。公眾假期不適用。'}
 ];
 var LANG='en'; try{LANG=localStorage.getItem('ni-lang')||'en';}catch(e){}
 if(/[?&]lang=zh/.test(location.search))LANG='zh';
