@@ -40,7 +40,7 @@
       acceptNode: function (n) {
         var p = n.parentNode && n.parentNode.nodeName;
         if (p === 'SCRIPT' || p === 'STYLE') return NodeFilter.FILTER_REJECT;
-        if (n.parentNode && n.parentNode.id === 'ni-lang-toggle') return NodeFilter.FILTER_REJECT;
+        if (n.parentNode && (n.parentNode.id === 'ni-lang-toggle' || (n.parentNode.classList && n.parentNode.classList.contains('ni-lang-hdr')))) return NodeFilter.FILTER_REJECT;
         return NodeFilter.FILTER_ACCEPT;
       }
     });
@@ -124,7 +124,9 @@
     applyMenu();
     applyLinks();
     document.documentElement.lang = mode === 'zh' ? 'zh-HK' : 'en';
-    if (btn) btn.textContent = mode === 'zh' ? 'English' : '中文';
+    var label = mode === 'zh' ? 'English' : '中文';
+    if (btn) btn.textContent = label;
+    var hb = document.querySelector('.ni-lang-hdr'); if (hb) hb.textContent = label;
     applying = false;
   }
 
@@ -432,6 +434,14 @@
                   /border-gold/.test(el.className) || t === 'Order' || t === 'Reserve';
       if (isCta && el.parentNode !== cta) cta.appendChild(el);
     });
+    // language toggle in the header (desktop), same as the sub-pages
+    if (!cta.querySelector('.ni-lang-hdr')) {
+      var hb = document.createElement('button');
+      hb.type = 'button'; hb.className = 'ni-lang-hdr';
+      hb.textContent = mode === 'zh' ? 'English' : '中文';
+      hb.setAttribute('aria-label', 'Switch language / 轉換語言');
+      cta.appendChild(hb);
+    }
     // header "Order" button jumps to the on-page Menus & Ordering section (not straight to Deliveroo)
     Array.prototype.slice.call(cta.querySelectorAll('a')).forEach(function (el) {
       if ((el.textContent || '').trim() === 'Order') {
@@ -454,13 +464,22 @@
       'border:1px solid rgba(212,168,83,.75)','font:600 14px/1 Inter,"Noto Sans TC",system-ui,sans-serif',
       'letter-spacing:.12em','cursor:pointer','box-shadow:0 4px 18px rgba(30,18,5,.45)',
       'backdrop-filter:blur(6px)','-webkit-backdrop-filter:blur(6px)'].join(';');
-    btn.addEventListener('click', function () {
-      mode = mode === 'zh' ? 'en' : 'zh';
-      try { localStorage.setItem('ni-lang', mode); } catch (e) {}
-      applyAll();
-    });
-    document.documentElement.appendChild(btn);
+    (document.body || document.documentElement).appendChild(btn);
   }
+
+  function toggleLang() {
+    mode = mode === 'zh' ? 'en' : 'zh';
+    try { localStorage.setItem('ni-lang', mode); } catch (e) {}
+    applyAll();
+  }
+  // one delegated listener (capture phase) so the toggles keep working even if a
+  // button node is recreated or another script stops propagation lower down
+  document.addEventListener('click', function (e) {
+    var t = e.target && e.target.closest ? e.target.closest('#ni-lang-toggle, .ni-lang-hdr') : null;
+    if (!t) return;
+    e.preventDefault(); e.stopPropagation();
+    toggleLang();
+  }, true);
 
   function boot() {
     Promise.all([
