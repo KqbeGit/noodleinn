@@ -2989,6 +2989,7 @@
     "heroPoster": "/intro-poster.jpg",
     "aboutImage": "/about.png",
     "gallery": [
+      "/gallery-img/g55.jpg",
       "/gallery-img/g01.jpg",
       "/gallery-img/g02.jpg",
       "/gallery-img/g03.jpg",
@@ -3042,7 +3043,8 @@
       "/gallery-img/g51.jpg",
       "/gallery-img/g52.jpg",
       "/gallery-img/g53.jpg",
-      "/gallery-img/g54.jpg"
+      "/gallery-img/g54.jpg",
+      "/gallery-img/g56.jpg"
     ]
   }
 }
