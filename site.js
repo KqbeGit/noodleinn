@@ -101,7 +101,7 @@
             noteEl.textContent = noteTarget;
             box.appendChild(noteEl);
           }
-        } else if (noteEl && noteEl.firstChild) {
+        } else if (noteEl && noteEl.firstChild && noteEl.firstChild.nodeValue !== '') {
           noteEl.firstChild.nodeValue = '';
         }
       });
@@ -125,8 +125,10 @@
     applyLinks();
     document.documentElement.lang = mode === 'zh' ? 'zh-HK' : 'en';
     var label = mode === 'zh' ? 'English' : '中文';
-    if (btn) btn.textContent = label;
-    var hb = document.querySelector('.ni-lang-hdr'); if (hb) hb.textContent = label;
+    // only write when changed: assigning textContent replaces the text node, which would
+    // re-trigger the MutationObserver forever and (in WebKit) swallow clicks on that text
+    if (btn && btn.textContent !== label) btn.textContent = label;
+    var hb = document.querySelector('.ni-lang-hdr'); if (hb && hb.textContent !== label) hb.textContent = label;
     applying = false;
   }
 
