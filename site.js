@@ -163,6 +163,22 @@
     slogan.parentNode.insertBefore(p, slogan.nextSibling);
   }
 
+  function ensurePrivacyLink() {
+    // "Privacy Policy" link after the footer copyright line (label translated via the content map)
+    if (document.querySelector('a.ni-privacy')) return;
+    var footer = document.querySelector('footer'); if (!footer) return;
+    var w = document.createTreeWalker(footer, NodeFilter.SHOW_TEXT), n, host = null;
+    while ((n = w.nextNode())) {
+      var key = orig.has(n) ? orig.get(n) : n.nodeValue;
+      if (key.indexOf('All rights reserved.') !== -1) { host = n.parentNode; break; }
+    }
+    if (!host) return;
+    host.appendChild(document.createTextNode(' · '));
+    var a = document.createElement('a'); a.className = 'ni-privacy'; a.href = '/privacy'; a.textContent = 'Privacy Policy';
+    a.style.cssText = 'color:#a97e2f;font-weight:600;text-decoration:none';
+    host.appendChild(a);
+  }
+
   function relinkMenu() {
     // Menu now lives on its own page — send all "Menu" links there
     var links = document.querySelectorAll('a[href="#menu"]');
@@ -493,7 +509,7 @@
       if (!DEFAULTS && !SAVED) return;
       buildGeneric();
       makeButton();
-      ensureIntro(); ensureEst();
+      ensureIntro(); ensureEst(); ensurePrivacyLink();
       enhanceHeader();
       relinkMenu();
       hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia();
@@ -502,9 +518,9 @@
       new MutationObserver(function () {
         if (applying || scheduled) return;
         scheduled = true;
-        requestAnimationFrame(function () { scheduled = false; makeButton(); ensureIntro(); ensureEst(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); });
+        requestAnimationFrame(function () { scheduled = false; makeButton(); ensureIntro(); ensureEst(); ensurePrivacyLink(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); });
       }).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
-      [400, 1200, 2500].forEach(function (ms) { setTimeout(function () { makeButton(); ensureIntro(); ensureEst(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); }, ms); });
+      [400, 1200, 2500].forEach(function (ms) { setTimeout(function () { makeButton(); ensureIntro(); ensureEst(); ensurePrivacyLink(); enhanceHeader(); relinkMenu(); hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia(); applyAll(); }, ms); });
     });
   }
 
