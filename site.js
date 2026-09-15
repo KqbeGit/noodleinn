@@ -29,10 +29,15 @@
     var dcats = (DEFAULTS && DEFAULTS.menu) || [];
     var scats = (SAVED && SAVED.menu) || dcats;
     dcats.forEach(function (dc, i) {
-      var sc = scats[i] || dc;
+      var sc = matchCat(scats, dc, i) || dc;
       if (dc.name) generic[dc.name] = { en: sc.name, zh: sc.name_zh };
       if (dc.description) generic[dc.description] = { en: sc.description, zh: sc.description_zh };
     });
+  }
+
+  function matchCat(scats, dc, i) {
+    for (var k = 0; k < scats.length; k++) if (scats[k] && scats[k].name === dc.name) return scats[k];
+    return scats[i];
   }
 
   function walkText(fn) {
@@ -80,7 +85,7 @@
     var dcats = (DEFAULTS && DEFAULTS.menu) || [];
     var scats = (SAVED && SAVED.menu) || dcats;
     dcats.forEach(function (dc, i) {
-      var sc = scats[i]; if (!sc) return;
+      var sc = matchCat(scats, dc, i); if (!sc) return;
       (dc.items || []).forEach(function (di, j) {
         var si = sc.items && sc.items[j]; if (!si) return;
         var h4 = findItemNodes(di.name); if (!h4) return;
@@ -237,9 +242,11 @@
 
   var galPage = 0;
   var GAL_PER = 8;
-  function galTile(url) {
-    return '<div style="position:relative;width:auto;min-width:0;aspect-ratio:1/1;overflow:hidden;border-radius:6px;background:#efece6">' +
-           '<img src="' + url + '" alt="Noodle Inn" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" /></div>';
+  function escHtml(t) { return String(t || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function galTile(e) {
+    var cap = e.title ? '<figcaption class="ni-cap"><span class="ni-cap-en">' + escHtml(e.title) + '</span><span class="ni-cap-zh">' + escHtml(e.title_zh || e.title) + '</span></figcaption>' : '';
+    return '<figure class="ni-gal-tile"' + (e.title ? ' tabindex="0"' : '') + ' style="position:relative;margin:0;width:auto;min-width:0;aspect-ratio:1/1;overflow:hidden;border-radius:6px;background:#efece6">' +
+           '<img src="' + escHtml(e.src) + '" alt="' + escHtml(e.title || 'Noodle Inn') + '" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />' + cap + '</figure>';
   }
   function galArrow(dir) {
     var b = document.createElement('button'); b.type = 'button'; b.className = 'ni-gal-' + dir;
@@ -258,7 +265,11 @@
       '.ni-gal-wrap{position:relative}' +
       '.ni-gal-track{display:flex !important;width:100% !important;align-items:flex-start;transition:transform .42s ease;will-change:transform}' +
       '.ni-gal-page{flex:0 0 100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}' +
-      '@media(max-width:900px){.ni-gal-page{grid-template-columns:repeat(2,minmax(0,1fr))}}';
+      '@media(max-width:900px){.ni-gal-page{grid-template-columns:repeat(2,minmax(0,1fr))}}' +
+      '.ni-gal-tile{cursor:pointer}.ni-cap{position:absolute;left:0;right:0;bottom:0;margin:0;padding:28px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.74));color:#fff;font:600 .92rem/1.3 Inter,"Noto Sans TC",system-ui,sans-serif;opacity:0;transition:opacity .25s;pointer-events:none}' +
+      '.ni-gal-tile:hover .ni-cap,.ni-gal-tile.show .ni-cap,.ni-gal-tile:focus-visible .ni-cap{opacity:1}' +
+      'html[lang="zh-HK"] .ni-cap-en,html:not([lang="zh-HK"]) .ni-cap-zh{display:none}' +
+      '@media(prefers-reduced-motion:reduce){.ni-cap{transition:none}}';
     document.head.appendChild(st);
   }
   function galGo(track, pages, p) {
@@ -279,7 +290,17 @@
   }
   function buildGalleryCarousel(grid, arr) {
     injectGalCss();
-    var pages = Math.ceil(arr.length / GAL_PER), sig = arr.join('|');
+    var pages = Math.ceil(arr.length / GAL_PER), sig = arr.map(function (e) { return e.src + '\u0001' + e.title + '\u0001' + e.title_zh; }).join('|');
+    if (!grid.getAttribute('data-ni-cap')) {
+      grid.setAttribute('data-ni-cap', '1');
+      // tap / click a photo: show its name at the bottom (tap again or tap another to hide)
+      grid.addEventListener('click', function (ev) {
+        var t = ev.target && ev.target.closest ? ev.target.closest('.ni-gal-tile') : null; if (!t) return;
+        var was = t.classList.contains('show');
+        Array.prototype.forEach.call(grid.querySelectorAll('.ni-gal-tile.show'), function (x) { x.classList.remove('show'); });
+        if (!was) t.classList.add('show');
+      });
+    }
     var wrap = grid.parentNode;
     if (!(wrap && wrap.classList && wrap.classList.contains('ni-gal-wrap'))) {
       wrap = document.createElement('div'); wrap.className = 'ni-gal-wrap';
@@ -337,9 +358,14 @@
       if (img && img.getAttribute('src') !== m.aboutImage) img.setAttribute('src', m.aboutImage);
     }
     if (m.gallery) {
-      var arr = Array.isArray(m.gallery) ? m.gallery
+      var raw = Array.isArray(m.gallery) ? m.gallery
               : Object.keys(m.gallery).map(function (k) { return m.gallery[k]; });
-      arr = arr.filter(Boolean);
+      // entries are either a plain URL (old format) or {src, title, title_zh}
+      var arr = raw.map(function (e) {
+        if (!e) return null;
+        if (typeof e === 'string') return { src: e, title: '', title_zh: '' };
+        return e.src ? { src: e.src, title: e.title || '', title_zh: e.title_zh || '' } : null;
+      }).filter(Boolean);
       var grid = document.querySelector('#gallery .overflow-x-auto');
       if (grid && arr.length) buildGalleryCarousel(grid, arr);
     }
