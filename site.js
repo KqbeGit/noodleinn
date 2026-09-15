@@ -417,6 +417,7 @@
       var payload = {
         name: (data.firstName + ' ' + data.lastName).trim() || 'Website visitor',
         email: data.email, phone: data.phone, message: data.message,
+        _replyto: data.email,
         _subject: 'New enquiry from the Noodle Inn website', _template: 'table'
       };
       fetch('https://formsubmit.co/ajax/' + CONTACT_TO, {
