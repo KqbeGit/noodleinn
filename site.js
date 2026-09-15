@@ -10,7 +10,7 @@
   if (/[?&#]lang=zh/.test(location.href)) mode = 'zh';
 
   var DEFAULTS = null, SAVED = null, btn = null;
-  var CONTACT_TO = 'noodle@kqbellc.com';   // contact-form recipient (temp test address)
+  var CONTACT_TO = 'noodleinnsheffielduk@gmail.com';   // contact-form recipient (restaurant inbox)
   var applying = false;
   var orig = new WeakMap();       // text node -> its pristine (original English) value
   var generic = {};               // original English string -> {en, zh}
@@ -417,6 +417,7 @@
       var payload = {
         name: (data.firstName + ' ' + data.lastName).trim() || 'Website visitor',
         email: data.email, phone: data.phone, message: data.message,
+        _replyto: data.email,
         _subject: 'New enquiry from the Noodle Inn website', _template: 'table'
       };
       fetch('https://formsubmit.co/ajax/' + CONTACT_TO, {
