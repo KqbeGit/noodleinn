@@ -10,7 +10,7 @@
   if (/[?&#]lang=zh/.test(location.href)) mode = 'zh';
 
   var DEFAULTS = null, SAVED = null, btn = null;
-  var CONTACT_TO = 'noodle@kqbellc.com';   // contact-form recipient (temp test address)
+  var CONTACT_TO = 'noodleinnsheffielduk@gmail.com';   // contact-form recipient (restaurant inbox)
   var applying = false;
   var orig = new WeakMap();       // text node -> its pristine (original English) value
   var generic = {};               // original English string -> {en, zh}
