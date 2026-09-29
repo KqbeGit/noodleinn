@@ -4,7 +4,23 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="only light" />
-<title>Dim Sum | Noodle Inn</title>
+<title>Dim Sum Menu | Noodle Inn, Sheffield</title>
+<meta name="description" content="Handmade dim sum served 12–6pm daily at Noodle Inn, Sheffield: prawn dumplings, siu mai, cheung fun, congee and more. Dim sum 4 for 3 offer when you dine in." />
+<link rel="canonical" href="https://noodleinn.co.uk/dimsum" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Noodle Inn" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:title" content="Dim Sum Menu | Noodle Inn, Sheffield" />
+<meta property="og:description" content="Handmade dim sum served 12–6pm daily at Noodle Inn, Sheffield: prawn dumplings, siu mai, cheung fun, congee and more. Dim sum 4 for 3 offer when you dine in." />
+<meta property="og:url" content="https://noodleinn.co.uk/dimsum" />
+<meta property="og:image" content="https://noodleinn.co.uk/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dim Sum Menu | Noodle Inn, Sheffield" />
+<meta name="twitter:description" content="Handmade dim sum served 12–6pm daily at Noodle Inn, Sheffield: prawn dumplings, siu mai, cheung fun, congee and more. Dim sum 4 for 3 offer when you dine in." />
+<meta name="twitter:image" content="https://noodleinn.co.uk/og.jpg" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Noodle Inn", "item": "https://noodleinn.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Dim Sum", "item": "https://noodleinn.co.uk/dimsum"}]}</script>
 <link rel="icon" href="/favicon.ico?v=3" sizes="any" />
 <link rel="icon" href="/icon-192.png?v=3" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180" />
@@ -152,6 +168,16 @@ try{ LANG = localStorage.getItem('ni-lang') || 'en'; }catch(e){}
 if(/[?&]lang=zh/.test(location.search)) LANG='zh';
 if(/[?&]lang=en/.test(location.search)) LANG='en';
 
+function publishMenuSchema(menu){
+  var old=document.getElementById('ni-menu-ld'); if(old) old.remove();
+  function price(p){ var m=/(\d+(?:\.\d+)?)/.exec(p||''); return m?m[1]:null; }
+  var ld={"@context":"https://schema.org","@type":"Menu","@id":location.origin+location.pathname+"#menu",
+    "name":MENU_KEY==='dimsum'?"Noodle Inn Dim Sum Menu":"Noodle Inn Menu","inLanguage":"en-GB",
+    "hasMenuSection":menu.map(function(cat){ return {"@type":"MenuSection","name":cat.name,"description":cat.description||undefined,
+      "hasMenuItem":(cat.items||[]).map(function(it){ var p=price(it.price); return {"@type":"MenuItem","name":it.name,"description":it.note||undefined,
+        "offers":p?{"@type":"Offer","price":p,"priceCurrency":"GBP"}:undefined}; })}; })};
+  var sc=document.createElement('script'); sc.type='application/ld+json'; sc.id='ni-menu-ld'; sc.text=JSON.stringify(ld); document.head.appendChild(sc);
+}
 function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
 function applyLabels(){
   var L=LABELS[LANG];
@@ -217,7 +243,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   el.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();}},true);
   el.addEventListener('dragstart',function(e){e.preventDefault();});
 })();
-fetch('/api/content').then(function(r){return r.json();}).then(function(d){DATA=d;render();})
+fetch('/api/content').then(function(r){return r.json();}).then(function(d){DATA=d;render();try{publishMenuSchema((DATA&&DATA[MENU_KEY])||[]);}catch(e){}})
   .catch(function(){document.getElementById('menu').textContent='Could not load the menu.';});
 </script>
 </body>

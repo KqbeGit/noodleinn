@@ -137,6 +137,12 @@
     applying = false;
   }
 
+  function heroSrcFor(url) {
+    // phones get the smaller encode of the default hero video (same clip, 480p)
+    if (url === '/intro-hero.mp4' && window.innerWidth <= 768) return '/intro-hero-480.mp4';
+    return url;
+  }
+
   function ensureIntro() {
     // remove the old standalone "Our Story" video section if present
     var old = document.getElementById('intro');
@@ -151,7 +157,7 @@
       v.setAttribute('muted', ''); v.setAttribute('autoplay', '');
       v.setAttribute('loop', ''); v.setAttribute('playsinline', '');
       v.playsInline = true; v.preload = 'auto'; v.poster = '/intro-poster.jpg';
-      v.innerHTML = '<source src="/intro-hero.mp4" type="video/mp4" />';
+      v.innerHTML = '<source src="' + heroSrcFor('/intro-hero.mp4') + '" type="video/mp4" />';
       home.insertBefore(v, home.firstChild);
       var p = v.play(); if (p && p.catch) p.catch(function () {});
     }
@@ -349,7 +355,8 @@
       var v = document.querySelector('#home video.ni-hero-vid');
       if (v) {
         var src = v.querySelector('source');
-        if (src && src.getAttribute('src') !== m.heroVideo) { src.setAttribute('src', m.heroVideo); v.load(); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        var want = heroSrcFor(m.heroVideo);
+        if (src && src.getAttribute('src') !== want) { src.setAttribute('src', want); v.load(); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
         if (m.heroPoster && v.poster !== m.heroPoster) v.poster = m.heroPoster;
       }
     }

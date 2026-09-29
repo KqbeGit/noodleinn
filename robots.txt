@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin
-Disallow: /api/
+Disallow: /api/login
+Disallow: /api/upload
 
 Sitemap: https://noodleinn.co.uk/sitemap.xml
