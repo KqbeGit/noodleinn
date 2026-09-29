@@ -150,6 +150,8 @@
     // full-bleed looping background video in the hero
     var home = document.getElementById('home');
     if (!home) return;
+    var down = home.querySelector('a[href="#about"]');
+    if (down && !down.getAttribute('aria-label')) down.setAttribute('aria-label', 'Scroll down to Our Story');
     if (!home.querySelector('video.ni-hero-vid')) {
       var v = document.createElement('video');
       v.className = 'ni-hero-vid';
@@ -337,10 +339,10 @@
     var dots = wrap.parentNode.querySelector('.ni-gal-dots');
     if (pages > 1 && !dots) {
       dots = document.createElement('div'); dots.className = 'ni-gal-dots';
-      dots.style.cssText = 'display:flex;gap:9px;justify-content:center;margin-top:18px';
+      dots.style.cssText = 'display:flex;gap:2px;justify-content:center;margin-top:12px';
       for (var d = 0; d < pages; d++) (function (d) {
         var dot = document.createElement('button'); dot.type = 'button'; dot.setAttribute('aria-label', 'Page ' + (d + 1));
-        dot.style.cssText = 'width:9px;height:9px;border-radius:50%;border:none;padding:0;cursor:pointer;background:rgba(0,0,0,.22)';
+        dot.style.cssText = 'width:12px;height:12px;border-radius:50%;border:none;padding:0;margin:6px;cursor:pointer;background:rgba(0,0,0,.22)';
         dot.addEventListener('click', function () { galGo(track, pages, d); }); dots.appendChild(dot);
       })(d);
       wrap.parentNode.insertBefore(dots, wrap.nextSibling);
@@ -534,12 +536,11 @@
   }, true);
 
   function boot() {
-    // put the hero video (and its poster, the page's largest visible element) up immediately -
-    // don't make it wait for the content download; a short-lived observer re-adds it if React
-    // hydration wipes it before the main observer below takes over
-    try { ensureIntro(); } catch (e) {}
-    var early = new MutationObserver(function () { try { ensureIntro(); } catch (e) {} });
-    early.observe(document.documentElement, { childList: true, subtree: true });
+    // add the hero video as soon as React has hydrated (window load) rather than after the
+    // content download; the poster is painted by CSS in the meantime so the hero is never blank.
+    // Inserting before hydration would trigger a React mismatch and a full client re-render.
+    if (document.readyState === 'complete') { try { ensureIntro(); } catch (e) {} }
+    else window.addEventListener('load', function () { try { ensureIntro(); } catch (e) {} });
     Promise.all([
       fetch('/content.default.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/api/content').then(function (r) { return r.json(); }).catch(function () { return null; })
@@ -554,7 +555,6 @@
       relinkMenu();
       hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia();
       applyAll();
-      early.disconnect();
       var scheduled = false;
       new MutationObserver(function () {
         if (applying || scheduled) return;
