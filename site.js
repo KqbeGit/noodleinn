@@ -491,7 +491,7 @@
       var hb = document.createElement('button');
       hb.type = 'button'; hb.className = 'ni-lang-hdr';
       hb.textContent = mode === 'zh' ? 'English' : '中文';
-      hb.setAttribute('aria-label', 'Switch language / 轉換語言');
+      hb.title = 'Switch language / 轉換語言';
       cta.appendChild(hb);
     }
     // header "Order" button jumps to the on-page Menus & Ordering section (not straight to Deliveroo)
@@ -510,7 +510,7 @@
     btn.id = 'ni-lang-toggle';
     btn.type = 'button';
     btn.textContent = mode === 'zh' ? 'English' : '中文';
-    btn.setAttribute('aria-label', 'Switch language / 轉換語言');
+    btn.title = 'Switch language / 轉換語言';
     btn.style.cssText = ['position:fixed','bottom:22px','left:22px','z-index:400',
       'padding:10px 18px','border-radius:999px','background:rgba(46,29,12,.9)','color:#e8c97a',
       'border:1px solid rgba(212,168,83,.75)','font:600 14px/1 Inter,"Noto Sans TC",system-ui,sans-serif',
@@ -534,6 +534,12 @@
   }, true);
 
   function boot() {
+    // put the hero video (and its poster, the page's largest visible element) up immediately -
+    // don't make it wait for the content download; a short-lived observer re-adds it if React
+    // hydration wipes it before the main observer below takes over
+    try { ensureIntro(); } catch (e) {}
+    var early = new MutationObserver(function () { try { ensureIntro(); } catch (e) {} });
+    early.observe(document.documentElement, { childList: true, subtree: true });
     Promise.all([
       fetch('/content.default.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
       fetch('/api/content').then(function (r) { return r.json(); }).catch(function () { return null; })
@@ -548,6 +554,7 @@
       relinkMenu();
       hideQuote(); ensureOrder(); relinkContact(); relinkReserve(); relinkMobileMenu(); ensureWhatsNew(); applyMedia();
       applyAll();
+      early.disconnect();
       var scheduled = false;
       new MutationObserver(function () {
         if (applying || scheduled) return;
