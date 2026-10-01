@@ -61,6 +61,71 @@
       ],
       "destination": "https://noodleinn.co.uk/:path*",
       "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/gallery",
+      "destination": "/#gallery",
+      "permanent": true
+    },
+    {
+      "source": "/order",
+      "destination": "/#ni-order",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/cookiepolicy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/menus",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/dim-sum",
+      "destination": "/dimsum",
+      "permanent": true
+    },
+    {
+      "source": "/offers",
+      "destination": "/whats-on",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
